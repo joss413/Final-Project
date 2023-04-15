@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Sub_policelogin.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	<title>Subcity Police Login</title>
   <?php
@@ -57,41 +57,55 @@ if(sta2!="" && x2>=0){
     
     
 </head>
-<body style="color: black;background-image: url(pictures/subcitypolice.jpg);background-size: 100%;background-repeat: no-repeat;">
-	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="home.php"><b> On_The_Go Incident Reporter </b></a>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-           <li><a href="official_login.php">Official Login</a></li>
-           <li class="active"><a href="Sub_policelogin.php">Subcity Police Login</a></li>
-        </ul>
-    </div>
-  </div>
- </nav>
- <div  align="center" >
-	<div class="form" style="margin-top: 15%">
-		<form method="post">
-  <div class="form-group" style="width: 30%">
-    <label for="exampleInputEmail1"  ><h1 style="color:white">Subcity Police Id</h1></label>
-    <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" size="5" placeholder="Enter user id" required onfocusout="f1()">
-     </div>
-  <div class="form-group" style="width:30%">
-    <label for="exampleInputPassword1"><h1 style="color:white">Password</h1></label>
-    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required onfocusout="f1()">
-  </div>
-  
-  
-  <button type="submit" class="btn btn-primary" name="s">Login</button>
-</form>
-	</div>
-</div>
 
+<header>
+         <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         
+         
+         <nav class="navigation">
+            
+            
+            <a href="home.php" > Home </a>
+            <a href="Sub_policelogin.php" class="active"> Subcity Police Login </a>
+        
+       
+         </nav>   
+</header>
+<main>
+	<div class="wrapper">
+       <a href="official_login.php" class="icon-close"> <ion-icon name="close-outline"></ion-icon></a>
+
+          <div class="form-box login">
+          <h2> Subcity Police  </h2>
+	   	<form method="post">
+        
+           <div class="input-box">
+              
+         
+                <span class="icon"><ion-icon name="id-card"></ion-icon></span>
+                <input type="text" name="email" class="form-control" id="exampleInputEmail1" autocomplete="off" aria-describedby="emailHelp" size="5" placeholder="Enter user id" required onfocusout="f1()">
+                <label for="exampleInputEmail1">Subcity Police Id</label>
+           
+            </div>
+
+
+             
+           <div class="input-box" >
+     
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" name="password" class="form-control" autocomplete="off" id="exampleInputPassword1" placeholder="Password" required onfocusout="f1()">
+                <label for="exampleInputPassword1">Password</label>
+              </div>
+              <button type="submit" class="btn" name="s">Login</button>
+       </form>             
+    </div>
+    </div>
+</main>
 <?php
 include("footer.php");
 ?>
 
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    font-family: 'poppins',sans-serif;
+    font-family: 'lato',sans-serif;
 }
 
 body{
@@ -11,8 +11,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background: url(../pictures/Home.jpg) no-repeat; */
-    background: #659dbd;
+    background: url(../pictures/back.jpg) no-repeat;
+    /* background: #659dbd; */
     background-size: cover;
 } 
 header{
@@ -22,7 +22,7 @@ header{
     width: 100%;
     padding: 0px 100px; 
     background: rgba(255,255,255, .5);
-    opacity: 0.5;
+    opacity: 0.9;
     border: 2px 0px solid rgba(255,255,255, .5);
     border-radius: 0px;
     display: flex;

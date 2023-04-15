@@ -35,7 +35,9 @@ if(isset($_POST['s']))
     
 }
 ?> 
- <link rel="stylesheet" href="../on_the_go incident reporter/Assets/css/userlogin.css">
+  <link rel="stylesheet" href="../on_the_go incident reporter/Assets/css/userlogin.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <script>
      function f1()
         {
@@ -81,12 +83,12 @@ var x3=sta3.indexOf(' ');
        <a href="home.php" class="icon-close"> <ion-icon name="close-outline"></ion-icon></a>
 
           <div class="form-box login">
-          <h2> Login</h2>
+          <h2> User </h2>
 	   	<form method="post">
            <div class="input-box">
               
          
-                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <span class="icon"><ion-icon name="id-card"></ion-icon></span>
                 <input type="email"  id="exampleInputEmail1" autocomplete="off" aria-describedby="emailHelp" size="5" placeholder="Enter Email id" required name="email" onfocusout="f1()">
                 <label for="exampleInputEmail1">User Id</label>
            
@@ -94,7 +96,7 @@ var x3=sta3.indexOf(' ');
              
            <div class="input-box" >
      
-                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
                 <input type="password" id="exampleInputPassword1" autocomplete="off" placeholder="Password" required name="password" onfocusout="f1()">
                 <label for="exampleInputPassword1">Password</label>
               </div>
@@ -116,8 +118,6 @@ var x3=sta3.indexOf(' ');
 <?php
 include("footer.php");
 ?>
-
-
 
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

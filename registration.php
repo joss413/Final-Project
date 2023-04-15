@@ -110,30 +110,30 @@ if(isset($_POST['s'])){
 	<div class="wrapper">
       <a href="userlogin.php" class="icon-close"> <ion-icon name="close-outline"></ion-icon></a>
          <div class="form-box login">
-             <h2> Login</h2>	
+             <h2> Registration </h2>	
 				          <form action="#" method="post">
 
                        <div class="input-box">
-                            <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                            <span class="icon"><ion-icon name="person"></ion-icon></span>
                             <input type="text"  name="name" autocomplete="off" autocomplete="off" required="" id="name1" onfocusout="f1()" />
                             <label>Full Name</label>
                       </div>	
 
                        <div class="input-box">
-                             <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                             <span class="icon"><ion-icon name="mail"></ion-icon></span>
                             <input type="email"  name="email"  required=""  autocomplete="off" id="email1" onfocusout="f1()"/>
                             <label>Email-Id</label>         
         
                        </div>
 
                       <div class="input-box">
-                             <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                             <span class="icon"><ion-icon name="lock-closed"></ion-icon></ion-icon></span>
   
                              <input type="password"  placeholder="6 Character minimum" autocomplete="off" pattern=".{6,}" required name="password" id="pass" onfocusout="f1()"> 
                              <label>Password</label>
                        </div>
 
-
+                          
                       <div class="input-dropdown">
 
                        <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Home Subcity </p>  
@@ -157,7 +157,7 @@ if(isset($_POST['s'])){
 
                       <div class="input-box">
             
-                              <span class="icon"><ion-icon name="home-outline"></ion-icon></span> 
+                              <span class="icon"><ion-icon name="home"></ion-icon></span> 
                               <input type="text"  name="adress"  minlength="2" autocomplete="off" maxlength="2" required pattern="[0-9]{2}" id="addr" onfocusout="f1()"/>
                               <label>Woreda</label>
 
@@ -166,7 +166,7 @@ if(isset($_POST['s'])){
 
                       <div class="input-box">
 
-                            <span class="icon"><ion-icon name="id-card-outline"></ion-icon></span>
+                            <span class="icon"><ion-icon name="id-card"></ion-icon></span>
                             <input type="text"  name="id_number" minlength="5" autocomplete="off"  maxlength="5" required pattern="[0-9]{5}" id="id" onfocusout="f1()"/>
                             <label>ID Number</label>
 
@@ -186,7 +186,7 @@ if(isset($_POST['s'])){
 
 
                     <div class="input-box">
-                            <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                            <span class="icon"><ion-icon name="call"></ion-icon></span>
                             <input type="text"  name="mobile_number" autocomplete="off" placeholder="Country code +251" required pattern="[+251][0-9]{}" minlength="13" maxlength="13" id="mobno" onfocusout="f1()"/>
                             <label>Mobile</label>
                     </div>
@@ -200,10 +200,12 @@ if(isset($_POST['s'])){
 
 </main>
 
-<?php
-include("footer.php");
-?>
+<footer>
+        <div class="foot" >
+            <h4> &copy <b>On_The_Go Incident Reporter</b></h4>
+     </div>
 
+    </footer>
 
 
  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

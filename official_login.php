@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../on_the_go incident reporter/Assets/css/official_login.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	 <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <title>Official Login</title>
 </head>
 <body>
@@ -76,10 +78,10 @@
 
              <div class="officaldetail">
 
-                        <div>
-                    <a href="Admin.login" class="Admintitle"> Admin Login </a>
+                <div>
+                    <a href="Adminlogin.php" class="Admintitle"> Admin Login </a>
                     <p>Offical Login</p>
-                        </div>
+                </div>
              </div>
 
         </div>

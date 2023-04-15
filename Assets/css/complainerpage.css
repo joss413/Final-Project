@@ -80,14 +80,16 @@ nav a.active:before{
 
 main{
     margin-top: 11em;
-    margin-left:  23em;
+    margin-left: 23em;
+    margin-bottom:11em;
+    
    
 }
 
 .wrapper{
     position: relative;
     width: 500px;
-    height: 440px;
+    height: 840px;
     background: transparent;
     border: 2px solid rgba(255,255,255, .5);
     border-radius: 20px;
@@ -129,6 +131,7 @@ main{
     color: #162938;
     text-align: center;
 }
+
 .input-box{
     position: relative;
     width: 100%;
@@ -167,6 +170,18 @@ main{
     padding: 0 35px 0 5px;
 }
 
+.input-box textarea{
+    width: 100%;
+    height: 0%;
+    background:transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
 .input-box  .icon{
     position: absolute;
     right: 8px;
@@ -176,22 +191,16 @@ main{
 }
 
 
-.remeber-forgot{
-    font-size: .9em;
-    color: #162938;
-    font-weight: 500;
-    margin: -15px 0 15px;
-    display: flex;
-    justify-content: space-between;
+.input-dropdown{
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
 }
 
-.remeber-forgot a {
-    color: #162938;
-    text-decoration: none;
-}
-
-.remeber-forgot a:hover {
-    text-decoration: underline;
+.form-control{
+    height: 30px;
+    width: 420px;
+  
 }
 
 .btn{
@@ -226,3 +235,31 @@ main{
 .login-register p a:hover{
     text-decoration: underline;
 }
+
+footer{
+    margin-top: 6em;
+      }
+
+.foot{
+     position: relative;
+     bottom: 0;
+     width: 100%;
+    
+                 
+   }
+
+.foot h4{
+        
+    color: black;   
+    text-align: center;
+    background: rgba(255,255,255, .5);
+    margin:0;
+    padding-top: 4px;
+    height: 25px;
+    border: 0px solid rgba(255,255,255, .5);
+    border-radius: 0px;
+  }
+
+
+
+

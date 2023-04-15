@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    font-family: 'poppins',sans-serif;
+    font-family: 'lato',sans-serif;
 }
 
 body{
@@ -11,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(../pictures/Home.jpg) no-repeat;
+    background: url(../pictures/Home1.jpg) no-repeat;
     background-size: cover;
 }
 header{

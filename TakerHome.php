@@ -1,81 +1,51 @@
-<meta http-equiv="refresh"  content="60;url=Takerlogin.php";
+<!-- <meta http-equiv="refresh"  content="60;url=Takerlogin.php"; -->
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
 
-.table{
-    border-collapse: collapse;
-    margin: 25px 0px;
-    font-size: 0.9em;
-    min-width: 400px;
-    /* border:black 2px solid; */
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0 , 0 ,0 ,0.15);
-}
+  <title>Taker Homepage</title>
+	
+  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Takerhome.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	
 
-.table thead tr{
-    background-color: #000;
-    color:white;
-    font-weight: bold;
-}
-
-.table th,.table td{
-    padding: 12px 15px;
-}
-
-.table tbody tr {
-
-    border-bottom: 1px solid #dddddd;
-}
-
-.table tbody tr:nth-of-type(even){
-   background-color: #f3f3f3;
-}
-
-.table tbody tr:last-of-type{
-    border-bottom: 3px solid #000;
-}
-
-</style>
 </head>
-<body style="background-color: #dfdfdf">
-	<nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="home.php"><b> On_The_Go Incident Reporter </b></a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li ><a href="official_login.php">Official Login</a></li>
-        <li ><a href="Takerlogin.php">Taker Login</a></li>
-        <li class="active"><a href="TakerHome.php">Taker Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-         <li class="active" ><a href="TakerHome.php">View Complaints</a></li>
-        <li ><a href="TakerHistory.php">Taker History</a></li>
-        <li><a href="Taker_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </div>
- </nav>
+<body>
 
-    <form style="margin-top: 7%; margin-left: 40%;" method="post">
+
+ <header>
+
+     <div class="leftside">
+         <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+              
+                <nav class="navleft">
+                  <a href="home.php"> Home </a>
+                  <a href="Takerlogin.php">Taker Login</a></li>
+              </nav>
+      </div>
+
+         <nav class="navigation">
+            
+            <a href="Takerlogin.php" class="active"> Taker Home </a>
+            <a href="TakerHistory.php">Taker History</a>
+            <a href="Taker_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+        
+       
+         </nav>   
+</header>
+
+
+    <form class="forms" method="post">
       <input type="text" name="cid" style="width: 250px; height: 30px; background-color:white;" placeholder="&nbsp Complaint Id" id="ciid" onfocusout="f1()" required>
         <div>
-      <input class="btn btn-primary" type="submit" value="Search" name="s2" style="margin-top: 10px; margin-left: 11%;"> </br> </br>
+      <input class="btns" type="submit" value="Search" name="s2"> </br> </br>
         </div>
     </form>
-    
+
+  
     
     
 
@@ -137,7 +107,7 @@
                         <input type='hidden' name='description' value='" . $row["description"] . "'>
                         <input type='hidden' name='inc_status' value='" . $row["inc_status"] . "'>
                         <input type='hidden' name='p_id' value='" . $row["p_id"] . "'>
-                        <button type='submit' name='pass_to_handler' class='btn btn-primary' onclick='hideRow(".$row["c_id"].")'>Pass to Handler</button>
+                        <button type='submit' name='pass_to_handler' class='btn-primary' onclick='hideRow(".$row["c_id"].")'>Pass to Handler</button>
                     </form>
         </td>
         <td>
@@ -151,7 +121,7 @@
                     <input type='hidden' name='description' value='" . $row["description"] . "'>
                     <input type='hidden' name='inc_status' value='" . $row["inc_status"] . "'>
                     <input type='hidden' name='p_id' value='" . $row["p_id"] . "'>
-                    <button type='submit' name='reject_complaint' class='btn btn-danger' onclick='confirmReject(".$row["c_id"].")'>Confirm Rejection</button>
+                    <button type='submit' name='reject_complaint' class='btn-danger' onclick='confirmReject(".$row["c_id"].")'>Confirm Rejection</button>
                    </form> 
                        
                    
@@ -260,10 +230,6 @@ if (isset($_POST['reject_complaint'])) {
 // close the database connection
   mysqli_close($conn);
   ?>
-	<title>Taker Homepage</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	
     <script>
      function f1()
@@ -302,18 +268,16 @@ function confirmReject(complaintId) {
 }
 </script>
 
-<br> <br> <br>
+<footer>
+        <div class="foot" >
+            <h4> &copy <b>On_The_Go Incident Reporter</b></h4>
+     </div>
 
-<div style="position: relative;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height:25px;
-   background-color: rgba(0,0,0,0.8);
-   color: white;
-   text-align: center;">
-  <h4 style="color: white;">&copy <b> on_the_go incident reporter | All Right Reserved</b></h4>
-</div>
+  </footer>
+
+
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
