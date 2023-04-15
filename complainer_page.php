@@ -1,5 +1,5 @@
 
- <meta http-equiv="refresh" content="60;url=userlogin.php">  
+ <!-- <meta http-equiv="refresh" content="60;url=userlogin.php">   -->
  <!DOCTYPE html>
 <html>
  
@@ -107,7 +107,8 @@ if(isset($_POST['s'])){
             
             
             <a href="home.php" > Home </a>
-            <a href="Takerlogin.php" class="active"> Taker Login </a>
+            <a href="complainer_page.php" class="active">Log New Complain </a>
+            <a href="complainer_complain_history.php">Complaint History</a>
         
        
          </nav>   
@@ -186,12 +187,10 @@ if(isset($_POST['s'])){
     </div>
 </main>
 
-<footer>
-        <div class="foot" >
-            <h4> &copy <b>On_The_Go Incident Reporter</b></h4>
-     </div>
+<?php
+  include("footers.php");
+  ?>
 
-</footer>
 
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

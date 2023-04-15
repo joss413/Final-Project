@@ -130,7 +130,7 @@ nav a.active:before{
 
     width: 15%;
     height: 35px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 8%;
     background:#3D6181;
     border-radius: 6px;
@@ -172,7 +172,7 @@ nav a.active:before{
     margin-left:10px ;
     margin-right: 10px;
     margin-top: 25px;
-    margin-bottom: 0%;
+    margin-bottom: 16%;
     font-size: 0.9em;
     min-width: 400px;
     /* border:black 2px solid; */
@@ -193,15 +193,15 @@ nav a.active:before{
 
 .table tbody tr {
 
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 2px solid #dddddd;
 }
 
 .table tbody tr:nth-of-type(even){
    background-color: #f3f3f3;
 }
 
-.table tbody tr:last-of-type{
+/* .table tbody tr:last-of-type{
     border-bottom: 3px solid #000;
-}
+} */
 
 

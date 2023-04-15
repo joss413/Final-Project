@@ -28,8 +28,9 @@ header{
     border-radius: 0px;
     display: flex;
     /* justify-content: space-between; */
-    align-items: center ;
+     align-items: center ; 
     z-index: 99;
+    margin-bottom: 80px;
 }
 
 .pic{
@@ -58,7 +59,7 @@ header{
     color: #000;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 .navleft a::after{
     content:'';
@@ -82,7 +83,7 @@ header{
 
 
 
-/* right side navigation part */
+                        /* right side navigation part */
 
 .navigation a {
     position: relative;
@@ -90,7 +91,7 @@ header{
     color: #000;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 45px;
+    margin-left: 35px;
 }
 
 nav a.active:before{
@@ -122,6 +123,15 @@ nav a.active:before{
     transform-origin: left;
 }
 
+
+
+
+.form-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+
+}
 .forms{
    margin-top: 7%; 
    margin-left: 40%;
@@ -155,26 +165,32 @@ nav a.active:before{
  
 }
 
-.txts{
-    width: 250px;
-    height: 30px;
-    color:#000;
-    background-color:white;
-    font-size: 1.3em;
-}
 
 
 
                 /* table part */
 
-.table{
+  .title{   
+    text-align:center; 
+    font-weight:bolder;
+    background-color:white;
+    width: 50%;
+    height: 8%;
+    margin-left: 22%;
+    color:#3b3b3b;
+    align-items: center;
+} 
+
+
+  .table{
     border-collapse: collapse;
     margin-left:10px ;
     margin-right: 10px;
     margin-top: 25px;
-    margin-bottom: 0%;
+    margin-bottom: 10%;
     font-size: 0.9em;
     min-width: 400px;
+    width: 1246px;
     /* border:black 2px solid; */
     border-radius: 0px 0px 0 0;
     overflow: hidden;
@@ -203,5 +219,3 @@ nav a.active:before{
 .table tbody tr:last-of-type{
     border-bottom: 3px solid #000;
 }
-
-

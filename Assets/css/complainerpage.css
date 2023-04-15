@@ -236,29 +236,6 @@ main{
     text-decoration: underline;
 }
 
-footer{
-    margin-top: 6em;
-      }
-
-.foot{
-     position: relative;
-     bottom: 0;
-     width: 100%;
-    
-                 
-   }
-
-.foot h4{
-        
-    color: black;   
-    text-align: center;
-    background: rgba(255,255,255, .5);
-    margin:0;
-    padding-top: 4px;
-    height: 25px;
-    border: 0px solid rgba(255,255,255, .5);
-    border-radius: 0px;
-  }
 
 
 

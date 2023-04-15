@@ -1,11 +1,17 @@
 
-<meta http-equiv="refresh"  content="60;url=Handlerlogin.php">
+<!-- <meta http-equiv="refresh"  content="60;url=Handlerlogin.php"> -->
 
 
 <!DOCTYPE html>
 <html>
 <head>
 
+
+	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/HandlerHome.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<title>Handler Homepage</title>
 <?php
   include("connection.php");
     session_start();
@@ -58,8 +64,9 @@
   ?>
 
 </head>
-<body style="background-color: #dfdfdf">
-	<nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
+<body >
+
+	<!-- <nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -83,18 +90,39 @@
     </div>
   </div>
  </nav>
- 
+  -->
 
-    <form style="margin-top: 7%; margin-left: 40%;" method="post">
-      <input type="text" name="cid" style="width: 250px; height: 30px; background-color:white;" placeholder="&nbsp Complaint Id" id="ciid" onfocusout="f1()" required>
+
+  <header>
+
+<div class="leftside">
+    <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         
+           <nav class="navleft">
+             <a href="home.php"> Home </a>
+             <a href="Handlerlogin.php">Handler Login</a></li>
+         </nav>
+ </div>
+
+    <nav class="navigation">
+       
+       <a href="HandlerHome.php" class="active"> Handler Home </a>
+       <a href="Handler_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+   
+  
+    </nav>   
+</header>
+
+    <form class="forms" method="post">
+      <input type="text" name="cid" class="txts" placeholder="&nbsp Complaint ID" id="ciid" onfocusout="f1()" required>
         <div>
-      <input class="btn btn-primary" type="submit" value="Search" name="s2" style="margin-top: 10px; margin-left: 11%;"> </br> </br>
+      <input class="btns" type="submit" value="Search" name="s2"> 
         </div>
     </form>
     
-    <div style="padding:50px;">
-   <table class="table table-bordered">
-    <thead class="thead-dark" style="background-color: black; color: white;">
+    <div >
+   <table class="table">
+    <thead>
       <tr>
 
         <th scope="col">Registration ID</th>
@@ -116,7 +144,7 @@
 
              ?> 
 
-            <tbody style="background-color: white; color: black;">
+            <tbody>
       <tr>
           <td><?php echo $rows['id_no'];?></td>
           <td><?php echo $rows['c_id'];?></td>
@@ -137,15 +165,11 @@
   
 </table>
  </div>
-    
+
 <?php
- include("footer.php");
+ include("footers.php");
 ?>
-	<title>Handler Homepage</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-	
+
     <script>
      function f1()
         {

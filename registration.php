@@ -200,12 +200,10 @@ if(isset($_POST['s'])){
 
 </main>
 
-<footer>
-        <div class="foot" >
-            <h4> &copy <b>On_The_Go Incident Reporter</b></h4>
-     </div>
+<?php
+  include("footers.php");
+  ?>
 
-    </footer>
 
 
  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

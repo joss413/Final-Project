@@ -190,3 +190,8 @@ main{
     font-weight:500;
 }
 
+.txts{
+    width: 250px;
+    height: 30px;
+    background-color:white;
+}

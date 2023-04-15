@@ -39,9 +39,9 @@
 
 
     <form class="forms" method="post">
-      <input type="text" name="cid" style="width: 250px; height: 30px; background-color:white;" placeholder="&nbsp Complaint Id" id="ciid" onfocusout="f1()" required>
+      <input type="text" name="cid" class="txts" placeholder="&nbsp Complaint ID" id="ciid" onfocusout="f1()" required>
         <div>
-      <input class="btns" type="submit" value="Search" name="s2"> </br> </br>
+      <input class="btns" type="submit" value="Search" name="s2"> 
         </div>
     </form>
 
@@ -65,7 +65,7 @@
   // Check if there are any complaints in the database
   if (mysqli_num_rows($result) > 0) {
       // Start the table and output the header row
-      echo "<table  class='table';>";
+      echo "<table  class='table'>";
       echo "<thead>";
       echo "<tr>
       <th>Registration ID</th>
@@ -268,12 +268,9 @@ function confirmReject(complaintId) {
 }
 </script>
 
-<footer>
-        <div class="foot" >
-            <h4> &copy <b>On_The_Go Incident Reporter</b></h4>
-     </div>
-
-  </footer>
+<?php
+  include("footers.php");
+  ?>
 
 
  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

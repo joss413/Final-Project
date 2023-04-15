@@ -73,6 +73,7 @@ var x3=sta3.indexOf(' ');
             <a href="home.php" > Home </a>
            
            <a href="" class="active"> User Login </a>
+          
         
        
          </nav>   
@@ -116,7 +117,7 @@ var x3=sta3.indexOf(' ');
     </div>
 </main>
 <?php
-include("footer.php");
+include("footers.php");
 ?>
 
 
