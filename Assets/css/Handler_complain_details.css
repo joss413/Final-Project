@@ -128,10 +128,10 @@ nav a.active:before{
 }
  .btns{
 
-    width: 15%;
-    height: 35px;
-    margin-top: 15px;
-    margin-left: 8%;
+    width: 10%;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 5%;
     background:#3D6181;
     border-radius: 6px;
     cursor: pointer;
@@ -165,14 +165,17 @@ nav a.active:before{
 
 
 
+
                 /* table part */
 
 .table{
+    
+    width: 1246px;
     border-collapse: collapse;
     margin-left:10px ;
     margin-right: 10px;
     margin-top: 25px;
-    margin-bottom: 17%;
+    margin-bottom: 10%;
     font-size: 0.9em;
     min-width: 400px;
     /* border:black 2px solid; */
@@ -187,21 +190,22 @@ nav a.active:before{
     font-weight: bold;
 }
 
-.table th,.table td{
-    padding: 12px 15px;
+.table th{
+    padding: 12px 1px;
 }
 
+.table td{
+    padding: 12px 45px;
+}
 .table tbody tr {
 
-    border-bottom: 2px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
 }
 
 .table tbody tr:nth-of-type(even){
    background-color: #f3f3f3;
 }
 
-.table tbody tr:last-of-type{
+  tbody tr:last-of-type{
     border-bottom: 1px solid #000;
 } 
-
-

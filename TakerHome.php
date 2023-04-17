@@ -84,7 +84,7 @@
      echo"<tbody>";
       // Loop through the result set and output each row as a table row
       while ($row = mysqli_fetch_assoc($result)) {
-        echo "<tr class='complaint-row' id='complaint-".$row["c_id"]."'>
+        echo "<tr  id='complaint-".$row["c_id"]."'>
             <td>" . $row["id_no"] . "</td>
             <td>" . $row["c_id"] . "</td>
             <td>" . $row["type_crime"] . "</td>

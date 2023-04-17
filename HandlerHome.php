@@ -131,7 +131,7 @@
         <th scope="col">Date of Crime</th>
         <th scope="col">Reported Time and Date </th>
         <th scope="col">Location</th>
-        <th scope="col">Descripition</th>
+        <th scope="col">Description</th>
         <th scope="col">Complaint Status</th>
         <th scope="col">Police Status</th>
         <th scope="col">Police ID</th>

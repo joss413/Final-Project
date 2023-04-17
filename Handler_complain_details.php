@@ -37,40 +37,41 @@
     ?>
 
 	<title>Assign Police</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Handler_complain_details.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="home.php"><b>On_The_Go Incident Reporter</b></a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li ><a href="HandlerHome.php">View Complaints</a></li>
-        <li class="active" ><a href="Handler_complain_details.php">Complaints Details</a></li>
-        <li><a href="Handler_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </div>
- </nav>
     
-    
+ <header>
+
+<div class="leftside">
+    <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         
+           <nav class="navleft">
+             <a href="home.php"> Home </a>
+           
+         </nav>
+ </div>
+
+    <nav class="navigation">
+       
+
+       <a href="HandlerHome.php">View Complaints</a>
+       <a href="Handler_complain_details.php" class="active"> Complaints Details</a>
+       <a href="Handler_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+   
+  
+    </nav>   
+</header>
 
     
-<div style="padding:50px; margin-top:10px;">
-   <table class="table table-bordered">
-    <thead class="thead-dark" style="background-color: black; color: white;">
+<body>
+   <table class="table">
+    <thead >
     <tr>
         <th scope="col">Registration ID</th>
         <th scope="col">Complaint Id</th>
@@ -85,7 +86,7 @@
       <?php
               while($rows=mysqli_fetch_assoc($result)){
              ?> 
-       <tbody style="background-color: white; color: black;">
+       <tbody>
     <tr>
         
 
@@ -105,10 +106,9 @@
 ?>
           
 </table>
- </div>
- <div>  
+
 <form method="post">
-<select class="form-control" name="police_name" style="margin-left:40%; width:250px;">
+<select  name="police_name" style="margin-left:40%; width:250px; height:30px;">
             <?php
                         $p_name=mysqli_query($conn,"SELECT p_name from sub_police ");
                         while($row=mysqli_fetch_array($p_name))
@@ -120,7 +120,7 @@
                         ?>
           
             </select>
-            <input type="submit" name="assign" value="Assign Case" class="btn btn-primary" style="margin-top:10px; margin-left:45%;">
+            <input type="submit" name="assign" value="Assign Case" class="btns" style="margin-top:10px; margin-left:45%;">
 </form>
  </div>
  <?php

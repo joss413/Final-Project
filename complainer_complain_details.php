@@ -29,13 +29,14 @@
   ?>
 
 	<title>Complaint Details</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/complainer-complain-history.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     
    
-    <body style="background-color: #dfdfdf;">
-	   <nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
+    <body>
+	   <!-- <nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
         <div class="container">
             
             <div class="navbar-header">
@@ -56,8 +57,30 @@
                 </ul>
             </div>
          </div>
-        </nav>
- 
+        </nav> -->
+
+        <header>
+
+<div class="leftside">
+    <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         
+           <nav class="navleft">
+             <a href="home.php"> Home </a>
+            
+         </nav>
+ </div>
+
+    <nav class="navigation">
+       
+       <a href="complainer_page.php">Log New Complain</a>
+       <a href="complainer_complain_history.php" class="active"> Complaint History</a>
+       <a href="Taker_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+   
+  
+    </nav>   
+</header>
+
+
         <div style="padding:50px;margin-top:10px;">
             <table class="table table-bordered">
             <thead class="thead-dark" style="background-color: black; color: white;">
