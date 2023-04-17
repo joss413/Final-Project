@@ -25,37 +25,37 @@
     ?>
 
 	<title>Handler Homepage</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Handler_complain_details1.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="home.php"><b>On_The_Go Incident Reporter</b></a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li ><a href="HandlerHome.php">View Complaints</a></li>
-        <li class="active" ><a href="Handler_complain_details.php">Complaints Details</a></li>
-        <li><a href="inc_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </div>
- </nav>
-    
-    
 
-    
-<div style="padding:50px; margin-top:10px;">
+     <header>
+
+<div class="leftside">
+    <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         
+           <nav class="navleft">
+             <a href="home.php"> Home </a>
+           
+         </nav>
+ </div>
+
+    <nav class="navigation">
+       
+
+       <a href="HandlerHome.php">View Complaints</a>
+       <a href="Handler_complain_details.php" class="active"> Complaints Details</a>
+       <a href="Handler_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+   
+  
+    </nav>   
+</header>
+
+<h4 class='title'>Complaint Details</h4>";
+
    <table class="table table-bordered">
      <thead class="thead-dark" style="background-color: black; color: white;">
     <tr>
@@ -91,22 +91,22 @@
  </div>
  
 
-<div style="padding:50px; margin-top:8px;">
+ <h4 class='title'>Case Details</h4>";
    <table class="table table-bordered">
-        <thead class="thead-dark" style="background-color: black; color: white;">
+        <thead>
     <tr>
-      <th scope="col">Date Of Update</th>
-      <th scope="col">Case Update</th>
+      <th scope="col" class="head">Date Of Update</th>
+      <th scope="col" class="head">Case Update</th>
     </tr>
        </thead>
       <?php
               while($rows1=mysqli_fetch_assoc($res2)){
              ?> 
-       <tbody style="background-color: white; color: black;">
+       <tbody >
     <tr>
         
-      <td><?php echo $rows1['d_o_u']; ?></td>
-      <td><?php echo $rows1['case_update']; ?></td>
+      <td class="head"><?php echo $rows1['d_o_u']; ?></td>
+      <td class="head"><?php echo $rows1['case_update']; ?></td>
         
         
     </tr>
