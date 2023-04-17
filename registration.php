@@ -175,7 +175,7 @@ if(isset($_POST['s'])){
                     <div class="input-dropdown">
 
                     <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Gender </p> 
-                            <select class="form-control" name="gender">
+                            <select name="gender">
                                 <option>Male</option>
                                 <option>Female</option>
                                 <option>Others</option>

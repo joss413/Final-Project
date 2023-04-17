@@ -36,7 +36,8 @@ include("connection.php");
     ?>
 
 	<title>Subcity Police Homepage</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Sub_police_complainDetails.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 <script>
@@ -52,30 +53,34 @@ include("connection.php");
     </script>
 </head>
 <body>
-	<nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="home.php"><b>On The Go Incident Reporter</b></a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li ><a href="Sub_policeHome.php">View Complaints</a></li>
-        <li class="active" ><a href="Sub_police_complainDetails.php">Complaints Details</a></li>
-        <li><a href="Sub_police_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </div>
- </nav>
-<div style="padding:50px; margin-top:10px;">
-   <table class="table table-bordered">
-    <thead class="thead-dark" style="background-color: black; color: white;">
+
+ <header>
+
+<div class="leftside">
+    <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         
+           <nav class="navleft">
+             <a href="home.php"> Home </a>
+           
+         </nav>
+ </div>
+
+    <nav class="navigation">
+       
+       <a href="Sub_police_complainDetails.php" class="active"> Complaints Details</a>
+       <a href="Sub_policeHome.php">View Complaints</a>
+       <a href="Sub_police_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+   
+  
+    </nav>   
+</header>
+
+
+
+<h4 class='title'>Complaint Details</h4>
+
+   <table class="table">
+    <thead>
     <tr>
       <th scope="col">Complaint Id</th>
       <th scope="col">Type of Crime</th>
@@ -89,7 +94,7 @@ include("connection.php");
       <?php
               while($rows=mysqli_fetch_assoc($result)){
              ?> 
-    <tbody style="background-color: white; color: black;">
+    <tbody>
        <tr>
         <td><?php echo $rows['c_id']; ?></td>
         <td><?php echo $rows['type_crime']; ?></td>
@@ -106,14 +111,14 @@ include("connection.php");
 ?>
           
 </table>
- </div>
+
     
-<div style="padding:50px; margin-top:8px;">
-   <table class="table table-bordered">
+<h4 class='title'>Case Details</h4>
+   <table class="table">
         <thead class="thead-dark" style="background-color: black; color: white;">
     <tr>
-      <th scope="col">Date Of Update</th>
-      <th scope="col">Case Update</th>
+      <th class="head" scope="col">Date Of Update</th>
+      <th class="head" scope="col">Case Update</th>
     </tr>
        </thead>
       <?php
@@ -122,8 +127,8 @@ include("connection.php");
        <tbody style="background-color: white; color: black;">
     <tr>
         
-      <td><?php echo $rows1['d_o_u']; ?></td>
-      <td><?php echo $rows1['case_update']; ?></td>
+      <td id="tdpart" class="head"><?php echo $rows1['d_o_u']; ?></td>
+      <td id="tdpart" class="head"><?php echo $rows1['case_update']; ?></td>
         
         
     </tr>
@@ -133,16 +138,16 @@ include("connection.php");
 ?>
           
 </table>
- </div>
 
-  <div style="width: 100%; height: 250px;"> 
+
+  <div class="divp" > 
     
-    <div style="width: 50%;float: left;height: 250px; background-color: #dcdcdc;"> 
+    <div class="divs" > 
      
      <form method="post">
     
       <h5 style="text-align: center;"><b>Complaint ID</b></h5>                 
-      <input type="text" name="cid" style="margin-left: 47%; width: 50px;color: #fff" disabled value="<?php echo "$cid" ?>">
+      <input  type="text" name="cid" style="margin-left: 47%; width: 50px;color: #fff" disabled value="<?php echo "$cid" ?>">
         
          
       <select class="form-control" style="align-content: center;margin-top: 20px; margin-left: 35%; width: 180px; color:white; background-color:#3b3b3b" name="update">
@@ -153,15 +158,16 @@ include("connection.php");
           <option>Criminal Charged</option>
       </select>
 
-      <input class="btn btn-primary btn-sm" type="submit" value="Update Case Status" name="status" style="margin-top: 10px; margin-left: 40%;">
+      <input class="btns btn-primary " type="submit" value="Update Case Status" name="status" style="margin-top: 10px; margin-left: 40%;">
         
     </form>
     </div>     
-     <div style="width: 50%;float: right;height: 250px; background-color: #dfdfdf;">
+    
+     <div class="divthird" >
      <form method="post">
      <textarea name="final_report" cols="40" rows="5" placeholder="Final Report" style="margin-top: 20px;margin-left: 20px;color:#fff" id="ciid" onfocusout="f1()" required></textarea>
      <div>
-      <input  class="btn btn-danger" type="submit" value="Close Case" name="close" style="margin-left: 20px; margin-top: 10px; margin-bottom:20px;">
+      <input  class="btns btn-danger" type="submit" value="Close Case" name="close" style="margin-left: 20px; margin-top: 10px; margin-bottom:20px;">
        </div> 
     </form>
   </div>

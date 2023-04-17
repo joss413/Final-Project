@@ -171,7 +171,8 @@ nav a.active:before{
  .title{   
    text-align:center; 
    font-weight:bolder;
-   background-color:white;
+   background: url(../pictures/allpage.jpg) no-repeat;
+   opacity: 0.6;
    width: 50%;
    height: 8%;
    margin-left: 22%;

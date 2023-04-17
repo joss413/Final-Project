@@ -129,10 +129,10 @@ nav a.active:before{
 }
  .btns{
 
-    width: 10%;
+   
     height: 30px;
     margin-top: 10px;
-    margin-left: 5%;
+    margin-left: 3%;
     background:#3D6181;
     border-radius: 6px;
     cursor: pointer;
@@ -144,7 +144,8 @@ nav a.active:before{
     background:#3D6181; 
     border-radius: 6px;
     cursor: pointer;
-    width: 115%;
+    width: 25%;
+    margin-top: 10px;
  
 }
 
@@ -152,7 +153,7 @@ nav a.active:before{
     background:#db2623; 
     border-radius: 6px;
     cursor: pointer;
-    width: 115%;
+    width: 20%;
  
 }
 
@@ -172,8 +173,8 @@ nav a.active:before{
  .title{   
      text-align:center; 
      font-weight:bolder;
-     background: url(../pictures/allpage.jpg) no-repeat;
-     opacity: 0.6;
+      background: url(../pictures/allpage.jpg) no-repeat;
+      opacity: 0.6;
       width: 50%;
       height: 8%;
       margin-left: 22%;
@@ -214,6 +215,9 @@ nav a.active:before{
     padding: 12px 35px;
 }
 
+.table tr #tdpart{
+    padding: 12px 55px;
+}
 
 
 .table thead tr .head{
@@ -235,3 +239,26 @@ nav a.active:before{
   tbody tr:last-of-type{
     border-bottom: 1px solid #000;
 } 
+
+
+/*-- div part --*/
+
+.divp{
+    width: 100%;
+     height: 250px;
+}
+
+.divs{
+    width: 50%;
+    float: left;
+    height: 250px; 
+    background: url(../pictures/allpage.jpg) no-repeat;
+}
+
+.divthird{
+   width: 50%;
+   float: right;
+   height: 250px; 
+   background: url(../pictures/allpage.jpg) no-repeat;
+   opacity: 1.2;
+}

@@ -173,7 +173,8 @@ nav a.active:before{
  .title{   
      text-align:center; 
      font-weight:bolder;
-      background-color:white;
+     background: url(../pictures/allpage.jpg) no-repeat;
+     opacity: 0.6;
       width: 50%;
       height: 8%;
       margin-left: 22%;
@@ -219,7 +220,14 @@ nav a.active:before{
 .table thead tr .head{
     padding-left:0px ;
     padding-top:12px ;
-    padding-right:400px ;
+    padding-right:410px ;
+    padding-bottom: 12px;
+  
+}
+.table tbody tr .head{
+    padding-left:52px ;
+    padding-top:12px ;
+    padding-right:230px ;
     padding-bottom: 12px;
   
 }
