@@ -45,16 +45,15 @@
 
     <nav class="navigation">
        
-
-       <a href="HandlerHome.php">View Complaints</a>
        <a href="Handler_complain_details.php" class="active"> Complaints Details</a>
+       <a href="HandlerHome.php">View Complaints</a>
        <a href="Handler_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
    
   
     </nav>   
 </header>
 
-<h4 class='title'>Complaint Details</h4>";
+<h4 class='title'>Complaint Details</h4>
 
    <table class="table table-bordered">
      <thead class="thead-dark" style="background-color: black; color: white;">
@@ -91,7 +90,7 @@
  </div>
  
 
- <h4 class='title'>Case Details</h4>";
+ <h4 class='title'>Case Details</h4>
    <table class="table table-bordered">
         <thead>
     <tr>

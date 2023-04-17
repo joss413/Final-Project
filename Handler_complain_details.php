@@ -59,16 +59,15 @@
 
     <nav class="navigation">
        
-
-       <a href="HandlerHome.php">View Complaints</a>
        <a href="Handler_complain_details.php" class="active"> Complaints Details</a>
+       <a href="HandlerHome.php">View Complaints</a>
        <a href="Handler_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
    
   
     </nav>   
 </header>
 
-    
+<h4 class="title">Complaints Details</h4>
 <body>
    <table class="table">
     <thead >

@@ -21,7 +21,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0px 100px; 
+    padding: 0px 10px; 
     background: rgba(255,255,255, .5);
     opacity: 0.9;
     border: 2px 0px solid rgba(255,255,255, .5);
@@ -90,7 +90,8 @@ header{
     color: #000;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 45px;
+    margin-left: 95px;
+    
 }
 
 nav a.active:before{

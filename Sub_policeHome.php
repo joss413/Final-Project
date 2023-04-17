@@ -1,9 +1,10 @@
-<meta http-equiv="refresh"  content="60 ; url=Sub_policelogin.php">
+<!-- <meta http-equiv="refresh"  content="60 ; url=Sub_policelogin.php"> -->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>subcity Police pending complain</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Sub_policeHome.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	
@@ -47,44 +48,44 @@
 </script>
 </head>
 <body>
-	<nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="home.php"><b> On_The_Go Incident Reporter </b></a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li ><a href="official_login.php">Official Login</a></li>
-        <li ><a href="Sub_policelogin.php">Subcity Police Login</a></li>
-        <li class="active"><a href="Sub_policeHome.php">Subcity Police Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active" ><a href="Sub_policeHome.php">Pending Complaints</a></li>
-        <li ><a href="Sub_police_complete.php">Completed Complaints</a></li>
-        <li><a href="Sub_police_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </div>
- </nav>
-    
-    <form style="margin-top: 7%; margin-left: 40%;" method="post">
-    <input type="text" name="cid" style="width: 250px; height: 30px; background-color:white; color:grey; margin-top:5px;" placeholder="&nbsp Complaint Id" onfocusout="f1()" required id="ciid">
-        <div>
-      <input class="btn btn-primary" type="submit" value="Search" name="s2" style="margin-top: 10px; margin-left: 11%;">
-        </div>
-    </form>
-    
- <div style="padding:50px;">
-   <table class="table table-bordered">
-    <thead class="thead-dark" style="background-color: black; color: white;">
+
+    <header>
+
+<div class="leftside">
+    <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         
+           <nav class="navleft">
+             <a href="home.php"> Home </a>
+             <a href="official_login.php">Official Login</a>
+         </nav>
+ </div>
+
+    <nav class="navigation">
+       
+       <a href="Sub_policeHome.php" class="active"> Pending Complaints </a>
+       <a href="Sub_police_complete.php">Completed Complaints</a>
+       <a href="Sub_police_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+   
+  
+    </nav>   
+</header>
+
+
+<form class="forms" method="post">
+<input type="text" name="cid" class="txts" placeholder="&nbsp Complaint Id" onfocusout="f1()" required id="ciid">
+
+   <div>
+   <input class="btns" type="submit" value="Search" name="s2" style="margin-top: 10px; margin-left: 11%;">
+   </div>
+</form>
+
+
+
+
+   <table class="table">
+    <thead>
       <tr>
-        <th scope="col">Complaint Id</th>
+        <th  scope="col">Complaint Id</th>
         <th scope="col">Type of Crime</th>
         <th scope="col">Date of Crime</th>
         <th scope="col">Location of Crime</th>
@@ -96,7 +97,7 @@
       while($rows=mysqli_fetch_assoc($result)){
     ?> 
 
-    <tbody style="background-color: white; color: black;">
+    <tbody >
       <tr>
         <td><?php echo $rows['c_id']; ?></td>
         <td><?php echo $rows['type_crime']; ?></td>     
@@ -111,7 +112,6 @@
     ?>
   
 </table>
- </div>
 
 
 

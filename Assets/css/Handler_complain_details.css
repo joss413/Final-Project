@@ -21,7 +21,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0px 100px; 
+    padding: 0px 10px; 
     background: rgba(255,255,255, .5);
     opacity: 0.9;
     border: 2px 0px solid rgba(255,255,255, .5);
@@ -46,7 +46,7 @@ header{
 
  .leftside{
     margin-left:20px;
-    margin-right:220px;
+    margin-right:370px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,7 +91,7 @@ header{
     color: #000;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 45px;
+    margin-left: 65px;
 }
 
 nav a.active:before{
@@ -168,6 +168,16 @@ nav a.active:before{
 
 
                 /* table part */
+ .title{   
+   text-align:center; 
+   font-weight:bolder;
+   background-color:white;
+   width: 50%;
+   height: 8%;
+   margin-left: 22%;
+   color:#3b3b3b;
+   align-items: center;
+        }   
 
 .table{
     

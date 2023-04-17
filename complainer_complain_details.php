@@ -29,35 +29,13 @@
   ?>
 
 	<title>Complaint Details</title>
-    <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/complainer-complain-history.css">
-	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/complainer-complain-details.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     
    
     <body>
-	   <!-- <nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
-        <div class="container">
-            
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="home.php"><b>On_The_Go Incident Reporter</b></a>
-            </div>
-            
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li ><a href="complainer_complain_history.php">View Complaints</a></li>
-                    <li class="active" ><a href="complainer_complain_details.php">Complaints Details</a></li>
-                    <li><a href="logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
-         </div>
-        </nav> -->
+	
 
         <header>
 
@@ -72,18 +50,18 @@
 
     <nav class="navigation">
        
-       <a href="complainer_page.php">Log New Complain</a>
        <a href="complainer_complain_history.php" class="active"> Complaint History</a>
+       <a href="complainer_page.php">Log New Complain</a>
        <a href="Taker_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
    
   
     </nav>   
 </header>
 
-
-        <div style="padding:50px;margin-top:10px;">
-            <table class="table table-bordered">
-            <thead class="thead-dark" style="background-color: black; color: white;">
+<h4 class="title">Complaints Details</h4>
+       
+            <table class="table">
+            <thead >
                 <tr>
                     <th scope="col">Complain Id</th>
                     <th scope="col">Description</th>
@@ -106,14 +84,14 @@
               } 
             ?>
             </table>
-        </div>
+       
     
-        <div style="padding:50px; margin-top:8px;">
-            <table class="table table-bordered">
-               <thead class="thead-dark" style="background-color: black; color: white;">
+        <h4 class='title'>Case Details</h4>
+            <table class="table ">
+               <thead >
                    <tr>
-                        <th scope="col">Date Of Update</th>
-                        <th scope="col">Case Update</th>
+                        <th class="head"scope="col">Date Of Update</th>
+                        <th class="head" scope="col">Case Update</th>
                    </tr>
                </thead>
             <?php
@@ -121,8 +99,8 @@
              ?> 
                 <tbody style="background-color: white; color: black;">
                 <tr>
-                    <td><?php echo $rows1['d_o_u']; ?></td>
-                    <td><?php echo $rows1['case_update']; ?></td>
+                    <td class="head"><?php echo $rows1['d_o_u']; ?></td>
+                    <td class="head"><?php echo $rows1['case_update']; ?></td>
                 </tr>
                 </tbody>
             <?php
@@ -130,21 +108,15 @@
             ?>
           
             </table>
-        </div>
+      
  
           
             </table>
         </div>
     
-        <div style="position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color:#3b3b3b;
-            color: white;
-            text-align: center;">
-            <h4 style="color: white;">&copy <b>On_The_Go Incident Reporter</b></h4>
-         </div>
+        <?php
+        include("footer.php");
+        ?>
     
      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
