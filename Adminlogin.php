@@ -82,7 +82,7 @@ if(isset($_POST['s']))
 
 <?php
 
-include("footer.php");
+include("footers.php");
 ?>
 
 

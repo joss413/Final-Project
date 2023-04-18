@@ -102,7 +102,7 @@ if(sta2!="" && x2>=0){
     </div>
 </main>
 <?php
-include("footer.php");
+include("footers.php");
 ?>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

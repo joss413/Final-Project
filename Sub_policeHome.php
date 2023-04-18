@@ -74,7 +74,7 @@
 <input type="text" name="cid" class="txts" placeholder="&nbsp Complaint Id" onfocusout="f1()" required id="ciid">
 
    <div>
-   <input class="btns" type="submit" value="Search" name="s2" style="margin-top: 10px; margin-left: 11%;">
+   <input class="btns" type="submit" value="Search" name="s2" >
    </div>
 </form>
 

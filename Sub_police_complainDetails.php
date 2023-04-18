@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+<?php
+include("connection.php");
+?>
+
     <?php
 include("connection.php");
     session_start();
@@ -35,9 +38,8 @@ include("connection.php");
     
     ?>
 
-	<title>Subcity Police Homepage</title>
+	<title> Subcity Police Homepage</title>
   <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Sub_police_complainDetails.css">
-	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 <script>
@@ -146,11 +148,11 @@ include("connection.php");
      
      <form method="post">
     
-      <h5 style="text-align: center;"><b>Complaint ID</b></h5>                 
-      <input  type="text" name="cid" style="margin-left: 47%; width: 50px;color: #fff" disabled value="<?php echo "$cid" ?>">
+      <h3 class="title">Complaint ID</h3>                 
+      <input  class="txts" type="text" name="cid"  disabled value="<?php echo "$cid" ?>">
         
          
-      <select class="form-control" style="align-content: center;margin-top: 20px; margin-left: 35%; width: 180px; color:white; background-color:#3b3b3b" name="update">
+      <select id="form" name="update">
           <option>Criminal Verified</option>
           <option>Criminal Caught</option>
           <option>Criminal Interrogated</option>
@@ -158,24 +160,27 @@ include("connection.php");
           <option>Criminal Charged</option>
       </select>
 
-      <input class="btns btn-primary " type="submit" value="Update Case Status" name="status" style="margin-top: 10px; margin-left: 40%;">
+      <input class="btn-primary " type="submit" value="Update Case Status" name="status" >
         
     </form>
     </div>     
     
      <div class="divthird" >
      <form method="post">
-     <textarea name="final_report" cols="40" rows="5" placeholder="Final Report" style="margin-top: 20px;margin-left: 20px;color:#fff" id="ciid" onfocusout="f1()" required></textarea>
+     <textarea class="textarea" name="final_report" cols="40" rows="5" placeholder="Final Report" id="ciid" onfocusout="f1()" required></textarea>
      <div>
-      <input  class="btns btn-danger" type="submit" value="Close Case" name="close" style="margin-left: 20px; margin-top: 10px; margin-bottom:20px;">
+      <input  class="btn-danger" type="submit" value="Close Case" name="close" >
        </div> 
     </form>
   </div>
 
  </div>
-<?php
-include("connection.php");
-?>
+
+
+ <?php
+
+ include("footers.php");
+ ?>
 
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

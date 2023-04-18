@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+<?php
+ include("connection.php");
+ ?>
     <?php
     include("connection.php");
     session_start();
@@ -122,8 +124,9 @@
             <input type="submit" name="assign" value="Assign Case" class="btns" style="margin-top:10px; margin-left:45%;">
 </form>
  </div>
+
  <?php
- include("connection.php");
+ include("footer.php");
  ?>
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

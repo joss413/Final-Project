@@ -186,12 +186,13 @@ nav a.active:before{
   .table{
     border-collapse: collapse;
     margin-left:10px ;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     margin-top: 25px;
     margin-bottom: 10%;
     font-size: 0.9em;
     min-width: 400px;
-    width: 1246px;
+    /* width: 1246px; */
+    width: 98%;
     /* border:black 2px solid; */
     border-radius: 0px 0px 0 0;
     overflow: hidden;

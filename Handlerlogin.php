@@ -81,7 +81,7 @@ if(isset($_POST['s']))
     </div>
 </main>
 <?php
-  include("footer.php");
+  include("footers.php");
 ?>
 
 

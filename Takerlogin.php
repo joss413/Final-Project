@@ -78,7 +78,7 @@ if(isset($_POST['s']))
 </main>
 
 <?php
-include("footer.php");
+include("footers.php");
 ?>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
