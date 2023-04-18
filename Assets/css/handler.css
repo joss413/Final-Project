@@ -98,6 +98,8 @@ main{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin-bottom: 23%;
+    margin-left:4%;
 
 }
 
@@ -123,6 +125,7 @@ main{
     border-bottom-left-radius: 20px;
     cursor: pointer;
     z-index: 1;
+    
 }
 
 .form-box h2{
