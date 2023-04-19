@@ -1,0 +1,238 @@
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'lato',sans-serif;
+}
+
+body{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../pictures/back.jpg) no-repeat;
+     /* background: burlywood;  */
+    background-size: cover;
+} 
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 10px; 
+    background: rgba(255,255,255, .5);
+    opacity: 0.9;
+    border: 2px 0px solid rgba(255,255,255, .5);
+    border-radius: 0px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center ;
+    z-index: 99;
+    margin-bottom: 8%;
+}
+
+.pic{
+    height:70px;
+    padding-left: 60px;
+    padding-right: 0px;
+    padding-top: 12px;
+    margin-right: 0px;
+  
+}
+
+/* left side navigation part */
+
+ .leftside{
+    margin-left:20px;
+    margin-right:370px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navleft a{
+
+    position: relative;
+    font-size: 1.3em;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navleft a::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom:-6px;
+    width:50%;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    transform-origin: right;
+    transform:scaleX(0);
+    transition: transform .5s;
+}
+
+.navleft a:hover::after{
+    transform:scaleX(1);
+    transform-origin: left;
+}
+
+
+
+
+/* right side navigation part */
+
+.navigation a {
+    position: relative;
+    font-size: 1.3em;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 45px;
+}
+
+nav a.active:before{
+    position:absolute;
+    content: " ";
+    width:50%;
+    height: 3px;
+    border-bottom: 3px solid black;
+    border-radius: 5px;
+    bottom:-6px;
+    
+}
+.navigation a::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom:-6px;
+    width:50%;
+    height: 3px;
+    background: black;
+    border-radius: 5px;
+    transform-origin: right;
+    transform:scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform:scaleX(1);
+    transform-origin: left;
+}
+
+.forms{
+   margin-top: 7%; 
+   margin-left: 40%;
+}
+ .btns{
+
+    width: 15%;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 8%;
+    background:#3D6181;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight:500;
+}
+.btn-primary{
+    width: 12%;
+    height: 35px;
+    margin-top: 0px;
+    margin-left: 45%;
+    background:#3D6181;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight:500;
+    
+  
+}
+
+.intern{
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+.btn-danger{
+    background:#db2623; 
+    width: 20%;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 6%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight:500;
+ 
+}
+
+.txts{
+    width: 250px;
+    height: 30px;
+    color:#000;
+    background-color:white;
+    font-size: 1.3em;
+}
+
+
+
+                /* table part */
+
+.table{
+    width: 98%; 
+    border-collapse: collapse;
+    margin-left:10px ;
+    margin-right: 10px;
+    margin-top: 4%;
+    margin-bottom: 0%;
+    font-size: 0.9em;
+    min-width: 400px;
+    /* border:black 2px solid; */
+    border-radius: 0px 0px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0 , 0 ,0 ,0.15);
+}
+
+.table thead tr{
+    background-color: #000;
+    color:white;
+    font-weight: bold;
+
+}
+
+.table th{
+    padding: 12px 0px;
+}
+
+.table  td{
+    
+    padding-left:284px;
+    padding-right:0px ;
+    padding-top:12px  ;
+    padding-bottom: 12px ;
+}
+
+
+.table tbody tr {
+
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even){
+   background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type{
+    border-bottom: 3px solid #000;
+}
+
+

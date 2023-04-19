@@ -22,7 +22,7 @@
     ?>
     
 	<title>Admin Add Handler </title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Admin_viewhadler.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <script>
@@ -40,42 +40,40 @@
 
 </head>
 <body>
-	<nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="home.php"><b> On_The_Go Incident Reporter </b></a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      
-      <ul class="nav navbar-nav">
-        <li><a href="official_login.php">Official Login</a></li>
-           
-        <li><a href="Adminlogin.php">Admin Login</a></li>
-        <li class="active"><a href="AdminHome.php">Admin Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="AdminHome.php"> Admin </a></li>
-        <li class="active" ><a href="Admin_viewHandler.php">View Handler</a></li>
-        <li><a href="Admin_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </div>
- </nav>
-   
- <div  style="margin-top: 10%;margin-left: 45%">
-     
-   <a href="Handler add.php" class="btn btn-primary">Add Handler </a>
+	
+   <header>
+
+<div class="leftside">
+    <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         
+           <nav class="navleft">
+             <a href="home.php"> Home </a>
+             <a href="Adminlogin.php">Admin Login</a>
+             <a href="AdminHome.php">Admin Home</a>
+
+         </nav>
  </div>
-    
-<div style="padding:50px;">
-   <table class="table table-bordered">
-    <thead class="thead-dark" style="background-color: black; color: white;">
+
+    <nav class="navigation">
+       
+       <a href="Admin_viewHandler.php" class="active"> View Handler </a>
+       
+       <a href="Admin_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+   
+  
+    </nav>   
+</header>
+
+
+
+<button class="btn-primary"> <a href="Handler add.php" class="intern"> Add Handler </a> </button>
+
+
+
+
+
+   <table class="table">
+    <thead>
       <tr>
         <th scope="col">Handler Id</th>
         <th scope="col">Handler Name</th>
@@ -86,7 +84,7 @@
       while($rows=mysqli_fetch_assoc($result)){
     ?> 
 
-    <tbody style="background-color: white; color: black;">
+    <tbody >
       <tr>
         <td><?php echo $rows['h_id']; ?></td>
         <td><?php echo $rows['h_name']; ?></td> 
@@ -99,13 +97,13 @@
     ?>
   
 </table>
- </div>
+ 
 
 
- <form style="margin-top: 2%; margin-left: 40%;" method="post">
-     <input type="text" name="hid" style="width: 250px; height: 30px; background-color:white;" placeholder="&nbsp Handler Id" id="ciid" onfocusout="f1()" required>
+ <form class="forms">
+     <input type="text" name="hid" class="txts" placeholder="&nbsp Handler Id" id="ciid" onfocusout="f1()" required>
         <div>
-      <input class="btn btn-danger" type="submit" value="Delete Handler" name="s2" style="margin-top: 10px; margin-left: 9%;">
+      <input class="btn-danger" type="submit" value="Delete Handler" name="s2" >
         </div>
     </form>
 

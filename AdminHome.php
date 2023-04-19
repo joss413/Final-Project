@@ -1,83 +1,60 @@
-<meta http-equiv="refresh" content="60; url=Adminlogin.php">
+<!-- <meta http-equiv="refresh" content="60; url=Adminlogin.php"> -->
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.table{
-    border-collapse: collapse;
-    margin: 25px 0px;
-    font-size: 0.9em;
-    min-width: 400px;
-    /* border:black 2px solid; */
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0 , 0 ,0 ,0.15);
-}
-
-.table thead tr{
-    background-color: #000;
-    color:white;
-    font-weight: bold;
-}
-
-.table th,.table td{
-    padding: 12px 15px;
-}
-
-.table tbody tr {
-
-    border-bottom: 1px solid #dddddd;
-}
-
-.table tbody tr:nth-of-type(even){
-   background-color: #f3f3f3;
-}
-
-.table tbody tr:last-of-type{
-    border-bottom: 3px solid #000;
-}
-
-</style> 
 
 
 	<title>Admin Homepage</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/AdminHome.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     
     
      
 </head>
-<body style="background-image: url(search1.jpeg); ">
-	<nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="home.php"><b>On_The_Go Incident Reporter</b></a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li ><a href="official_login.php">Official Login</a></li>
-        <li ><a href="Adminlogin.php">Admin Login</a></li>
-        <li class="active"><a href="AdminHome.php">Admin Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active" ><a href="AdminHome.php"> View users </a></li>
-        <li ><a href="Admin_viewTaker.php">View Taker</a></li>
-        <li ><a href="Admin_viewHandler.php">View Handler</a></li>
-        <li ><a href="Admin_viewpolice.php">View Sub_Police</a></li>
-        <li><a href="h_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </div>
- </nav>
-</br></br></br></br></br></br></br></br>
+<body>
+
+
+<header>
+
+<div class="leftside">
+    <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         
+           <nav class="navleft">
+             <a href="home.php"> Home </a>
+             <a href="official_login.php">Official Login</a>
+             <a href="Adminlogin.php">Admin Login</a> 
+         </nav>
+
+          <ul class="navleft">
+         <li >
+      <a href="#"> View Officers <ion-icon name="caret-down-outline"></ion-icon> </a>
+      <ul class="dropdown">
+
+                <li class=""><a href="Admin_viewTaker.php"> View Taker</a></li>
+                <li class=""><a href="Admin_viewHandler.php">View Handler</a></li>
+                <li class=""><a href="Admin_viewpolice.php"> View Sub_police</a></li>
+               
+      </ul>       
+    </li>
+
+          </ul>
+ </div>
+
+ 
+
+    <nav class="navigation">
+       
+       <a href="AdminHome.php" class="active"> View users</a>
+       <a href="Taker_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+   
+  
+    </nav>   
+</header>
+<h4 class='title'> Registered user Details </h4>
+
 
 <?php
   include("connection.php");
@@ -97,7 +74,7 @@ if (!$result) {
 // Check if there are any complaints in the database
 if (mysqli_num_rows($result) > 0) {
     // Start the table and output the header row
-    echo "<table  class='table';>";
+    echo "<table  class='table'>";
     echo "<thead>";
     echo "<tr>
       <th>Registration ID</th>
@@ -164,18 +141,19 @@ if(isset($_POST['s2']))
 
 
 
-<form style="margin-top: 2%; margin-left: 40%;" method="post">
-     <input type="text" name="uid" style="width: 250px; height: 30px; background-color:white;" placeholder="&nbsp Registration Id" id="ciid" onfocusout="f1()" required>
+<form class="forms" >
+     <input type="text" name="uid" class="txts" placeholder="&nbsp Registration ID" id="ciid" onfocusout="f1()" required>
         <div>
-      <input class="btn btn-danger" type="submit" value="Delete user" name="s2" style="margin-top: 10px; margin-left: 9%;">
+      <input class="btns" type="submit" value="Delete user" name="s2" >
         </div>
     </form>
 
     <?php
-      include("footer.php");
+      include("footers.php");
     ?>
     
-
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>

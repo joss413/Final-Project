@@ -23,7 +23,7 @@
               
                 <nav class="navleft">
                   <a href="home.php"> Home </a>
-                  <a href="Takerlogin.php">Taker Login</a></li>
+                  <a href="Takerlogin.php">Taker Login</a>
               </nav>
       </div>
 

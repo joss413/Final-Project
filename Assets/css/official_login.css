@@ -7,12 +7,11 @@
 }
 
 body{
-    /* display: flex; */
+  
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: url(../pictures/back.jpg) no-repeat;
-    /* background: #659dbd; */
     background-size: cover;
 } 
 header{
@@ -91,6 +90,7 @@ main{
   gap:4em;
   grid-template-columns: repeat(2,500px)  ;     /*the same with (auto, auto);*/
   justify-content: center;
+  margin-bottom: 10%;
     
   
 }
