@@ -144,3 +144,56 @@ nav a.active:before{
     }
 }
  
+
+/* resizing for different screen */
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .pic {
+        height: 50px;
+        padding: 0;
+    }
+    
+    .navigation a {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    
+    nav a.active:before {
+        bottom: -8px;
+    }
+    
+    .container {
+        margin-left: 0;
+    }
+    
+    .container .text {
+        font-size: 40px;
+    }
+    
+    .text.first-text:before {
+        border-left: none;
+        border-top: 2px solid #FFF;
+        animation: animate2 10s linear infinite;
+    }
+    
+    .text.sec-text:before {
+        border-left: none;
+        border-top: 2px solid #4070F4;
+        animation: animate2 10s steps(12) infinite;
+    }
+    
+    @keyframes animate2 {
+        0% {
+            top: 100%;
+        }
+        100% {
+            top: 0%;
+        }
+    }
+}

@@ -8,7 +8,7 @@ include("connection.php");
     session_start();
     if(!isset($_SESSION['x']))
         header("location:Sub_policelogin.php");
-    
+          
     $cid=$_SESSION['cid'];
     $p_id=$_SESSION['pol'];    
     

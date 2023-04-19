@@ -205,3 +205,49 @@ nav a.active:before{
 }
 
 
+/* resizing for different screen size */
+
+@media (max-width: 576px) {
+    .pic {
+      height: 50px;
+      padding-left: 30px;
+      padding-right: 0px;
+      padding-top: 5px;
+    }
+    .leftside {
+      margin-left: 10px;
+      margin-right: 10px;
+      flex-direction: column;
+      align-items: center;
+    }
+    .navleft a {
+      margin: 10px 0;
+    }
+    .navigation a {
+      margin: 10px 0;
+    }
+    .forms {
+      margin-top: 20%;
+      margin-left: 20%;
+    }
+    .txts {
+      width: 200px;
+      height: 25px;
+      font-size: 1.1em;
+    }
+    .btns {
+      width: 25%;
+      height: 30px;
+      margin-top: 10px;
+      margin-left: 5%;
+      font-size: 0.9em;
+    }
+    .btn-primary, .btn-danger {
+      width: 100%;
+    }
+    .table {
+      font-size: 0.8em;
+      min-width: 300px;
+    }
+  }
+  
