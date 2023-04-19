@@ -34,14 +34,29 @@
                      <img src="../on_the_go incident reporter/Assets/pictures/Home3.jpg" alt=""> 
                 </div>
                 <div class="about-content">
+
+                    <input id="ch" type="checkbox">
                         <h2> Vision</h2>
                         <p> 	To make Addis Ababa a city where there is peace and security and where the rule of law is guaranteed.
                                 To create a city where residents feel safe and secure in their homes, workplaces and communities, and where they have trust in the justice system to hold wrongdoers accountable.
-                                And establish Addis Ababa as a model for other cities in Ethiopia and beyond, in terms of safety, security, and rule of law.
+                                And establish Addis Ababa as a model for other cities in Ethiopia and beyond, in terms of safety, security, and rule of law...
                         </p>
-               
+                   <div class="content">
 
-                 <a href="" class="read-more">Read More</a>
+                            <h2>Mission</h2>
+                            <p> Preventing crime and traffic accidents by respecting the country's constitution and other laws and increasing community participation; When it is found, it is to ensure the peace and safety of the city society by investigating the perpetrators according to law.</p>
+                            <h2>Values</h2>
+                            <p> To be absolutely faithful to the constitution of the F.D.R.E
+                                Always put the interests of the country and the people first
+                                Excellent results in any police mission
+                                Caring for the welfare and safety of all members of the community.
+                                Transparency and accountability in decision making
+                            </p>
+
+                            <label for="ch" class="read-more">Show less</label>  <br><br><br>   
+                   </div>
+
+                 <label for="ch" class="read-more">Read More</label>
 
                  </div>
           </section>

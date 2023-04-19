@@ -177,7 +177,7 @@ if(isset($_POST['s'])){
                 <input type="text" name="description" rows="20" cols="50" placeholder="Describe the incident in details with time" onfocusout="f1()" id="desc" required>
                 <label for="exampleInputPassword1">	Description </label>
               </div>
-              <button type="submit" class="btn" name="s">Login</button>
+              <button type="submit" class="btn" name="s">Submit</button>
        </form>             
     </div>
     </div>

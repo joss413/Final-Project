@@ -187,6 +187,27 @@ nav a.active:before{
 }
 
 
+#ch{
+    display:none;
+}
+
+label{
+    display:inline-block;
+    cursor: pointer;
+}
+
+.content{
+    display: none;
+}
+
+#ch:checked ~ .content{
+    display: block;
+}
+
+
+#ch:checked ~ label{
+    display: none;
+}
 /* resizing for different screen sizes*/
 
 
