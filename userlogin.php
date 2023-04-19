@@ -79,7 +79,7 @@ var x3=sta3.indexOf(' ');
          </nav>   
 </header>
 
-<main
+<main>
 	<div class="wrapper">
        <a href="home.php" class="icon-close"> <ion-icon name="close-outline"></ion-icon></a>
 
