@@ -45,7 +45,7 @@ header{
     color: #000;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 3px;
+    margin-left: 4px;
     margin-right: 70px;
 }
 
@@ -77,7 +77,6 @@ nav a.active:before{
     transform:scaleX(1);
     transform-origin: left;
 }
-
 
 /* left side navigation part */
 
@@ -116,17 +115,18 @@ nav a.active:before{
     transform:scaleX(1);
     transform-origin: left;
 }
-
 main{
     margin-top: 11em;
-    margin-left:  23em;
+    margin-left: 23em;
+    margin-bottom:11em;
+    
    
 }
 
 .wrapper{
     position: relative;
     width: 500px;
-    height: 440px;
+    height: 840px;
     background: transparent;
     border: 2px solid rgba(255,255,255, .5);
     border-radius: 20px;
@@ -136,8 +136,7 @@ main{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-bottom: 22.8%;
-    margin-left:3%;
+    margin-left: 4%;
 
 }
 
@@ -170,6 +169,7 @@ main{
     color: #162938;
     text-align: center;
 }
+
 .input-box{
     position: relative;
     width: 100%;
@@ -217,6 +217,18 @@ main{
 }
 
 
+.input-dropdown{
+    position: relative;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.form-control{
+    height: 30px;
+    width: 420px;
+ 
+}
+
 .btn{
     width: 100%;
     height: 45px;
@@ -249,3 +261,7 @@ main{
 .login-register p a:hover{
     text-decoration: underline;
 }
+
+
+
+

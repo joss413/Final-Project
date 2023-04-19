@@ -172,6 +172,7 @@ nav a.active:before{
     font-size: 1em;
     color: #fff;
     font-weight:500;
+    margin-bottom: 20%;
  
 }
 
@@ -215,7 +216,7 @@ nav a.active:before{
 
 .table  td{
     
-    padding-left:124px;
+    padding-left:134px;
     padding-right:0px ;
     padding-top:12px  ;
     padding-bottom: 12px ;

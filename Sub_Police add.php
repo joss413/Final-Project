@@ -3,10 +3,8 @@
 <head>
 	<title>Add police log </title>
 
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Sub_Police add.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
 	<link href="complainer_page.css" rel="stylesheet" type="text/css" media="all" />
@@ -86,10 +84,8 @@ if(isset($_POST['s'])){
 </script>
 </head>
 
-<body style="background-size: cover;
-    background-image: url(pictures/insertpart.jpg);
-    background-position: center;">
-	<nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
+<body>
+	<!-- <nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -158,11 +154,117 @@ if(isset($_POST['s'])){
 			</div>	
 		</div>
 	</div>	
-</div>	
+</div>	 -->
+
+<header>
+
+<div class="leftside">
+    <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         
+           <nav class="navleft">
+             <a href="home.php"> Home </a>
+             <a href="Adminlogin.php">Admin Login</a>
+             <a href="AdminHome.php">Admin Home</a>
+            
+
+         </nav>
+ </div>
+
+    <nav class="navigation">
+       
+       <a href="Sub_Police add.php" class="active"> Add Sub_Police </a>
+       
+       <a href="Admin_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+   
+  
+    </nav>   
+</header>
+
+<main>
+	<div class="wrapper">
+       <a href="Admin_viewpolice.php" class="icon-close"> <ion-icon name="close-outline"></ion-icon></a>
+
+          <div class="form-box login">
+          <h2> Add Sub_Police </h2>
+	   	<form method="post">
+
+           <div class="input-box">
+              
+         
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text"autocomplete="off" name="police_name" placeholder="Police Name" required="" id="pname" onfocusout="f1()"/>
+                <label for="exampleInputName1">Police Name</label>
+           
+            </div>
+
+
+            <div class="input-box">
+              
+         
+              <span class="icon"><ion-icon name="id-card"></ion-icon></span>
+              <input type="email" autocomplete="off"  name="police_id" placeholder="Police Id" minlength="5" maxlength="5"required="" id="pid" onfocusout="f1()"/>
+              <label for="exampleInputName1">Police Id</label>
+         
+          </div>
+
+          <div class="input-dropdown">
+
+                  <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Location of Police </p>  
+                        <select class="form-control" name="location" placeholder="Police Location" required="" id="loc" onfocusout="f1()">
+                          <option>Akaki-Kality</option>
+                          <option>Addis Ketema</option>
+                          <option>Arada</option>
+                          <option>Bole</option>
+                          <option>Gulele</option>
+                          <option>Kolfe Keranio</option>
+                          <option>Lideta</option>
+                          <option>Nefas Silk-Lafto</option>
+                          <option>Kirkos</option>
+                          <option>Yeka</option>
+                          <option>Lemi Kura</option>
+                          
+                        </select>
+             <div>  
+
+             <div class="input-dropdown">
+
+                      <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Specification </p>  
+                            <select class="form-control" name="specification" placeholder="specification" required="" id="spec" onfocusout="f1()">
+                                     
+                                      <option>Inspector</option>
+                                      <option>Surf</option>
+                            
+                              
+                            </select>
+                      <div>     
+
+
+
+
+           <div class="input-box" >
+     
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="text" autocomplete="off" name="password" placeholder="6 Character minimum" pattern=".{6,}" required="" id="pas" onfocusout="f1()"/>
+                <label for="exampleInputPassword1">Password</label>
+              </div>
+              <button type="submit" class="btn" name="s" onclick="f1()"> Add </button>
+              </form>             
+       </div>
+    </div>
+    </main>
+
 
 <?php
-include("connection.php");
+
+include("footers.php");
 ?>
+
+
+
+
+
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
