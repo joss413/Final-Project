@@ -2,17 +2,12 @@
 <html>
 <head>
 <?php
+  include("connection.php");
     session_start();
     if(!isset($_SESSION['x']))
         header("location:Adminlogin.php");
-    $conn=mysqli_connect("localhost","root","");
-    if(!$conn)
-    {
-        die("could not connect".mysqli_error());
-    }
-    mysqli_select_db($conn,"on_the_go incident reporter");
-    
-    if(isset($_POST['h2']))
+  
+    if(isset($_POST['s2']))
     {
         if($_SERVER["REQUEST_METHOD"]=="POST")
         {
@@ -108,7 +103,7 @@
      <input type="text" name="hid" class="txts" placeholder="&nbsp Handler Id" id="ciid" onfocusout="f1()" required>
         <div>
         
-        <input class="btn-danger" type="submit" value="Delete Handler" name="h2" > 
+        <input class="btn-danger" type="submit" value="Delete Handler" name="s2" > 
         </div>
     </form>
 

@@ -46,7 +46,7 @@ header{
 
  .leftside{
     margin-left:20px;
-    margin-right:370px;
+    margin-right:350px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -172,7 +172,7 @@ nav a.active:before{
     font-size: 1em;
     color: #fff;
     font-weight:500;
-    margin-bottom: 20%;
+    margin-bottom: 26.5%;
  
 }
 
