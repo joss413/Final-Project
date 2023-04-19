@@ -14,7 +14,9 @@
     $u_id=$_SESSION['u_id'];
     $c_id=$_SESSION['cid'];
         
-    $query="select c_id,description,inc_status,pol_status from complaint natural join user where c_id='$c_id' and u_id='$u_id'";
+
+   
+    $query="SELECT c_id,location,description,inc_status,pol_status,p_id from p_handler natural join user where c_id='$c_id' and u_id='$u_id'";
     $result=mysqli_query($conn,$query);
     
     $res2=mysqli_query($conn,"select d_o_u,case_update from update_case where c_id='$c_id'");
@@ -66,7 +68,7 @@
             <?php
               while($rows=mysqli_fetch_assoc($result)){
             ?> 
-             <tbody style="background-color: white; color: black;">
+             <tbody >
               <tr>
                 <td><?php echo $rows['c_id']; ?></td>
                 <td><?php echo $rows['description']; ?></td>     
@@ -106,10 +108,10 @@
  
           
             </table>
-        </div>
+        </div> 
     
         <?php
-        include("footer.php");
+        include("footers.php");
         ?>
     
      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
