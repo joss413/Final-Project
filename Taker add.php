@@ -143,29 +143,6 @@ if(isset($_POST['s'])){
 </main>
 
 
-<!-- 
-<div class="video" style="margin-top: 5%"> 
-	<div class="center-container">
-		 <div class="bg-agile">
-			<br><br>
-			<div class="login-form"><p>
-                <h2>Log Taker </h2><br>
-      <form  method="post" style="color: gray">
-      
-      
-      Taker Name<input type="text"  name="taker_name" placeholder="Taker Name" required="" id="tname" onfocusout="f1()"/>
-	  Taker Id<input type="email"  name="taker_id" placeholder="Taker Id" minlength="5" maxlength=5 required="" id="tid" onfocusout="f1()"/>
-					<br>
-      Password<input type="text"  name="password" placeholder="6 Character minimum" pattern=".{6,}" required="" id="pas" onfocusout="f1()"/>
-	                <input type="submit" value="Submit" name="s">
-
-
-           
-				</form>	
-			</div>	
-		</div>
-	</div>	
-</div>	 -->
 
 <?php
 include("footers.php");

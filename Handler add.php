@@ -3,11 +3,9 @@
 <head>
 	<title>Add Handler log </title>
 
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Handler add.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
 	<link href="complainer_page.css" rel="stylesheet" type="text/css" media="all" />
 	<?php
@@ -76,58 +74,81 @@ if(isset($_POST['s'])){
 </script>
 </head>
 
-<body style="background-size: cover;
-    background-image: url(pictures/insertpart.jpg);
-    background-position: center;">
-	<nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="home.php"><b> On_The_Go Incident Reporter</b></a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li ><a href="official_login.php">Admin Login</a></li>
-        <li><a href="AdminHome.php">Admin Home</a></li>
-      </ul>
-     
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="Handler add.php"> Log Handler </a></li>
-      <li> <a href="Admin_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </div>
- </nav>
-<div class="video" style="margin-top: 5%"> 
-	<div class="center-container">
-		 <div class="bg-agile">
-			<br><br>
-			<div class="login-form"><p>
-                <h2>Log Handler </h2><br>
-      <form  method="post" style="color: gray">
-      
-      
-      Handler Name<input type="text"  name="handler_name" placeholder="Handler Name" required="" id="hname" onfocusout="f1()"/>
-	  Handler Id<input type="email"  name="handler_id" placeholder="Handler Id" minlength="5" maxlength=5" required="" id="hid" onfocusout="f1()"/>
-					<br>
-      Password<input type="text"  name="password" placeholder="6 Character minimum" pattern=".{6,}" required="" id="pas" onfocusout="f1()"/>
-	                <input type="submit" value="Submit" name="s">
-				</form>	
-			</div>	
-		</div>
-	</div>	
-</div>	
+<body>
 
+
+<header>
+
+<div class="leftside">
+    <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         
+           <nav class="navleft">
+             <a href="home.php"> Home </a>
+             <a href="Adminlogin.php">Admin Login</a>
+             <a href="AdminHome.php">Admin Home</a>
+            
+
+         </nav>
+ </div>
+
+    <nav class="navigation">
+       
+       <a href="Handler add.php" class="active"> Add Handler </a>
+       
+       <a href="Admin_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+   
+  
+    </nav>   
+</header>
+
+<main>
+	<div class="wrapper">
+       <a href="Admin_viewHandler.php" class="icon-close"> <ion-icon name="close-outline"></ion-icon></a>
+
+          <div class="form-box login">
+          <h2> Add Handler </h2>
+	   	<form method="post">
+
+           <div class="input-box">
+              
+         
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" autocomplete="off" name="handler_name" placeholder="Handler Name" required="" id="hname" onfocusout="f1()"/>
+                <label for="exampleInputName1">Handler Name</label>
+           
+            </div>
+
+
+            <div class="input-box">
+              
+         
+              <span class="icon"><ion-icon name="id-card"></ion-icon></span>
+              <input type="email" autocomplete="off" name="handler_id" placeholder="Handler Id" minlength="5" maxlength=5" required="" id="hid" onfocusout="f1()"/>
+              <label for="exampleInputName1">Handler Id</label>
+         
+          </div>
+
+
+
+           <div class="input-box" >
+     
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="text" autocomplete="off" name="password" placeholder="6 Character minimum" pattern=".{6,}" required="" id="pas" onfocusout="f1()"/>
+                <label for="exampleInputPassword1">Password</label>
+              </div>
+              <button type="submit" class="btn" name="s" onclick="f1()"> Add </button>
+              </form>             
+       </div>
+    </div>
+</main>
 <?php
 
-include('footer.php');
+include('footers.php');
 
 ?>
+
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
