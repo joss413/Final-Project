@@ -12,7 +12,7 @@
 <body>
     
         <header>
-         <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
          
          <nav class="navigation">
@@ -29,11 +29,55 @@
 
         
         
-        <main >
+        <div class="container">
+        <span class="text first-text"> </span>
+        <span class="text sec-text"> </span>
+        </div>
 
-        </main> 
-      
+    <script>
+
+      const texts = document.querySelector(".first-text");
+
+        const textLoads = () => {
+            setTimeout(() => {
+                texts.textContent = " Welcome To ";
+            }, 0);
+            setTimeout(() => {
+                texts.textContent = " Please feel free ";
+            }, 10000);
+            setTimeout(() => {
+                texts.textContent = " For more Information ";
+            }, 20000); //1s = 1000 milliseconds
+        }
+
+        textLoads();
+        setInterval(textLoads, 30000);
+
     
+
+
+        const text = document.querySelector(".sec-text");
+
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "  On_The_Go Incident Reporter";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = "to use our Page!!!";
+            }, 10000);
+            setTimeout(() => {
+                text.textContent = " Call 991";
+            }, 20000); //1s = 1000 milliseconds
+        }
+
+        textLoad();
+        setInterval(textLoad, 30000);
+
+
+
+
+
+    </script>    
 
 
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>

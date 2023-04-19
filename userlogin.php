@@ -64,7 +64,7 @@ var x3=sta3.indexOf(' ');
 <body>
 	
 <header>
-         <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logo.jpg" alt="Addis Ababa police commission logo"  ></a>
+         <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
          
          <nav class="navigation">
