@@ -140,7 +140,7 @@ if(isset($_POST['s2']))
 
 
 
-<form class="forms" >
+<form class="forms" method="post">
      <input type="text" name="uid" class="txts" placeholder="&nbsp Registration ID" id="ciid" onfocusout="f1()" required>
         <div>
       <input class="btns" type="submit" value="Delete user" name="s2" >

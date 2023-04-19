@@ -20,7 +20,7 @@
             <a href="home.php" class="active"> Home </a>
             <a href="userlogin.php"> User Login </a>
             <a href="official_login.php"> Offical Login </a>
-            <a href="About.php"> About </a>
+            <a href="About page.php"> About Us</a>
            
         
        
