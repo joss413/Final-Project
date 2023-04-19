@@ -40,13 +40,15 @@
          
            <nav class="navleft">
              <a href="home.php"> Home </a>
+             <a href="complainer_complain_history.php" > Complaint History</a>
             
          </nav>
  </div>
 
     <nav class="navigation">
        
-       <a href="complainer_complain_history.php" class="active"> Complaint History</a>
+       <a href="complainer_complain_details.php" class="active"> Complaint Details </a>
+       
        <a href="complainer_page.php">Log New Complain</a>
        <a href="Taker_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
    
@@ -83,7 +85,7 @@
        
     
         <h4 class='title'>Case Details</h4>
-            <table class="table ">
+            <table class="table" id="bottom-update">
                <thead >
                    <tr>
                         <th class="head"scope="col">Date Of Update</th>

@@ -91,7 +91,7 @@ header{
     color: #000;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 95px;
+    margin-left:50px;
    
 }
 
@@ -243,3 +243,7 @@ nav a.active:before{
   tbody tr:last-of-type{
     border-bottom: 1px solid #000;
 } 
+
+#bottom-update{
+    margin-bottom: 34%;
+}
