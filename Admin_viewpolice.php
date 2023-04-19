@@ -110,7 +110,7 @@
 </table>
  </div>
 
- <form class="forms">
+ <form class="forms" method="post" >
      <input type="text" name="pid" class="txts" placeholder="&nbsp Police Id" id="ciid" onfocusout="f1()" required>
         <div>
       <input class="btn-danger" type="submit" value="Delete Sub_police" name="s2" >

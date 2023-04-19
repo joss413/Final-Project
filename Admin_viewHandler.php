@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php
-    include("connection.php");
+<?php
     session_start();
     if(!isset($_SESSION['x']))
         header("location:Adminlogin.php");
-
-    if(isset($_POST['s2']))
+    $conn=mysqli_connect("localhost","root","");
+    if(!$conn)
+    {
+        die("could not connect".mysqli_error());
+    }
+    mysqli_select_db($conn,"on_the_go incident reporter");
+    
+    if(isset($_POST['h2']))
     {
         if($_SERVER["REQUEST_METHOD"]=="POST")
         {
@@ -19,8 +24,7 @@
     }
     $query="select h_id,h_name from handler";
     $result=mysqli_query($conn,$query);  
-    ?>
-    
+  ?>
 	<title>Admin Add Handler </title>
   <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Admin_viewhadler.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -100,10 +104,11 @@
  
 
 
- <form class="forms">
+ <form class="forms" method="post" >
      <input type="text" name="hid" class="txts" placeholder="&nbsp Handler Id" id="ciid" onfocusout="f1()" required>
         <div>
-      <input class="btn-danger" type="submit" value="Delete Handler" name="s2" >
+        
+        <input class="btn-danger" type="submit" value="Delete Handler" name="h2" > 
         </div>
     </form>
 
@@ -114,3 +119,5 @@ include("footers.php");
  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
