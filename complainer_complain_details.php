@@ -3,16 +3,10 @@
 <head>
     
   <?php
+   include("connection.php");
     session_start();
     
-    $conn=mysqli_connect("localhost","root","");
-    if(!$conn)
-    {
-        die("could not connect".mysqli_error());
-    }
-    mysqli_select_db($conn,"on_the_go incident reporter");
-    
-    
+   
     if(!isset($_SESSION['x']))
         header("location:userlogin.php");
     

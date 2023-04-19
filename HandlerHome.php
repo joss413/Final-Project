@@ -6,8 +6,6 @@
 <html>
 <head>
 
-
-	<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
   <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/HandlerHome.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -66,31 +64,6 @@
 </head>
 <body >
 
-	<!-- <nav  class="navbar navbar-default navbar-fixed-top" style="background-color:#3b3b3b;">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="home.php"><b> On_The_go Incident Reporter </b></a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li ><a href="official_login.php">Official Login</a></li>
-        <li ><a href="Handlerlogin.php">Handler Login</a></li>
-        <li class="active"><a href="HandlerHome.php">Handler Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      
-        <li><a href="Handler_logout.php">Logout &nbsp <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-  </div>
- </nav>
-  -->
 
 
   <header>
