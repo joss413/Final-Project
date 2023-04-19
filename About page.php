@@ -37,20 +37,20 @@
 
                     <input id="ch" type="checkbox">
                         <h2> Vision</h2>
-                        <p> 	To make Addis Ababa a city where there is peace and security and where the rule of law is guaranteed.
-                                To create a city where residents feel safe and secure in their homes, workplaces and communities, and where they have trust in the justice system to hold wrongdoers accountable.
-                                And establish Addis Ababa as a model for other cities in Ethiopia and beyond, in terms of safety, security, and rule of law...
+                        <p> 	- To make Addis Ababa a city where there is peace and security and where the rule of law is guaranteed.<br>
+                                - To create a city where residents feel safe and secure in their homes, workplaces and communities, and where they have trust in the justice system to hold wrongdoers accountable.<br>
+                                - And establish Addis Ababa as a model for other cities in Ethiopia and beyond, in terms of safety, security, and rule of law...
                         </p>
                    <div class="content">
 
                             <h2>Mission</h2>
-                            <p> Preventing crime and traffic accidents by respecting the country's constitution and other laws and increasing community participation; When it is found, it is to ensure the peace and safety of the city society by investigating the perpetrators according to law.</p>
+                            <p> - Preventing crime and traffic accidents by respecting the country's constitution and other laws and increasing community participation; When it is found, it is to ensure the peace and safety of the city society by investigating the perpetrators according to law.</p>
                             <h2>Values</h2>
-                            <p> To be absolutely faithful to the constitution of the F.D.R.E
-                                Always put the interests of the country and the people first
-                                Excellent results in any police mission
-                                Caring for the welfare and safety of all members of the community.
-                                Transparency and accountability in decision making
+                            <p> - To be absolutely faithful to the constitution of the F.D.R.E <br>
+                                - Always put the interests of the country and the people first. <br>
+                                - Excellent results in any police mission. <br>
+                                - Caring for the welfare and safety of all members of the community.<br>
+                                - Transparency and accountability in decision making. <br>
                             </p>
 
                             <label for="ch" class="read-more">Show less</label>  <br><br><br>   
