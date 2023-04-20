@@ -21,9 +21,9 @@ if(isset($_POST['s'])){
         $t_id=$_POST['taker_id'];
         $t_pass=$_POST['password'];
 
-        $hash = password_hash($t_pass,PASSWORD_DEFAULT);
-
-   
+      
+        $hash = password_hash($t_pass, PASSWORD_BCRYPT);
+        
     $reg="insert into taker values('$t_id','$t_name','$hash')";
      mysqli_select_db($conn,"on_the_go incident reporter");
         $res=mysqli_query($conn,$reg);

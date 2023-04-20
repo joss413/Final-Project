@@ -13,10 +13,11 @@ if(isset($_POST['s'])){
         $id_no=$_POST['id_number'];
         $gen=$_POST['gender'];
         $mob=$_POST['mobile_number'];
+        $code=$_POST['code'];
        // $password=md5($u_pass);
-       $reg="insert into user values('$u_name','$u_id','$u_pass','$sub','$woreda','$id_no','$gen','$mob')";
-        mysqli_select_db($con,"on_the_go incident reporter");
-        $res=mysqli_query($con,$reg);
+       $reg="insert into user values('$u_name','$u_id','$u_pass','$sub','$woreda','$id_no','$gen','$mob','$code')";
+        
+        $res=mysqli_query($conn,$reg);
         if(!$res)
         {
         $message1 = "User Already Exist";
@@ -40,6 +41,7 @@ if(isset($_POST['s'])){
             var sta3=document.getElementById("addr").value;
             var sta4=document.getElementById("id").value;
             var sta5=document.getElementById("mobno").value;
+            var sta6=document.getElementById("cd").value;
 	   
   var x=sta.trim();
   var x1=sta1.indexOf(' ');
@@ -48,6 +50,8 @@ if(isset($_POST['s'])){
   var x3=sta3.indexOf(' ');
   var x4=sta4.indexOf(' ');
 	var x5=sta5.indexOf(' ');
+  var x6=sta6.indexOf(' ');
+
 	if(sta!="" && x==""){
 		document.getElementById("name1").value="";
 		document.getElementById("name1").focus();
@@ -77,6 +81,12 @@ if(isset($_POST['s'])){
         else if(sta5!="" && x5>=0){
     document.getElementById("mobno").value="";
     document.getElementById("mobno").focus();
+      alert("Space Not Allowed");
+        }
+
+        else if(sta6!="" && x6==""){
+    document.getElementById("cd").value="";
+    document.getElementById("cd").focus();
       alert("Space Not Allowed");
         }
 }
@@ -184,10 +194,17 @@ if(isset($_POST['s'])){
                            
                     </div>
 
+                    <div class="input-box">
+
+                      <span class="icon"><ion-icon name="qr-code-outline"></ion-icon></span>
+                      <input type="text"  name="code" minlength="5" autocomplete="off"  maxlength="10" required pattern="^[a-zA-Z0-9!@#$%^&*()_+-=]{5,10}$" onfocusout="f1()"/>
+                      <label>Recovery code</label>
+
+                    </div>
 
                     <div class="input-box">
                             <span class="icon"><ion-icon name="call"></ion-icon></span>
-                            <input type="text"  name="mobile_number" autocomplete="off" placeholder="Country code +251" required pattern="[+251][0-9]{}" minlength="13" maxlength="13" id="mobno" onfocusout="f1()"/>
+                            <input type="text"  name="mobile_number" autocomplete="off" placeholder="Country code +251" required pattern="^\+251\d{9}$" minlength="13" maxlength="13" id="mobno" onfocusout="f1()"/>
                             <label>Mobile</label>
                     </div>
           

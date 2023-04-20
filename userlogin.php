@@ -35,6 +35,8 @@ if(isset($_POST['s']))
     
 }
 ?> 
+
+
   <link rel="stylesheet" href="../on_the_go incident reporter/Assets/css/userlogin.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -57,6 +59,10 @@ var x3=sta3.indexOf(' ');
         }
 
 }
+
+
+
+
     </script>
     
 	<title>Complainant Login</title>
@@ -104,7 +110,7 @@ var x3=sta3.indexOf(' ');
    
           <div class="remeber-forgot">
                <span> </span>
-               <a href="#"> Forgot Password? </a>
+               <a href="Forgot-password.php"> Forgot Password? </a>
           </div>
             
           <button type="submit" class="btn" name="s" onclick="f1()">Login</button>
