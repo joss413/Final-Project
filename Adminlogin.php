@@ -8,7 +8,58 @@
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	
 	<title>Admin Login</title>
-  <?php
+
+
+  <script>
+     function f1()
+        {
+            var sta2=document.getElementById("exampleInputEmail1").value;
+            var sta3=document.getElementById("exampleInputPassword1").value;
+          var x2=sta2.indexOf(' ');
+var x3=sta3.indexOf(' ');
+    if(sta2!="" && x2>=0){
+    document.getElementById("exampleInputEmail1").value="";
+    document.getElementById("exampleInputEmail1").focus();
+      alert("Space Not Allowed");
+        }
+        else if(sta3!="" && x3>=0){
+    document.getElementById("exampleInputPassword1").value="";
+    document.getElementById("exampleInputPassword1").focus();
+      alert("Space Not Allowed");
+        }
+
+}
+    
+    function myFunction(){
+
+var x = document.getElementById("exampleInputPassword1");
+var y = document.getElementById("eye1");
+var z = document.getElementById("eye2");
+
+     if(x.type ==='password'){
+        
+         x.type ="text";
+         y.style.display ="block";
+         z.style.display="none";
+     }
+
+     else{
+         x.type ="password";
+         y.style.display ="none";
+         z.style.display="block";
+     
+     }
+
+}
+
+  </script>
+
+
+</head>
+
+<body>
+
+<?php
     include("connection.php");
 if(isset($_POST['s']))
 {
@@ -34,9 +85,6 @@ if(isset($_POST['s']))
     }                
 }
 ?> 
-</head>
-
-
 <header>
          <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
@@ -68,7 +116,10 @@ if(isset($_POST['s']))
              
            <div class="input-box" >
      
-                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <span class="icon" onclick="myFunction()">
+                  <ion-icon id="eye1" name="eye-sharp"></ion-icon>
+                  <ion-icon id="eye2"   name="eye-off-sharp"></ion-icon>
+                </span>
                 <input type="password" name="password" class="form-control" id="exampleInputPassword1" autocomplete="off" placeholder="Password" required>
                 <label for="exampleInputPassword1">Password</label>
               </div>

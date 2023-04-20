@@ -1,5 +1,5 @@
 
-<!-- <meta http-equiv="refresh"  content="60;url=Handlerlogin.php"> -->
+<meta http-equiv="refresh"  content="60;url=Handlerlogin.php">
 
 
 <!DOCTYPE html>

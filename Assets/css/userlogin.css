@@ -230,6 +230,14 @@ main{
     text-decoration: underline;
 }
 
+#eye1{
+  display: none;
+  margin-top:92%;
+}
+
+#eye2{
+   margin-top:92%;
+}
 
 
 /* resizing for different screen size */

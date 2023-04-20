@@ -1,3 +1,4 @@
+<meta http-equiv="refresh" content="60;url=userlogin.php"> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,25 +12,48 @@
      <script>
      function f1()
         {
-            var sta2=document.getElementById("InputEmail1").value;
-            var sta3=document.getElementById("InputCode1").value;
-          var x2=sta2.indexOf(' ');
-          var x3=sta3.indexOf(' ');
+         var sta2=document.getElementById("InputEmail1").value;
+         var sta3=document.getElementById("InputCode1").value;
+               
+           var x2=sta2.indexOf(' ');
+           var x3=sta3.indexOf(' ');
 
-    if(sta2!="" && x2>=0){
-    document.getElementById("InputEmail1").value="";
-    document.getElementById("InputEmail1").focus();
-      alert("Space Not Allowed");
+                if(sta2!="" && x2>=0){
+                document.getElementById("InputEmail1").value="";
+                document.getElementById("InputEmail1").focus();
+                alert("Space Not Allowed");
+                    }
+                else if(sta3!="" && x3>=0){
+            document.getElementById("InputCode1").value="";
+            document.getElementById("InputCode1").focus();
+            alert("Space Not Allowed");
+                }
+
         }
-        else if(sta3!="" && x3>=0){
-    document.getElementById("InputCode1").value="";
-    document.getElementById("InputCode1").focus();
-      alert("Space Not Allowed");
-        }
+
+
+
+function myFunction(){
+
+var x = document.getElementById("InputCode1");
+var y = document.getElementById("eye1");
+var z = document.getElementById("eye2");
+
+     if(x.type ==='password'){
+        
+         x.type ="text";
+         y.style.display ="block";
+         z.style.display="none";
+     }
+
+     else{
+         x.type ="password";
+         y.style.display ="none";
+         z.style.display="block";
+     
+     }
 
 }
-
-
 
 
     </script>
@@ -109,7 +133,10 @@ if(isset($_POST['s']))
                     <div class="input-box">
               
          
-                            <span class="icon"><ion-icon name="qr-code-outline"></ion-icon></span>
+                            <span class="icon" onclick="myFunction()">
+                                <ion-icon id="eye1" name="eye-sharp"></ion-icon>
+                                <ion-icon id="eye2"   name="eye-off-sharp"></ion-icon>
+                            </span>
                             <input type="password"  id="InputCode1" autocomplete="off" aria-describedby="emailHelp" size="5" placeholder="Enter code " required name="code" onfocusout="f1()">
                             <label for="exampleInputEmail1"> Recovery code </label>
          

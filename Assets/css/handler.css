@@ -199,3 +199,75 @@ main{
     height: 30px;
     background-color:white;
 }
+
+#eye1{
+    display: none;
+    margin-top:92%;
+  }
+  
+  #eye2{
+     margin-top:92%;
+  }
+
+
+
+  /* resizing for different screen size */
+
+@media screen and (max-width: 576px) {
+
+    header{
+        padding: 0px 5px; 
+    }
+
+    .pic{
+        padding-left: 20px;
+        padding-top: 10px;
+    }
+
+    .navigation a {
+        font-size: 1.1em;
+        margin-left: 2px;
+        margin-right: 20px;
+    }
+
+    main{
+        margin-top: 8em;
+        margin-left: 0;
+    }
+
+    .wrapper{
+        width: 90%;
+        height: 400px;
+        margin-left: 5%;
+        margin-bottom: 15%;
+    }
+
+    .wrapper .form-box {
+        padding: 30px;
+    }
+
+    .input-box label{
+        font-size: .8em;
+    }
+
+    .input-box input{
+        height: 120%;
+        font-size: .9em;
+    }
+
+    .remeber-forgot{
+        font-size: .7em;
+        margin: -10px 0 10px;
+    }
+
+    .btn{
+        height: 40px;
+        font-size: .8em;
+    }
+
+    .login-register{
+        font-size: .7em;
+        margin: 20px 0 5px;
+    }
+
+}

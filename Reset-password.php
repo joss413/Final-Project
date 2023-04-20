@@ -1,3 +1,4 @@
+<meta http-equiv="refresh" content="60;url=userlogin.php"> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,9 +40,76 @@
       alert("Space Not Allowed");
         }
 
+  let password= document.getElementById("InputPass1").value;
+  let confirmPassword = document.getElementById("InputConfirm1").value;
+  // console.log(password,cnfrmPassword);
+ 
+   let message =document.getElementById("message");
+          
+         if(password.length!= 0){
+             
+            if(password == confirmPassword){
+
+              message.textContent = "Passwords match";
+              message.style.backgroundColor="#3ae374";
+            }
+
+            else{
+               message.textContent = "Password don't match";
+               message.style.backgroundColor="#ff4d4d";
+            }
+         }
+
+        //  else{
+        //        alert("Password can't be empty!");
+        //        message.textContent = "";
+        //  }
+
 }
 
+function myFunction(){
 
+var x = document.getElementById("InputPass1");
+var y = document.getElementById("eye1");
+var z = document.getElementById("eye2");
+
+     if(x.type ==='password'){
+        
+         x.type ="text";
+         y.style.display ="block";
+         z.style.display="none";
+     }
+
+     else{
+         x.type ="password";
+         y.style.display ="none";
+         z.style.display="block";
+     
+     }
+
+    }
+
+     function confirms(){
+
+var x = document.getElementById("InputConfirm1");
+var y = document.getElementById("eye1");
+var z = document.getElementById("eye2");
+
+     if(x.type ==='password'){
+        
+         x.type ="text";
+         y.style.display ="block";
+         z.style.display="none";
+     }
+
+     else{
+         x.type ="password";
+         y.style.display ="none";
+         z.style.display="block";
+     
+     }
+
+    }
 
 
     </script>
@@ -75,7 +143,7 @@ if(isset($_POST['reset'])){
     } 
     
     else {
-      
+
         $message = "Invalid email address!";
         echo "<script type='text/javascript'>alert('$message');</script>";
     }
@@ -119,11 +187,32 @@ if(isset($_POST['reset'])){
                     <div class="input-box">
               
          
-                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                              <span class="icon" onclick="myFunction()">
+                                <ion-icon id="eye1" name="eye-sharp"></ion-icon>
+                                <ion-icon id="eye2"   name="eye-off-sharp"></ion-icon>
+                              </span>
                             <input type="password"  id="InputPass1" autocomplete="off" aria-describedby="emailHelp" size="5" placeholder="Enter New password" required name="password" onfocusout="f1()">
                             <label for="exampleInputEmail1"> New Password </label>
          
-                 </div>
+                   </div>
+
+                    <div class="input-box">
+              
+         
+                        <span class="icon" onclick="confirms()">
+                          <ion-icon id="eye1" name="eye-sharp"></ion-icon>
+                          <ion-icon id="eye2"   name="eye-off-sharp"></ion-icon>
+                        </span>
+                        <input type="password"  id="InputConfirm1" autocomplete="off" aria-describedby="emailHelp" size="5" placeholder="Confirm password" required name="" onfocusout="f1()">
+                        <label for="exampleInputEmail1"> Confirm Password </label>
+
+                  </div>
+
+                  
+              
+                    <p style="margin-bottom:5%;"id="message">  </p>
+            
+                   
 
                  <button type="submit" class="btn" name="reset" onclick="f1()">Reset</button>
                  </form>             

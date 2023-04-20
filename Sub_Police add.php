@@ -8,38 +8,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
 	<link href="complainer_page.css" rel="stylesheet" type="text/css" media="all" />
-	<?php
-  include("connection.php");
-    session_start();
-    if(!isset($_SESSION['x']))
-        header("location:Adminlogin.php");
-if(isset($_POST['s'])){
-  
-    if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $location=$_POST['location'];
-        $p_name=$_POST['police_name'];
-        $p_id=$_POST['police_id'];
-        $p_pass=$_POST['password'];
-        $spec=$_POST['specification'];
 
-    
-    $reg="insert into sub_police values('$p_name','$p_id','$spec','$location','$p_pass')";
-     mysqli_select_db($conn,"on_the_go incident reporter");
-        $res=mysqli_query($conn,$reg);
-        if(!$res)
-            {
-        $message1 = "User Already Exist";
-        echo "<script type='text/javascript'>alert('$message1');</script>";
-    }
-            
-        else
-    {
-        $message = "Subcity Police Added Successfully";
-        echo "<script type='text/javascript'>alert('$message');</script>";
-    }
-    }
-}
-?>
 <script>
      function f1()
         {
@@ -81,10 +50,79 @@ if(isset($_POST['s'])){
       alert("Space Not Allowed");
         }
       }
+
+      function myFunction(){
+
+var x = document.getElementById("pas");
+var y = document.getElementById("eye1");
+var z = document.getElementById("eye2");
+
+     if(x.type ==='password'){
+        
+         x.type ="text";
+         y.style.display ="block";
+         z.style.display="none";
+     }
+
+     else{
+         x.type ="password";
+         y.style.display ="none";
+         z.style.display="block";
+     
+     }
+
+
+
+    }
+
+
+
+
 </script>
 </head>
 
 <body>
+
+<?php
+  include("connection.php");
+    session_start();
+    if(!isset($_SESSION['x']))
+        header("location:Adminlogin.php");
+if(isset($_POST['s'])){
+  
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        $location=$_POST['location'];
+        $p_name=$_POST['police_name'];
+        $p_id=$_POST['police_id'];
+        $p_pass=$_POST['password'];
+        $spec=$_POST['specification'];
+
+    
+    $reg="insert into sub_police values('$p_name','$p_id','$spec','$location','$p_pass')";
+     mysqli_select_db($conn,"on_the_go incident reporter");
+        $res=mysqli_query($conn,$reg);
+        if(!$res)
+            {
+        $message1 = "User Already Exist";
+        echo "<script type='text/javascript'>alert('$message1');</script>";
+    }
+            
+        else
+    {
+        $message = "Subcity Police Added Successfully";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+    }
+    }
+}
+?>
+
+
+
+
+
+
+
+
 <header>
 
 <div class="leftside">
@@ -172,7 +210,10 @@ if(isset($_POST['s'])){
 
            <div class="input-box" >
      
-                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <span class="icon" onclick="myFunction()">
+                  <ion-icon id="eye1" name="eye-sharp"></ion-icon>
+                  <ion-icon id="eye2"   name="eye-off-sharp"></ion-icon>
+                </span>
                 <input type="text" autocomplete="off" name="password" placeholder="6 Character minimum" pattern=".{6,}" required="" id="pas" onfocusout="f1()"/>
                 <label for="exampleInputPassword1">Password</label>
               </div>

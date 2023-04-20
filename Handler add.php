@@ -1,45 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add Handler log </title>
+	<title> Add Handler log </title>
 
   <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/Handler add.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
 	<link href="complainer_page.css" rel="stylesheet" type="text/css" media="all" />
-	<?php
-  include("connection.php");
-    session_start();
-    if(!isset($_SESSION['x']))
-        header("location:Adminlogin.php");
-if(isset($_POST['s'])){
-   
-    if($_SERVER["REQUEST_METHOD"]=="POST"){
-    
-        $h_name=$_POST['handler_name'];
-        $h_id=$_POST['handler_id'];
-        $h_pass=$_POST['password'];
-        
 
-    
-    $reg="insert into handler values('$h_id','$h_name','$h_pass')";
-     mysqli_select_db($conn,"on_the_go incident reporter");
-        $res=mysqli_query($conn,$reg);
-        if(!$res)
-            {
-        $message1 = "User Already Exist";
-        echo "<script type='text/javascript'>alert('$message1');</script>";
-    }
-            
-        else
-    {
-        $message = "Handler Added Successfully";
-        echo "<script type='text/javascript'>alert('$message');</script>";
-    }
-    }
-}
-?>
 <script>
      function f1()
         {
@@ -71,11 +40,72 @@ if(isset($_POST['s'])){
         }
      
       }
+
+
+      function myFunction(){
+
+var x = document.getElementById("pas");
+var y = document.getElementById("eye1");
+var z = document.getElementById("eye2");
+
+     if(x.type ==='password'){
+        
+         x.type ="text";
+         y.style.display ="block";
+         z.style.display="none";
+     }
+
+     else{
+         x.type ="password";
+         y.style.display ="none";
+         z.style.display="block";
+     
+     }
+
+
+
+
+    }
+
+
+
+
 </script>
 </head>
 
 <body>
+<?php
+  include("connection.php");
+    session_start();
+    if(!isset($_SESSION['x']))
+        header("location:Adminlogin.php");
+if(isset($_POST['s'])){
+   
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+    
+        $h_name=$_POST['handler_name'];
+        $h_id=$_POST['handler_id'];
+        $h_pass=$_POST['password'];
+        
 
+    
+    $reg="insert into handler values('$h_id','$h_name','$h_pass')";
+     mysqli_select_db($conn,"on_the_go incident reporter");
+        $res=mysqli_query($conn,$reg);
+        if(!$res)
+            {
+        $message1 = "User Already Exist";
+        echo "<script type='text/javascript'>alert('$message1');</script>";
+    }
+            
+        else
+    {
+        $message = "Handler Added Successfully";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+    }
+    }
+}
+?>
 
 <header>
 
@@ -132,7 +162,10 @@ if(isset($_POST['s'])){
 
            <div class="input-box" >
      
-                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <span class="icon" onclick="myFunction()">
+                  <ion-icon id="eye1" name="eye-sharp"></ion-icon>
+                  <ion-icon id="eye2"   name="eye-off-sharp"></ion-icon>
+                </span>
                 <input type="text" autocomplete="off" name="password" placeholder="6 Character minimum" pattern=".{6,}" required="" id="pas" onfocusout="f1()"/>
                 <label for="exampleInputPassword1">Password</label>
               </div>

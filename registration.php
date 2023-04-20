@@ -1,36 +1,10 @@
 <!DOCTYPE html>
 <html>
-<?php
-include("connection.php");
-if(isset($_POST['s'])){
+<head>
+<title>User Registration</title>
 
-    if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $u_name=$_POST['name'];
-        $u_id=$_POST['email'];
-        $u_pass=$_POST['password'];
-        $sub=$_POST['subcity'];
-        $woreda=$_POST['adress'];
-        $id_no=$_POST['id_number'];
-        $gen=$_POST['gender'];
-        $mob=$_POST['mobile_number'];
-        $code=$_POST['code'];
-       // $password=md5($u_pass);
-       $reg="insert into user values('$u_name','$u_id','$u_pass','$sub','$woreda','$id_no','$gen','$mob','$code')";
-        
-        $res=mysqli_query($conn,$reg);
-        if(!$res)
-        {
-        $message1 = "User Already Exist";
-        echo "<script type='text/javascript'>alert('$message1');</script>";
-    }
-            else
-    {
-        $message = "User Registered Successfully";
-        echo "<script type='text/javascript'>alert('$message');</script>";
-    }
-    }
-}
-?>
+<link href="../on_the_go incident reporter/Assets/css/registration.css" rel="stylesheet" type="text/css" media="all" />
+
   
 <script>
      function f1()
@@ -90,16 +64,65 @@ if(isset($_POST['s'])){
       alert("Space Not Allowed");
         }
 }
+
+
+function myFunction(){
+
+var x = document.getElementById("pass");
+var y = document.getElementById("eye1");
+var z = document.getElementById("eye2");
+
+     if(x.type ==='password'){
+        
+         x.type ="text";
+         y.style.display ="block";
+         z.style.display="none";
+     }
+
+     else{
+         x.type ="password";
+         y.style.display ="none";
+         z.style.display="block";
+     
+     }
+
+}
 </script>    
     
-<head>
-<title>User Registration</title>
-
-<link href="../on_the_go incident reporter/Assets/css/registration.css" rel="stylesheet" type="text/css" media="all" />
 
 </head>
 <body>
+<?php
+include("connection.php");
+if(isset($_POST['s'])){
 
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        $u_name=$_POST['name'];
+        $u_id=$_POST['email'];
+        $u_pass=$_POST['password'];
+        $sub=$_POST['subcity'];
+        $woreda=$_POST['adress'];
+        $id_no=$_POST['id_number'];
+        $gen=$_POST['gender'];
+        $mob=$_POST['mobile_number'];
+        $code=$_POST['code'];
+       // $password=md5($u_pass);
+       $reg="insert into user values('$u_name','$u_id','$u_pass','$sub','$woreda','$id_no','$gen','$mob','$code')";
+        
+        $res=mysqli_query($conn,$reg);
+        if(!$res)
+        {
+        $message1 = "User Already Exist";
+        echo "<script type='text/javascript'>alert('$message1');</script>";
+    }
+            else
+    {
+        $message = "User Registered Successfully";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+    }
+    }
+}
+?>
 <header>
          <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
@@ -125,28 +148,31 @@ if(isset($_POST['s'])){
 
                        <div class="input-box">
                             <span class="icon"><ion-icon name="person"></ion-icon></span>
-                            <input type="text"  name="name" autocomplete="off" autocomplete="off" required="" id="name1" onfocusout="f1()" />
-                            <label>Full Name</label>
+                            <input type="text"  name="name" placeholder="Enter Full name" autocomplete="off" autocomplete="off" required="" id="name1" onfocusout="f1()" />
+                            <label>Full Name <span color="red">*</span></label>
                       </div>	
 
                        <div class="input-box">
                              <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                            <input type="email"  name="email"  required=""  autocomplete="off" id="email1" onfocusout="f1()"/>
-                            <label>Email-Id</label>         
+                            <input type="email"  name="email"  placeholder="Enter email id" required=""  autocomplete="off" id="email1" onfocusout="f1()"/>
+                            <label>Email-Id <span color="red">*</span></label>         
         
                        </div>
 
                       <div class="input-box">
-                             <span class="icon"><ion-icon name="lock-closed"></ion-icon></ion-icon></span>
+                         <span class="icon" onclick="myFunction()">
+                            <ion-icon id="eye1" name="eye-sharp"></ion-icon>
+                            <ion-icon id="eye2"   name="eye-off-sharp"></ion-icon>
+                          </span>
   
                              <input type="password"  placeholder="6 Character minimum" autocomplete="off" pattern=".{6,}" required name="password" id="pass" onfocusout="f1()"> 
-                             <label>Password</label>
+                             <label>Password <span color="red">*</span></label>
                        </div>
 
                           
                       <div class="input-dropdown">
 
-                       <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Home Subcity </p>  
+                       <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Home Subcity <span color="red">*</span> </p>  
                               <select class="form-control" name="subcity">
                                 <option>Akaki-Kality</option>
                                 <option>Addis Ketema</option>
@@ -168,8 +194,8 @@ if(isset($_POST['s'])){
                       <div class="input-box">
             
                               <span class="icon"><ion-icon name="home"></ion-icon></span> 
-                              <input type="text"  name="adress"  minlength="2" autocomplete="off" maxlength="2" required pattern="[0-9]{2}" id="addr" onfocusout="f1()"/>
-                              <label>Woreda</label>
+                              <input type="text"  name="adress" placeholder=" Enter Woreda" minlength="2" autocomplete="off" maxlength="2" required pattern="[0-9]{2}" id="addr" onfocusout="f1()"/>
+                              <label>Woreda <span color="red">*</span></label>
 
                      </div>
 
@@ -177,14 +203,14 @@ if(isset($_POST['s'])){
                       <div class="input-box">
 
                             <span class="icon"><ion-icon name="id-card"></ion-icon></span>
-                            <input type="text"  name="id_number" minlength="5" autocomplete="off"  maxlength="5" required pattern="[0-9]{5}" id="id" onfocusout="f1()"/>
-                            <label>ID Number</label>
+                            <input type="text"  name="id_number" minlength="5" placeholder="Enter Id Number"  autocomplete="off"  maxlength="5" required pattern="[0-9]{5}" id="id" onfocusout="f1()"/>
+                            <label>ID Number <span color="red">*</span></label>
 
                     </div>
 
                     <div class="input-dropdown">
 
-                    <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Gender </p> 
+                    <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Gender <span color="red">*</span> </p> 
                             <select class="form-control" name="gender">
                                 <option>Male</option>
                                 <option>Female</option>
@@ -197,15 +223,15 @@ if(isset($_POST['s'])){
                     <div class="input-box">
 
                       <span class="icon"><ion-icon name="qr-code-outline"></ion-icon></span>
-                      <input type="text"  name="code" minlength="5" autocomplete="off"  maxlength="10" required pattern="^[a-zA-Z0-9!@#$%^&*()_+-=]{5,10}$" onfocusout="f1()"/>
-                      <label>Recovery code</label>
+                      <input type="text"  name="code" minlength="5" autocomplete="off" placeholder=" Please don't forget this code!" maxlength="10" required pattern="^[a-zA-Z0-9!@#$%^&*()_+-=]{5,10}$" onfocusout="f1()"/>
+                      <label>Recovery code <span color="red">*</span></label>
 
                     </div>
 
                     <div class="input-box">
                             <span class="icon"><ion-icon name="call"></ion-icon></span>
                             <input type="text"  name="mobile_number" autocomplete="off" placeholder="Country code +251" required pattern="^\+251\d{9}$" minlength="13" maxlength="13" id="mobno" onfocusout="f1()"/>
-                            <label>Mobile</label>
+                            <label>Mobile <span color="red">*</span></label>
                     </div>
           
          

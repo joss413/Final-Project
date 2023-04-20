@@ -1,4 +1,4 @@
-<!-- <meta http-equiv="refresh"  content="60 ; url=Sub_policelogin.php"> -->
+<meta http-equiv="refresh"  content="60 ; url=Sub_policelogin.php">
 <!DOCTYPE html>
 <html>
 <head>
