@@ -6,7 +6,7 @@
 <html>
 <head>
 
-  <link rel="stylesheet" type="text/css" href="../on_the_go incident reporter/Assets/css/HandlerHome.css">
+  <link rel="stylesheet" type="text/css" href="./Assets/css/HandlerHome.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	<title>Handler Homepage</title>
@@ -69,7 +69,7 @@
   <header>
 
 <div class="leftside">
-    <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
+    <a href=""> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
            <nav class="navleft">
              <a href="home.php"> Home </a>

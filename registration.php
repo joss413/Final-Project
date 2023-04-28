@@ -3,7 +3,7 @@
 <head>
 <title>User Registration</title>
 
-<link href="../on_the_go incident reporter/Assets/css/registration.css" rel="stylesheet" type="text/css" media="all" />
+<link href="./Assets/css/registration.css" rel="stylesheet" type="text/css" media="all" />
 
   
 <script>
@@ -124,7 +124,7 @@ if(isset($_POST['s'])){
 }
 ?>
 <header>
-         <a href=""> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
+         <a href=""> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
          
          <nav class="navigation">

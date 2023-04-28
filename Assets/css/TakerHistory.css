@@ -173,13 +173,16 @@ nav a.active:before{
   .title{   
     text-align:center; 
     font-weight:bolder;
-    background: url(../pictures/allpage.jpg) no-repeat;
-    opacity: 0.6;
+    /* background: url(../pictures/allpage.jpg) no-repeat; */
+    background: white;
+    opacity: 1;
     width: 50%;
     height: 8%;
     margin-left: 22%;
-    color:#3b3b3b;
+    /* color:#3b3b3b; */
+    color:#29f516;
     align-items: center;
+
 } 
 
 

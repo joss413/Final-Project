@@ -50,7 +50,7 @@ include("connection.php");
   if (mysqli_num_rows($result) > 0) {
 
       // Output the table name
-      echo "<h4 class='title'> Cases passed to Handler </h4>";
+      echo "<h2 class='title'> Cases passed to Handler </h2>";
 
 
       // Start the table and output the header row
@@ -102,7 +102,7 @@ echo "\n ";
   if (mysqli_num_rows($result) > 0) {
 
       // Output the table name
-      echo "<h4 class='title'>Cases Dropped By Taker</h4>";
+      echo "<h2 class='title'>Cases Dropped By Taker</h2>";
 
 
       // Start the table and output the header row
