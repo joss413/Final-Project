@@ -86,10 +86,11 @@ if(isset($_POST['s'])){
         $h_name=$_POST['handler_name'];
         $h_id=$_POST['handler_id'];
         $h_pass=$_POST['password'];
+        $hash = md5($h_pass);  
         
 
     
-    $reg="insert into handler values('$h_id','$h_name','$h_pass')";
+    $reg="insert into handler values('$h_id','$h_name','$hash')";
      mysqli_select_db($conn,"on_the_go incident reporter");
         $res=mysqli_query($conn,$reg);
         if(!$res)

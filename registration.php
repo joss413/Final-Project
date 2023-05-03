@@ -100,14 +100,16 @@ if(isset($_POST['s'])){
         $u_name=$_POST['name'];
         $u_id=$_POST['email'];
         $u_pass=$_POST['password'];
+        $hash = md5($u_pass);  
         $sub=$_POST['subcity'];
         $woreda=$_POST['adress'];
         $id_no=$_POST['id_number'];
         $gen=$_POST['gender'];
         $mob=$_POST['mobile_number'];
         $code=$_POST['code'];
+        $hashcode = md5($code);  
        // $password=md5($u_pass);
-       $reg="insert into user values('$u_name','$u_id','$u_pass','$sub','$woreda','$id_no','$gen','$mob','$code')";
+       $reg="insert into user values('$u_name','$u_id','$hash','$sub','$woreda','$id_no','$gen','$mob','$hashcode')";
         
         $res=mysqli_query($conn,$reg);
         if(!$res)

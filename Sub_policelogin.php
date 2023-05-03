@@ -73,7 +73,7 @@ if(isset($_POST['s']))
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $name=$_POST['email'];
-        $pass=$_POST['password'];
+        $pass=md5($_POST['password']);
         $result=mysqli_query($conn,"SELECT p_id,p_pass FROM sub_police where p_id='$name' and p_pass='$pass' ");
         $_SESSION['pol']=$name;       
         if(mysqli_num_rows($result)==0)

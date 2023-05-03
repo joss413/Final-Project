@@ -67,7 +67,9 @@ if(isset($_POST['s']))
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $name=$_POST['email'];
-        $pass=$_POST['password'];
+        $pass=md5($_POST['password']);
+
+
         $result=mysqli_query($conn,"SELECT T_id,T_pass FROM Taker where T_id='$name' and T_pass='$pass' ");
         
         if(mysqli_num_rows($result)==0)

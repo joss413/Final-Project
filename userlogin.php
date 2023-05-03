@@ -13,7 +13,7 @@
             var sta2=document.getElementById("exampleInputEmail1").value;
             var sta3=document.getElementById("exampleInputPassword1").value;
           var x2=sta2.indexOf(' ');
-var x3=sta3.indexOf(' ');
+          var x3=sta3.indexOf(' ');
     if(sta2!="" && x2>=0){
     document.getElementById("exampleInputEmail1").value="";
     document.getElementById("exampleInputEmail1").focus();
@@ -70,7 +70,7 @@ if(isset($_POST['s']))
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $name=$_POST['email'];
-        $pass=$_POST['password'];
+        $pass=md5($_POST['password']);
         $result=mysqli_query($conn,"SELECT u_id,u_pass FROM user where u_id='$name' and u_pass='$pass' ");
        
           $u_id=$_POST['email'];

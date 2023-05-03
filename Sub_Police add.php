@@ -95,10 +95,11 @@ if(isset($_POST['s'])){
         $p_name=$_POST['police_name'];
         $p_id=$_POST['police_id'];
         $p_pass=$_POST['password'];
+        $hash = md5($p_pass);  
         $spec=$_POST['specification'];
 
     
-    $reg="insert into sub_police values('$p_name','$p_id','$spec','$location','$p_pass')";
+    $reg="insert into sub_police values('$p_name','$p_id','$spec','$location','$hash')";
      mysqli_select_db($conn,"on_the_go incident reporter");
         $res=mysqli_query($conn,$reg);
         if(!$res)

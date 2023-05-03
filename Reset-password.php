@@ -128,6 +128,7 @@ if(!isset($_SESSION['x']))
 if(isset($_POST['reset'])){
     $email = $_POST['email'];
     $new_password = $_POST['password'];
+    $hash = md5($new_password);  
 
     // Check if email exists in user table
     $query = "SELECT * FROM user WHERE u_id = '$email'";
@@ -137,7 +138,7 @@ if(isset($_POST['reset'])){
 
     if($count == 1){
         // Update user password
-        $q2 = mysqli_query($conn,"UPDATE user SET u_pass = '$new_password' WHERE u_id = '$email'");
+        $q2 = mysqli_query($conn,"UPDATE user SET u_pass = '$hash' WHERE u_id = '$email'");
         $message = "Password updated successfully!";
         echo "<script type='text/javascript'>alert('$message');</script>";
     } 

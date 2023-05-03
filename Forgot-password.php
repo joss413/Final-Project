@@ -73,7 +73,7 @@ if(isset($_POST['s']))
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $email=$_POST['email'];
-        $code=$_POST['code'];
+        $code=md5($_POST['code']);
         $result=mysqli_query($conn,"SELECT u_id,code FROM user where u_id='$email' and code='$code' ");
         
         if(mysqli_num_rows($result)==0)

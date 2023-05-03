@@ -73,7 +73,7 @@ if(isset($_POST['s']))
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $name=$_POST['email'];
-        $pass=$_POST['password'];
+        $pass= md5($_POST['password']);
         $result=mysqli_query($conn,"SELECT h_id,h_pass FROM handler where h_id='$name' and h_pass='$pass' ");
         
         if(mysqli_num_rows($result)==0)

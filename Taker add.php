@@ -88,8 +88,7 @@ if(isset($_POST['s'])){
         $t_pass=$_POST['password'];
 
       
-        $hash = password_hash($t_pass, PASSWORD_BCRYPT);
-        
+        $hash = md5($t_pass);     
     $reg="insert into taker values('$t_id','$t_name','$hash')";
      mysqli_select_db($conn,"on_the_go incident reporter");
         $res=mysqli_query($conn,$reg);
