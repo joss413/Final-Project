@@ -1,5 +1,4 @@
-
- <meta http-equiv="refresh" content="60;url=userlogin.php">  
+<meta http-equiv="refresh" content="60;url=userlogin.php">  
  <!DOCTYPE html>
 <html>
  

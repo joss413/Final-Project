@@ -72,6 +72,34 @@ var x = document.getElementById("pass");
 var y = document.getElementById("eye1");
 var z = document.getElementById("eye2");
 
+
+
+     if(x.type ==='password'){
+        
+         x.type ="text";
+         y.style.display ="block";
+         z.style.display="none";
+     }
+
+     else{
+         x.type ="password";
+         y.style.display ="none";
+         z.style.display="block";
+     
+     }
+
+}
+
+
+
+function Recoverycode(){
+
+var x = document.getElementById("cd");
+var y = document.getElementById("eye1");
+var z = document.getElementById("eye2");
+
+
+
      if(x.type ==='password'){
         
          x.type ="text";
@@ -223,9 +251,11 @@ if(isset($_POST['s'])){
                     </div>
 
                     <div class="input-box">
-
-                      <span class="icon"><ion-icon name="qr-code-outline"></ion-icon></span>
-                      <input type="text"  name="code" minlength="5" autocomplete="off" placeholder=" Please don't forget this code!" maxlength="10" required pattern="^[a-zA-Z0-9!@#$%^&*()_+-=]{5,10}$" onfocusout="f1()"/>
+                          <span class="icon" onclick="Recoverycode()">
+                            <ion-icon id="eye1" name="eye-sharp"></ion-icon>
+                            <ion-icon id="eye2"   name="eye-off-sharp"></ion-icon>
+                          </span>
+                      <input type="password"  name="code" minlength="5" id="cd" autocomplete="off" placeholder=" Please don't forget this code!" maxlength="10" required pattern="^[a-zA-Z0-9!@#$%^&*()_+-=]{5,10}$" onfocusout="f1()"/>
                       <label>Recovery code <span color="red">*</span></label>
 
                     </div>

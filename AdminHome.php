@@ -1,4 +1,4 @@
-<meta http-equiv="refresh" content="60; url=Adminlogin.php">
+<!-- <meta http-equiv="refresh" content="60; url=Adminlogin.php"> -->
 
 <!DOCTYPE html>
 <html>
