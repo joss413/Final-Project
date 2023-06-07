@@ -1,4 +1,4 @@
-<meta http-equiv="refresh"  content="60;url=Takerlogin.php";
+<!-- <meta http-equiv="refresh"  content="60;url=Takerlogin.php"; -->
 
 
 <!DOCTYPE html>
@@ -59,7 +59,7 @@
     if(!isset($_SESSION['x']))
         header("location:Takerlogin.php");
   // Fetch all the complaints from the database
-  $sql = "SELECT id_no,c_id, type_crime, d_o_c,repo_time_and_date,location,description, inc_status, p_id FROM complaint";
+  $sql = "SELECT id_no,c_id, type_crime, d_o_c,repo_time_and_date,location,description, inc_status, p_id,image_url FROM complaint";
   $result = mysqli_query($conn, $sql);
   
   // Check if there are any complaints in the database
@@ -77,6 +77,7 @@
       <th>Descripition</th>
       <th>Complaint Status</th>
       <th>Police ID</th>
+      <th>Image</th>
       <th>Accept </th>
       <th>Reject</th>
       </tr>";
@@ -94,6 +95,7 @@
             <td>" . $row["description"] . "</td>
             <td>" . $row["inc_status"] . "</td>
             <td>" . $row["p_id"] . "</td>
+            <td>" . $row["image_url"] . "</td>
             
             <td>
                 
@@ -107,6 +109,7 @@
                         <input type='hidden' name='description' value='" . $row["description"] . "'>
                         <input type='hidden' name='inc_status' value='" . $row["inc_status"] . "'>
                         <input type='hidden' name='p_id' value='" . $row["p_id"] . "'>
+                        <input type='hidden' name='image_url' value='" . $row["image_url"] . "'>
                         <button type='submit' name='pass_to_handler' class='btn-primary' onclick='hideRow(".$row["c_id"].")'>Pass to Handler</button>
                     </form>
         </td>
@@ -121,6 +124,7 @@
                     <input type='hidden' name='description' value='" . $row["description"] . "'>
                     <input type='hidden' name='inc_status' value='" . $row["inc_status"] . "'>
                     <input type='hidden' name='p_id' value='" . $row["p_id"] . "'>
+                    <input type='hidden' name='image_url' value='" . $row["image_url"] . "'>
                     <button type='submit' name='reject_complaint' class='btn-danger' onclick='confirmReject(".$row["c_id"].")'>Confirm Rejection</button>
                    </form> 
                        
@@ -152,13 +156,14 @@ if(isset($_POST['pass_to_handler'])) {
   $description = $_POST['description'];
   $inc_status = $_POST['inc_status'];
   $p_id = $_POST['p_id'];
+  $img= $_POST['image_url'];
   
   // check if the row already exists in the p_handler table
   $sql = "SELECT * FROM p_handler WHERE c_id = '$c_id'";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
       // the row already exists, update the values
-      $sql = "UPDATE p_handler SET id_no='$id_no', type_crime='$type_crime', d_o_c='$d_o_c', repo_time_and_date='$repo_time_and_date', location='$location', description='$description', inc_status='$inc_status', p_id='$p_id' WHERE c_id='$c_id'";
+      $sql = "UPDATE p_handler SET id_no='$id_no', type_crime='$type_crime', d_o_c='$d_o_c', repo_time_and_date='$repo_time_and_date', location='$location', description='$description', inc_status='$inc_status', p_id='$p_id' ,image_url='$img',WHERE c_id='$c_id'";
       if ($conn->query($sql) === TRUE) {
           // remove the row from the table
           // add your code to remove the row here
@@ -167,8 +172,8 @@ if(isset($_POST['pass_to_handler'])) {
       }
   } else {
       // the row does not exist, insert the values as a new row
-      $sql = "INSERT INTO p_handler (c_id, id_no, type_crime, d_o_c, repo_time_and_date, location, description, inc_status, p_id)
-      VALUES ('$c_id', '$id_no', '$type_crime', '$d_o_c', '$repo_time_and_date', '$location', '$description', '$inc_status', '$p_id')";
+      $sql = "INSERT INTO p_handler (c_id, id_no, type_crime, d_o_c, repo_time_and_date, location, description, inc_status, p_id,image_url)
+      VALUES ('$c_id', '$id_no', '$type_crime', '$d_o_c', '$repo_time_and_date', '$location', '$description', '$inc_status', '$p_id','$img')";
       if ($conn->query($sql) === TRUE) {
           // remove the row from the table
           // add your code to remove the row here
@@ -194,6 +199,7 @@ if (isset($_POST['reject_complaint'])) {
    $description = $_POST['description'];
    $inc_status = $_POST['inc_status'];
    $p_id = $_POST['p_id'];
+  //  $img = $_POST['image_url'];
    
    // check if the row already exists in the p_handler table
    $sql = "SELECT * FROM del_taker WHERE c_id = '$c_id'";

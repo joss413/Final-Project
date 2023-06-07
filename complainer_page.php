@@ -1,4 +1,4 @@
-<meta http-equiv="refresh" content="60;url=userlogin.php">  
+<!-- <meta http-equiv="refresh" content="60;url=userlogin.php">   -->
  <!DOCTYPE html>
 <html>
  
@@ -176,8 +176,32 @@ if(isset($_POST['s'])){
                 <input type="text" name="description" rows="20" cols="50" placeholder="Describe the incident in details with time" onfocusout="f1()" id="desc" required>
                 <label for="exampleInputPassword1">	Description </label>
               </div>
+
+            
+
+              <?php if (isset($_GET['error'])): ?>
+		    <p><?php echo $_GET['error']; ?></p>
+	      <?php endif ?>
+       <!-- <form action="Imageupload.php"
+           method="post"
+           enctype="multipart/form-data"> -->
+
+           <input type="file" 
+                  name="my_image">
+
+           <input type="submit" 
+                  name="submit"
+                  value="Upload">
+     	
+          <!-- </form> </br> </br> -->
+
+
+
               <button type="submit" class="btn" name="s">Submit</button>
-       </form>             
+       </form>    
+       
+
+        
     </div>
     </div>
 </main>

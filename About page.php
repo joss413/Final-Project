@@ -31,7 +31,7 @@
       <div class="container">
           <section class="about">
                 <div class="about-image">
-                     <img src="../on_the_go incident reporter/Assets/pictures/Home3.jpg" alt=""> 
+                     <img class="IMG" src="../on_the_go incident reporter/Assets/pictures/Home3.jpg" alt=""> 
                 </div>
                 <div class="about-content">
 

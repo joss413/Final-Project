@@ -12,7 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(../pictures/back.jpg) no-repeat;
+    background: url(../pictures/darkblack.jpg) no-repeat;
      /* background: burlywood;  */
     background-size: cover;
 } 
@@ -58,7 +58,7 @@ header{
     color: #000;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 .navleft a::after{
     content:'';

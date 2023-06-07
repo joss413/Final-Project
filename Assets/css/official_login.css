@@ -11,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(../pictures/back.jpg) no-repeat;
+    background: url(../pictures/darkblack.jpg) no-repeat;
     background-size: cover;
 } 
 header{
