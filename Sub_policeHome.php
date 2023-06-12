@@ -1,4 +1,4 @@
-<meta http-equiv="refresh"  content="60 ; url=Sub_policelogin.php">
+<!-- <meta http-equiv="refresh"  content="60 ; url=Sub_policelogin.php"> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +22,8 @@
        $joss=mysqli_query($conn,"select p_id from p_handler where c_id='$cid'");
        $row = mysqli_fetch_assoc($joss);
        $p_id=$_SESSION['pol'];
-     if($row['p_id']==$p_id){
+    
+       if($row['p_id']==$p_id){
      header("location:Sub_police_complainDetails.php");}
      else{
          $message = "Not in your scope";

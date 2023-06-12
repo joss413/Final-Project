@@ -202,7 +202,7 @@ if(isset($_POST['s'])){
                           
                       <div class="input-dropdown">
 
-                       <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Home Subcity <span color="red">*</span> </p>  
+                       <p style="margin-bottom:8px; padding-left:3px; opacity:0.7; color:white;"> Home Subcity <span color="red">*</span> </p>  
                               <select class="form-control" name="subcity">
                                 <option>Akaki-Kality</option>
                                 <option>Addis Ketema</option>
@@ -240,7 +240,7 @@ if(isset($_POST['s'])){
 
                     <div class="input-dropdown">
 
-                    <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Gender <span color="red">*</span> </p> 
+                    <p style="margin-bottom:8px; padding-left:3px; opacity:0.7;color:white;"> Gender <span color="red">*</span> </p> 
                             <select class="form-control" name="gender">
                                 <option>Male</option>
                                 <option>Female</option>

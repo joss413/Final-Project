@@ -99,7 +99,7 @@ main{
     align-items: center;
     overflow: hidden;
     margin-bottom: 23%;
-    margin-left:2%;
+    margin-left:4%;
 
 }
 
@@ -129,7 +129,8 @@ main{
 
 .form-box h2{
     font-size: 2em;
-    color: #162938;
+    /* color: #162938; */
+    color: white;
     text-align: center;
 }
 .input-box{
@@ -146,7 +147,8 @@ main{
     left: 5px;
     transform: translateY(-200%);
     font-size: 1em;
-    color: #162938;
+    /* color: #162938; */
+    color: white;
     font-weight: 500;
     pointer-events: none;
     /* transition: .5s; */
@@ -165,7 +167,8 @@ main{
     border: none;
     outline: none;
     font-size: 1em;
-    color: #162938;
+    /* color: #162938; */
+    color: white;
     font-weight: 600;
     padding: 0 35px 0 5px;
 }
@@ -175,6 +178,7 @@ main{
     right: 8px;
     font-size: 1.2em;
     color: #162938;
+    /* color: white; */
     line-height: 57px;
 }
 
@@ -182,6 +186,7 @@ main{
 .remeber-forgot{
     font-size: .9em;
     color: #162938;
+    /* color: white; */
     font-weight: 500;
     margin: -15px 0 15px;
     display: flex;
@@ -189,12 +194,14 @@ main{
 }
 
 .remeber-forgot a {
-    color: #162938;
+    /* color: #162938; */
+    color: white;
     text-decoration: none;
 }
 
 .remeber-forgot a:hover {
     text-decoration: underline;
+     color: #162938;
 }
 
 .btn{
@@ -212,14 +219,16 @@ main{
 
 .login-register{
     font-size: .9em;
-    color: #162938;
+    color: white;
+     /* color: #162938; */
     text-align: center;
     font-weight: 500;
     margin: 25px 0 10px;
 }
 
 .login-register p a{
-    color: #162938;
+    color: white;
+     /* color: #162938; */
     text-decoration: none;
     font-weight: 600;
 

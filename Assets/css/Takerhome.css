@@ -58,7 +58,7 @@ header{
     color: #000;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 .navleft a::after{
     content:'';
@@ -184,20 +184,26 @@ nav a.active:before{
 .table thead tr{
     background-color: #000;
     color:white;
-    font-weight: bold;
+    font-weight: bolder;
+    font-size:medium;
 }
 
 .table th,.table td{
     padding: 12px 15px;
+    /* color:black; */
 }
 
 .table tbody tr {
-
+    background: #dd3e54;  
+    background: -webkit-linear-gradient(to right, #6be585, #005AA7); 
+    background: linear-gradient(to right, #6be585, #005AA7);
     border-bottom: 1px solid #dddddd;
 }
 
 .table tbody tr:nth-of-type(even){
-   background-color: #f3f3f3;
+   
+    /* background-color: #3D6181; */
+   
 }
 
 .table tbody tr:last-of-type{

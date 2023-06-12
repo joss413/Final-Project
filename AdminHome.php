@@ -29,8 +29,8 @@
 
           <ul class="navleft">
          <li >
-      <a href="#"> View Officers <ion-icon name="caret-down-outline"></ion-icon> </a>
-      <ul class="dropdown">
+      <a href="#" class="drop" style="background: rgba(255,255,255, .5);"> View Officers <ion-icon name="caret-down-outline"></ion-icon> </a>
+      <ul class="dropdown" class="drop">
 
                 <li class=""><a href="Admin_viewTaker.php"> View Taker</a></li>
                 <li class=""><a href="Admin_viewHandler.php">View Handler</a></li>

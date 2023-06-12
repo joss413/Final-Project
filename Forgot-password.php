@@ -1,4 +1,4 @@
-<meta http-equiv="refresh" content="60;url=userlogin.php"> 
+<!-- <meta http-equiv="refresh" content="60;url=userlogin.php">  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,7 +104,7 @@ if(isset($_POST['s']))
          
          <nav class="navigation">
             
-            <a href="home.php" class="active"> Home </a>
+            <a href="Forgot-password.php" class="active"> Forgot Password </a>
             <a href="userlogin.php"> User Login </a>
     
            

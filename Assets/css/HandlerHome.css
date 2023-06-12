@@ -193,7 +193,9 @@ nav a.active:before{
 }
 
 .table tbody tr {
-
+    background: #dd3e54;  
+    background: -webkit-linear-gradient(to right, #6be585, #005AA7); 
+    background: linear-gradient(to right, #6be585, #005AA7);
     border-bottom: 2px solid #dddddd;
 }
 

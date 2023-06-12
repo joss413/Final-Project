@@ -130,7 +130,8 @@ main{
 
 .form-box h2{
     font-size: 2em;
-    color: #162938;
+    /* color: #162938; */
+    color: white;
     text-align: center;
 }
 .input-box{
@@ -147,7 +148,8 @@ main{
     left: 5px;
     transform: translateY(-200%);
     font-size: 1em;
-    color: #162938;
+    /* color: #162938; */
+    color:white;
     font-weight: 500;
     pointer-events: none;
     /* transition: .5s; */
@@ -166,7 +168,8 @@ main{
     border: none;
     outline: none;
     font-size: 1em;
-    color: #162938;
+    /* color: #162938; */
+    color:white;
     font-weight: 600;
     padding: 0 35px 0 5px;
 }
