@@ -95,7 +95,9 @@
             <td>" . $row["description"] . "</td>
             <td>" . $row["inc_status"] . "</td>
             <td>" . $row["p_id"] . "</td>
-            <td>" . $row["image_url"] . "</td>
+            <td><a style='color:black;'href='Imageview.php?id=".$row["c_id"]."'>View Image</a></td>
+            
+        
             
             <td>
                 

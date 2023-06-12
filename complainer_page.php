@@ -22,50 +22,74 @@ session_start();
         $u_name=$q2['u_name'];
     
     
-if(isset($_POST['s'])){
-    $con=mysqli_connect('localhost','root','');
-    if(!$con)
-    {
-        die('could not connect: '.mysqli_error());
-    }
-    if($_SERVER["REQUEST_METHOD"]=="POST")
-    {
-        
-        
-        $location=$_POST['location'];
-        $type_crime=$_POST['type_crime'];
-        $d_o_c=$_POST['d_o_c'];
-        $description=$_POST['description'];
-        
-        $var=strtotime(date("Ymd"))-strtotime($d_o_c);
-        
-        
-    if($var>=0)
-    {
-          
-      $comp="insert into complaint(id_no,location,type_crime,d_o_c,description) values('$id_no','$location','$type_crime','$d_o_c','$description')";
-      mysqli_select_db($con,"crime_portal"); 
-      $res=mysqli_query($conn,$comp);
+        if (isset($_POST['s'])) {
+          $con = mysqli_connect('localhost', 'root', '');
+          if (!$con) {
+              die('could not connect: ' . mysqli_error());
+          }
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+              $location = $_POST['location'];
+              $type_crime = $_POST['type_crime'];
+              $d_o_c = $_POST['d_o_c'];
+              $description = $_POST['description'];
       
-      if(!$res)
-      {
-        $message1 = "Complaint already filed";
-        echo "<script type='text/javascript'>alert('$message1');</script>";
+              $var = strtotime(date("Ymd")) - strtotime($d_o_c);
+      
+              if ($var >= 0) {
+                  // Handle image upload
+                  $targetDir = "imageuploads/"; // Specify the target directory
+                  $targetFile = $targetDir . basename($_FILES["my_image"]["name"]); // Get the file name with the target directory
+                  $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION)); // Get the file extension
+      
+                  // Check if the uploaded file is an image
+                  $validExtensions = array("jpg", "jpeg", "png", "gif"); // Define the allowed extensions
+                  if (in_array($imageFileType, $validExtensions)) {
+                      $maxFileSize = 64 * 1024 * 1024; // Maximum file size in bytes (64MB)
+                      if ($_FILES["my_image"]["size"] <= $maxFileSize) {
+                          if (move_uploaded_file($_FILES["my_image"]["tmp_name"], $targetFile)) {
+                              $image_url = $targetFile; // Store the file path or name in the $image_url variable
+      
+                              // Perform database insertion or update with $image_url
+                              $comp = "INSERT INTO complaint (id_no, location, type_crime, d_o_c, description, image_url) VALUES ('$id_no', '$location', '$type_crime', '$d_o_c', '$description', '$image_url')";
+                              $res = mysqli_query($conn, $comp);
+      
+                              if (!$res) {
+                                  $message1 = "Complaint already filed";
+                                  echo "<script type='text/javascript'>alert('$message1');</script>";
+                              } else {
+                                  $message = "Complaint Registered Successfully";
+                                  echo "<script type='text/javascript'>alert('$message');</script>";
+                              }
+                          } else {
+                              // Failed to move the uploaded file
+                              $message = "Failed to upload the image.";
+                              echo "<script type='text/javascript'>alert('$message');</script>";
+                          }
+                      } else {
+                          // File size exceeds the limit
+                          $message = "The file size should not exceed 64MB.";
+                          echo "<script type='text/javascript'>alert('$message');</script>";
+                      }
+                  } else {
+                      // Invalid file extension
+                      $message = "Only JPG, JPEG, PNG, and GIF files are allowed.";
+                      echo "<script type='text/javascript'>alert('$message');</script>";
+                  }
+              } else {
+                  $message = "Enter Valid Date";
+                  echo "<script type='text/javascript'>alert('$message');</script>";
+              }
+          }
       }
-      else
-      {
-          $message = "Complaint Registered Successfully";
-          echo "<script type='text/javascript'>alert('$message');</script>";
-      }
-    }
-    else
-    {
-     $message = "Enter Valid Date";
-      echo "<script type='text/javascript'>alert('$message');</script>";
-    }
-  }
-}
+      
+      
+
 ?>
+
+
+
+
+                                    
     
  <script>
      function f1()
@@ -114,9 +138,9 @@ if(isset($_POST['s'])){
 
           <div class="form-box login">
           <h2 style="color:#659DBD"> Welcome <?php echo "$u_name" ?> </h2>
-          <p><h3 style="text-align:center; margin-top:5px;">Log New Complain</h3></p><br>
+          <p><h3 style="text-align:center; margin-top:5px; color:white;">Log New Complain</h3></p><br>
       
-	   	<form method="post">
+	   	<form method="post" enctype="multipart/form-data">
 
 
              <div class="input-box">
@@ -129,7 +153,7 @@ if(isset($_POST['s'])){
 
                 <div class="input-dropdown">
 
-                       <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Location of Crime</p>  
+                       <p style="margin-bottom:8px; padding-left:3px;  color:white;"> Location of Crime</p>  
                               <select class="form-control" name="location">
                                 <option>Akaki-Kality</option>
                                 <option>Addis Ketema</option>
@@ -147,7 +171,7 @@ if(isset($_POST['s'])){
                        <div>    
                         
                        <br>
-                       <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Type of Crime</p> 
+                       <p style="margin-bottom:8px; padding-left:3px;color:white;"> Type of Crime</p> 
                             <select class="form-control" name="type_crime">
                                     <option>Theft</option>
                                     <option>Robbery</option>
@@ -179,22 +203,11 @@ if(isset($_POST['s'])){
 
             
 
-              <?php if (isset($_GET['error'])): ?>
-		    <p><?php echo $_GET['error']; ?></p>
-	      <?php endif ?>
-       <!-- <form action="Imageupload.php"
-           method="post"
-           enctype="multipart/form-data"> -->
+  
+           <p style="margin-bottom:8px; padding-left:3px;  color:white;">	Upload Image </p> <br>
+           <input type="file"  name="my_image" > <br> <br>
 
-           <input type="file" 
-                  name="my_image">
-
-           <input type="submit" 
-                  name="submit"
-                  value="Upload">
-     	
-          <!-- </form> </br> </br> -->
-
+     
 
 
               <button type="submit" class="btn" name="s">Submit</button>
