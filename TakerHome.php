@@ -59,7 +59,7 @@
     if(!isset($_SESSION['x']))
         header("location:Takerlogin.php");
   // Fetch all the complaints from the database
-  $sql = "SELECT id_no,c_id, type_crime, d_o_c,repo_time_and_date,location,description, inc_status, p_id,image_url,audio_url,video_url,Active,Reject FROM complaint";
+  $sql = "SELECT id_no,c_id, type_crime, d_o_c,repo_time_and_date,location,description, inc_status, p_id,image_url,audio_url,video_url,Active FROM complaint";
   $result = mysqli_query($conn, $sql);
   
   // Check if there are any complaints in the database

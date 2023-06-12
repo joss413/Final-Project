@@ -60,12 +60,13 @@ session_start();
                                   $message = "Complaint Registered Successfully";
                                   echo "<script type='text/javascript'>alert('$message');</script>";
                               }
-                          } else {
+                           } else {
                               // Failed to move the uploaded file
                               $message = "Failed to upload the image.";
                               echo "<script type='text/javascript'>alert('$message');</script>";
                           }
-                      } else {
+                      }
+                       else {
                           // File size exceeds the limit
                           $message = "The file size should not exceed 64MB.";
                           echo "<script type='text/javascript'>alert('$message');</script>";
@@ -75,6 +76,53 @@ session_start();
                       $message = "Only JPG, JPEG, PNG, and GIF files are allowed.";
                       echo "<script type='text/javascript'>alert('$message');</script>";
                   }
+                  
+
+                  // Handle audio upload
+
+                    $targetaudio = "audiouploads/"; // Specify the target directory
+                    $targetFile = $targetaudio . basename($_FILES["my_audio"]["name"]); // Get the file name with the target directory
+                    $audioFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION)); // Get the file extension
+        
+                    // Check if the uploaded file is an image
+                    $validExtensions = array("mp3", "mp4"); // Define the allowed extensions
+                    if (in_array($audioFileType, $validExtensions)) {
+                        $maxFileSize = 100 * 1024 * 1024; // Maximum file size in bytes (64MB)
+                        if ($_FILES["my_image"]["size"] <= $maxFileSize) {
+                            if (move_uploaded_file($_FILES["my_audio"]["tmp_name"], $targetFile)) {
+                                $audio_url = $targetFile; // Store the file path or name in the $image_url variable
+        
+                                // Perform database insertion or update with $image_url
+                                $comp = "INSERT INTO complaint (id_no, location, type_crime, d_o_c, description, image_url,audio_url) VALUES ('$id_no', '$location', '$type_crime', '$d_o_c', '$description', '$image_url','$audio_url')";
+                                $res = mysqli_query($conn, $comp);
+        
+                                if (!$res) {
+                                    $message1 = "Complaint already filed";
+                                    echo "<script type='text/javascript'>alert('$message1');</script>";
+                                } else {
+                                    $message = "Complaint Registered Successfully";
+                                    echo "<script type='text/javascript'>alert('$message');</script>";
+                                }
+                            } else {
+                                // Failed to move the uploaded file
+                                $message = "Failed to upload the audio.";
+                                echo "<script type='text/javascript'>alert('$message');</script>";
+                            }
+                        } else {
+                            // File size exceeds the limit
+                            $message = "The file size should not exceed 100MB.";
+                            echo "<script type='text/javascript'>alert('$message');</script>";
+                        }
+                    } else {
+                        // Invalid file extension
+                        $message = "Only mp3,mp4 files are allowed.";
+                        echo "<script type='text/javascript'>alert('$message');</script>";
+                    }
+                    
+
+
+
+
               } else {
                   $message = "Enter Valid Date";
                   echo "<script type='text/javascript'>alert('$message');</script>";
@@ -205,12 +253,16 @@ session_start();
 
   
            <p style="margin-bottom:8px; padding-left:3px;  color:white;">	Upload Image </p> <br>
-           <input type="file"  name="my_image" > <br> <br>
+           <input type="file"  name="my_image" style="color:white ;" > <br> <br>
 
      
+           <p style="margin-bottom:8px; padding-left:3px;  color:white;">	Upload Audio </p> <br>
+           <input type="file"  name="my_audio" style="color:white ;"> <br> <br>
 
+           <p style="margin-bottom:8px; padding-left:3px;  color:white;">	Upload Video </p> <br>
+           <input type="file"  name="my_video"  style="color:white ;"> <br> <br> <br>
 
-              <button type="submit" class="btn" name="s">Submit</button>
+           <button type="submit" class="btn" name="s">Submit</button>
        </form>    
        
 

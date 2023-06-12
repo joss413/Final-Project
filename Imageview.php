@@ -1,26 +1,33 @@
 <?php
 
 include "connection.php";
-// Get the image URL based on the ID from the button click
+
+// Get the audio URL based on the ID from the button click
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     
-    // Retrieve the image URL from the database
-    $query = "SELECT image_url FROM complaint WHERE c_id = '$id'";
+    // Retrieve the audio URL from the database
+    $query = "SELECT audio_url FROM complaint WHERE c_id = '$id'";
     $result = mysqli_query($conn, $query);
     
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        $imageURL = $row['image_url'];
+        $audioURL = $row['audio_url'];
         
-        // Display the image
-        echo '<img src="./'. $imageURL . '" alt="Image">';
+        if (!empty($audioURL)) {
+            // Display the audio element
+            echo '<audio controls>
+            <source src="./'. $audioURL . '" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>';
+        } else {
+            echo 'Audio URL is empty.';
+        }
     } else {
-        echo 'Image not found.';
+        echo 'Audio not found.';
     }
 } else {
     echo 'Invalid request.';
 }
-
 
 ?>
