@@ -1,5 +1,5 @@
 
-<meta http-equiv="refresh"  content="60;url=Handlerlogin.php">
+<!-- <meta http-equiv="refresh"  content="60;url=Handlerlogin.php"> -->
 
 
 <!DOCTYPE html>
@@ -53,7 +53,7 @@
   }
   }
   
-  $query="SELECT id_no,c_id,type_crime,d_o_c,repo_time_and_date,location,description,inc_status,pol_status,p_id from p_handler order by c_id desc";
+  $query="SELECT id_no,c_id,type_crime,d_o_c,repo_time_and_date,location,description,image_url,audio_url,video_url,inc_status,pol_status,p_id from p_handler order by c_id desc";
   $result=mysqli_query($conn,$query);  
 
 
@@ -105,6 +105,9 @@
         <th scope="col">Reported Time and Date </th>
         <th scope="col">Location</th>
         <th scope="col">Description</th>
+        <th scope="col">Image</th>
+        <th scope="col">Audio</th>
+        <th scope="col">Video</th>
         <th scope="col">Case Status</th>
         <th scope="col">Police Status</th>
         <th scope="col">Police ID</th>
@@ -119,16 +122,20 @@
 
             <tbody>
       <tr>
-          <td><?php echo $rows['id_no'];?></td>
-          <td><?php echo $rows['c_id'];?></td>
-          <td><?php echo $rows['type_crime'];?></td>     
-          <td><?php echo $rows['d_o_c'];?></td>
-          <td><?php echo $rows['repo_time_and_date'];?></td>
-          <td><?php echo $rows['location'];?></td>
-          <td><?php echo $rows['description'];?></td>
-          <td><?php echo $rows['inc_status']; ?></td>
-          <td><?php echo $rows['pol_status']; ?></td>
-          <td><?php echo $rows['p_id']; ?></td>
+      <td><?php echo $rows['id_no']; ?></td>
+      <td><?php echo $rows['c_id']; ?></td>
+      <td><?php echo $rows['type_crime']; ?></td>     
+      <td><?php echo $rows['d_o_c']; ?></td>
+      <td><?php echo $rows['repo_time_and_date']; ?></td>
+      <td><?php echo $rows['location']; ?></td>
+      <td><?php echo $rows['description']; ?></td>
+      <td><a style='color:black;' href='Imageview.php?id=<?php echo $rows["c_id"]; ?>'>View Image</a></td> 
+      <td><a style='color:black;'href='Audioview.php?id=".$row["c_id"]."'>View Audio</a></td>
+      <td><a style='color:black;'href='Videoview.php?id=".$row["c_id"]."'>View Video</a></td>  
+      <td><?php echo $rows['inc_status']; ?></td>
+      <td><?php echo $rows['pol_status']; ?></td>
+      <td><?php echo $rows['p_id']; ?></td>
+
       </tr>
     </tbody>
     

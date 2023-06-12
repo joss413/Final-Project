@@ -59,7 +59,7 @@
     if(!isset($_SESSION['x']))
         header("location:Takerlogin.php");
   // Fetch all the complaints from the database
-  $sql = "SELECT id_no,c_id, type_crime, d_o_c,repo_time_and_date,location,description, inc_status, p_id,image_url FROM complaint";
+  $sql = "SELECT id_no,c_id, type_crime, d_o_c,repo_time_and_date,location,description, inc_status, p_id,image_url,audio_url,video_url,Active,Reject FROM complaint";
   $result = mysqli_query($conn, $sql);
   
   // Check if there are any complaints in the database
@@ -78,6 +78,8 @@
       <th>Complaint Status</th>
       <th>Police ID</th>
       <th>Image</th>
+      <th>Audio</th>
+      <th>Video</th>
       <th>Accept </th>
       <th>Reject</th>
       </tr>";
@@ -85,6 +87,8 @@
      echo"<tbody>";
       // Loop through the result set and output each row as a table row
       while ($row = mysqli_fetch_assoc($result)) {
+
+        if( $row['Active']== null){
         echo "<tr  id='complaint-".$row["c_id"]."'>
             <td>" . $row["id_no"] . "</td>
             <td>" . $row["c_id"] . "</td>
@@ -96,6 +100,8 @@
             <td>" . $row["inc_status"] . "</td>
             <td>" . $row["p_id"] . "</td>
             <td><a style='color:black;'href='Imageview.php?id=".$row["c_id"]."'>View Image</a></td>
+            <td><a style='color:black;'href='Audioview.php?id=".$row["c_id"]."'>View Audio</a></td>
+            <td><a style='color:black;'href='Videoview.php?id=".$row["c_id"]."'>View Video</a></td>
             
         
             
@@ -112,6 +118,8 @@
                         <input type='hidden' name='inc_status' value='" . $row["inc_status"] . "'>
                         <input type='hidden' name='p_id' value='" . $row["p_id"] . "'>
                         <input type='hidden' name='image_url' value='" . $row["image_url"] . "'>
+                        <input type='hidden' name='audio_url' value='" . $row["audio_url"] . "'>
+                        <input type='hidden' name='video_url' value='" . $row["video_url"] . "'>
                         <button type='submit' name='pass_to_handler' class='btn-primary' onclick='hideRow(".$row["c_id"].")'>Pass to Handler</button>
                     </form>
         </td>
@@ -127,6 +135,8 @@
                     <input type='hidden' name='inc_status' value='" . $row["inc_status"] . "'>
                     <input type='hidden' name='p_id' value='" . $row["p_id"] . "'>
                     <input type='hidden' name='image_url' value='" . $row["image_url"] . "'>
+                    <input type='hidden' name='audio_url' value='" . $row["audio_url"] . "'>
+                    <input type='hidden' name='video_url' value='" . $row["video_url"] . "'>
                     <button type='submit' name='reject_complaint' class='btn-danger' onclick='confirmReject(".$row["c_id"].")'>Confirm Rejection</button>
                    </form> 
                        
@@ -137,6 +147,8 @@
 
             
         </tr>";
+        }
+        
     }
     echo "</tbody>";
       // End the table
@@ -159,13 +171,19 @@ if(isset($_POST['pass_to_handler'])) {
   $inc_status = $_POST['inc_status'];
   $p_id = $_POST['p_id'];
   $img= $_POST['image_url'];
+  $audio= $_POST['audio_url'];
+  $video= $_POST['video_url'];
+
+  $sql = "UPDATE complaint SET Active='active' where c_id = '$c_id'";
+  $result = $conn->query($sql);
+  if($result){
   
   // check if the row already exists in the p_handler table
   $sql = "SELECT * FROM p_handler WHERE c_id = '$c_id'";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
       // the row already exists, update the values
-      $sql = "UPDATE p_handler SET id_no='$id_no', type_crime='$type_crime', d_o_c='$d_o_c', repo_time_and_date='$repo_time_and_date', location='$location', description='$description', inc_status='$inc_status', p_id='$p_id' ,image_url='$img',WHERE c_id='$c_id'";
+      $sql = "UPDATE p_handler SET id_no='$id_no', type_crime='$type_crime', d_o_c='$d_o_c', repo_time_and_date='$repo_time_and_date', location='$location', description='$description', inc_status='$inc_status', p_id='$p_id' ,image_url='$img', audio_url='$audio',video_url='$video', WHERE c_id='$c_id'";
       if ($conn->query($sql) === TRUE) {
           // remove the row from the table
           // add your code to remove the row here
@@ -174,8 +192,8 @@ if(isset($_POST['pass_to_handler'])) {
       }
   } else {
       // the row does not exist, insert the values as a new row
-      $sql = "INSERT INTO p_handler (c_id, id_no, type_crime, d_o_c, repo_time_and_date, location, description, inc_status, p_id,image_url)
-      VALUES ('$c_id', '$id_no', '$type_crime', '$d_o_c', '$repo_time_and_date', '$location', '$description', '$inc_status', '$p_id','$img')";
+      $sql = "INSERT INTO p_handler (c_id, id_no, type_crime, d_o_c, repo_time_and_date, location, description, inc_status, p_id,image_url,audio_url,Video_url)
+      VALUES ('$c_id', '$id_no', '$type_crime', '$d_o_c', '$repo_time_and_date', '$location', '$description', '$inc_status', '$p_id','$img','$audio','$video')";
       if ($conn->query($sql) === TRUE) {
           // remove the row from the table
           // add your code to remove the row here
@@ -183,6 +201,7 @@ if(isset($_POST['pass_to_handler'])) {
           echo "Error: " . $sql . "<br>" . $conn->error;
       }
   }
+}
 }
 
 
@@ -201,14 +220,19 @@ if (isset($_POST['reject_complaint'])) {
    $description = $_POST['description'];
    $inc_status = $_POST['inc_status'];
    $p_id = $_POST['p_id'];
-  //  $img = $_POST['image_url'];
-   
+   $img= $_POST['image_url'];
+   $audio= $_POST['audio_url'];
+   $video= $_POST['video_url'];
+  $sql = "UPDATE complaint SET Active='active' where c_id = '$c_id'";
+  $result = $conn->query($sql);
+  if($result){
+  
    // check if the row already exists in the p_handler table
    $sql = "SELECT * FROM del_taker WHERE c_id = '$c_id'";
    $result = $conn->query($sql);
    if ($result->num_rows > 0) {
        // the row already exists, update the values
-       $sql = "UPDATE del_taker SET id_no='$id_no', type_crime='$type_crime', d_o_c='$d_o_c', repo_time_and_date='$repo_time_and_date', location='$location', description='$description', inc_status='$inc_status', p_id='$p_id' WHERE c_id='$c_id'";
+       $sql = "UPDATE del_taker SET id_no='$id_no', type_crime='$type_crime', d_o_c='$d_o_c', repo_time_and_date='$repo_time_and_date', location='$location', description='$description', inc_status='$inc_status', p_id='$p_id' ,image_url='$img',audio_url='$audio',video_url='$video' WHERE c_id='$c_id'";
        if ($conn->query($sql) === TRUE) {
            // remove the row from the table
            // add your code to remove the row here
@@ -217,8 +241,8 @@ if (isset($_POST['reject_complaint'])) {
        }
    } else {
        // the row does not exist, insert the values as a new row
-       $sql = "INSERT INTO del_taker (c_id, id_no, type_crime, d_o_c, repo_time_and_date, location, description, inc_status, p_id)
-       VALUES ('$c_id', '$id_no', '$type_crime', '$d_o_c', '$repo_time_and_date', '$location', '$description', '$inc_status', '$p_id')";
+       $sql = "INSERT INTO del_taker (c_id, id_no, type_crime, d_o_c, repo_time_and_date, location, description, inc_status, p_id,image_url,audio_url,video_url)
+       VALUES ('$c_id', '$id_no', '$type_crime', '$d_o_c', '$repo_time_and_date', '$location', '$description', '$inc_status', '$p_id','$img','$audio','$video')";
        if ($conn->query($sql) === TRUE) {
            // remove the row from the table
            // add your code to remove the row here
@@ -231,6 +255,7 @@ if (isset($_POST['reject_complaint'])) {
     $sql = "SELECT * FROM del_taker WHERE c_id = '$c_id'";
     $result = $conn->query($sql);
     $sql = mysqli_query($conn,"UPDATE del_taker SET inc_status='Unfulfilled Info',p_id='Not Assigned'");
+  }
  }
  
 

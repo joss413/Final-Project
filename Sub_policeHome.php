@@ -33,7 +33,7 @@
 }
     
     $p_id=$_SESSION['pol'];
-     $result=mysqli_query($conn,"SELECT c_id,type_crime,d_o_c,location FROM p_handler where p_id='$p_id' and pol_status='In Process' order by c_id desc");
+     $result=mysqli_query($conn,"SELECT c_id,type_crime,d_o_c,location,image_url,audio_url,video_url FROM p_handler where p_id='$p_id' and pol_status='In Process' order by c_id desc");
     ?>
  <script>
      function f1()
@@ -89,6 +89,9 @@
         <th scope="col">Type of Crime</th>
         <th scope="col">Date of Crime</th>
         <th scope="col">Location of Crime</th>
+        <th scope="col">Image</th>
+        <th scope="col">Audio</th>
+        <th scope="col">Video</th>
         
       </tr>
     </thead>
@@ -103,6 +106,9 @@
         <td><?php echo $rows['type_crime']; ?></td>     
         <td><?php echo $rows['d_o_c']; ?></td> 
         <td><?php echo $rows['location']; ?></td> 
+        <td><a style='color:black;' href='Imageview.php?id=<?php echo $rows["c_id"]; ?>'>View Image</a></td>
+        <td><a style='color:black;'href='Audioview.php?id=".$row["c_id"]."'>View Audio</a></td>
+        <td><a style='color:black;'href='Videoview.php?id=".$row["c_id"]."'>View Video</a></td>
                   
       </tr>
     </tbody>

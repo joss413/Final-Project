@@ -43,7 +43,7 @@ include("connection.php");
     
   
   // Fetch all the complaints from the database
-  $sql = "SELECT id_no,c_id, type_crime, d_o_c,repo_time_and_date,location,description, inc_status, p_id FROM p_handler";
+  $sql = "SELECT id_no,c_id, type_crime, d_o_c,repo_time_and_date,location,description,image_url,audio_url,video_url, inc_status, p_id FROM p_handler";
   $result = mysqli_query($conn, $sql);
   
   // Check if there are any complaints in the database
@@ -64,6 +64,9 @@ include("connection.php");
       <th>Reported Time and Date </th>
       <th>Location</th>
       <th> Descripition </th>
+      <th> Image </th>
+      <th> Audio </th>
+      <th> Video </th>
       <th>Complaint Status</th>
       <th>Police ID</th></tr>";
       echo "</thead>";
@@ -78,6 +81,9 @@ include("connection.php");
             <td>" . $row["repo_time_and_date"] . "</td>
             <td>" . $row["location"] . "</td>
             <td>" . $row["description"] . "</td>
+            <td><a style='color:black;'href='Imageview.php?id=".$row["c_id"]."'>View Image</a></td>
+            <td><a style='color:black;'href='Audioview.php?id=".$row["c_id"]."'>View Audio</a></td>
+            <td><a style='color:black;'href='Videoview.php?id=".$row["c_id"]."'>View Video</a></td>
             <td>" . $row["inc_status"] . "</td>
             <td>" . $row["p_id"] . "</td>
         
@@ -95,7 +101,7 @@ include("connection.php");
 echo " ";
 echo "\n ";
 
-  $sql = "SELECT id_no,c_id, type_crime, d_o_c,repo_time_and_date,location,description, inc_status, p_id FROM del_taker";
+  $sql = "SELECT id_no,c_id, type_crime, d_o_c,repo_time_and_date,location,description,image_url,audio_url,video_url, inc_status, p_id FROM del_taker";
   $result = mysqli_query($conn, $sql);
   
   // Check if there are any complaints in the database
@@ -116,6 +122,9 @@ echo "\n ";
       <th>Reported Time and Date </th>
       <th>Location</th>
       <th> Description </th>
+      <th> Image </th>
+      <th> Audio </th>
+      <th> Video </th>
       <th>Complaint Status</th>
       <th>Police ID</th></tr>";
       echo "</thead>";
@@ -130,6 +139,9 @@ echo "\n ";
             <td>" . $row["repo_time_and_date"] . "</td>
             <td>" . $row["location"] . "</td>
             <td>" . $row["description"] . "</td>
+            <td><a style='color:black;'href='Imageview.php?id=".$row["c_id"]."'>View Image</a></td>
+            <td><a style='color:black;'href='Audioview.php?id=".$row["c_id"]."'>View Audio</a></td>
+            <td><a style='color:black;'href='Videoview.php?id=".$row["c_id"]."'>View Video</a></td>
             <td>" . $row["inc_status"] . "</td>
             <td>" . $row["p_id"] . "</td>
            
