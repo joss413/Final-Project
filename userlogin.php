@@ -120,8 +120,8 @@ if(isset($_POST['s']))
               
          
                 <span class="icon"><ion-icon name="id-card"></ion-icon></span>
-                <input type="email"  id="exampleInputEmail1" autocomplete="off" aria-describedby="emailHelp" size="5" placeholder="Enter Email id" required name="email" onfocusout="f1()">
-                <label for="exampleInputEmail1">User Id</label>
+                <input type="email"  id="exampleInputEmail1" autocomplete="off" aria-describedby="emailHelp" size="5" placeholder="Enter Your Email " required name="email" onfocusout="f1()">
+                <label for="exampleInputEmail1">User Email</label>
            
             </div>
              
