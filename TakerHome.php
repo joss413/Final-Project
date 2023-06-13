@@ -74,7 +74,7 @@
       <th>Date of Crime</th>
       <th>Reported Time and Date </th>
       <th>Location</th>
-      <th>Descripition</th>
+      <th> Descripition </th>
       <th>Complaint Status</th>
       <th>Police ID</th>
       <th>Image</th>
@@ -302,7 +302,7 @@ function confirmReject(complaintId) {
 </script>
 
 <?php
-  include("footers.php");
+  include("footer.php");
   ?>
 
 

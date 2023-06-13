@@ -147,7 +147,7 @@
  </div>
 
 <?php
- include("footers.php");
+ include("footer.php");
 ?>
 
     <script>

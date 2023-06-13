@@ -108,12 +108,15 @@
 <form method="post">
 <select  name="police_name" style="margin-left:40%; width:250px; height:30px;">
             <?php
-                        $p_name=mysqli_query($conn,"SELECT p_name from sub_police ");
+                        $p_name=mysqli_query($conn,"SELECT p_name,location from sub_police ");
                         while($row=mysqli_fetch_array($p_name))
+
                         {
+                        if($row['location'] == $location){
                             ?>
-                                  <option> <?php echo $row[0]; ?> </option>
+                                  <option> <?php echo $row['p_name']; ?> </option>
                             <?php
+                        }
                         }
                         ?>
           
