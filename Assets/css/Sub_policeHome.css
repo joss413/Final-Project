@@ -59,7 +59,7 @@ header{
     color: #000;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 40px;
+    margin-left: 63px;
 }
 .navleft a::after{
     content:'';
@@ -144,7 +144,7 @@ nav a.active:before{
 
 
 .txts{
-    width: 250px;
+    /* width: 250px; */
     height: 30px;
     color:#000;
     background-color:white;
@@ -179,14 +179,19 @@ nav a.active:before{
 }
 
 .table th{
-    padding: 12px 1px;
+    /* padding: 12px 1px; */
+    padding-left:0px ;
+    padding-top:12px ;
+    padding-right:40px ;
+    padding-bottom: 12px;
 }
 
 .table td{
-    padding: 12px 120px;
+    /* padding: 12px 120px; */
+    padding: 12px 35px;
 }
 .table tbody tr {
-    
+
     background: #dd3e54;  
     background: -webkit-linear-gradient(to right, #6be585, #005AA7); 
     background: linear-gradient(to right, #6be585, #005AA7);

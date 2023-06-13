@@ -14,10 +14,12 @@
     
     $result1=mysqli_query($conn,"SELECT location FROM p_handler");
     $q2=mysqli_fetch_assoc($result1);
-    $location=$q2['location'];
+    
 
     $query="SELECT id_no,c_id,type_crime,d_o_c,repo_time_and_date,location,description from p_handler where c_id='$cid'";
     $result=mysqli_query($conn,$query); 
+   
+
     if(isset($_POST['assign']))
     {
       if($_SERVER["REQUEST_METHOD"]=="POST")
@@ -83,6 +85,8 @@
        </thead>
       <?php
               while($rows=mysqli_fetch_assoc($result)){
+                $location=$rows['location'];
+              //  echo $location;
              ?> 
        <tbody>
     <tr>

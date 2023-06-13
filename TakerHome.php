@@ -1,4 +1,4 @@
-<!-- <meta http-equiv="refresh"  content="60;url=Takerlogin.php"; -->
+<meta http-equiv="refresh"  content="60;url=Takerlogin.php";
 
 
 <!DOCTYPE html>

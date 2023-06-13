@@ -146,7 +146,7 @@ include("connection.php");
      
      <form method="post">
     
-      <h3 class="title">Complaint ID</h3>                 
+      <h3 class="titles">Complaint ID</h3>                 
       <input  class="txts" type="text" name="cid"  disabled value="<?php echo "$cid" ?>">
         
          
