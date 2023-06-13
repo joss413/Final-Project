@@ -1,5 +1,5 @@
 <!-- <meta http-equiv="refresh" content="60;url=userlogin.php">   -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
  
 <?php
@@ -21,8 +21,8 @@ session_start();
         $q2=mysqli_fetch_assoc($result1);
         $u_name=$q2['u_name'];
     
-    
         if (isset($_POST['s'])) {
+         
           $con = mysqli_connect('localhost', 'root', '');
           if (!$con) {
               die('could not connect: ' . mysqli_error());
@@ -37,102 +37,105 @@ session_start();
       
               if ($var >= 0) {
                   // Handle image upload
-                  $targetDir = "imageuploads/"; // Specify the target directory
-                  $targetFile = $targetDir . basename($_FILES["my_image"]["name"]); // Get the file name with the target directory
-                  $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION)); // Get the file extension
+                  $targetImageDir = "imageuploads/"; // Specify the target directory for image files
+                  $targetImageFile = $targetImageDir . basename($_FILES["my_image"]["name"]); // Get the file name with the target directory
+                  $imageFileType = strtolower(pathinfo($targetImageFile, PATHINFO_EXTENSION)); // Get the file extension
       
-                  // Check if the uploaded file is an image
-                  $validExtensions = array("jpg", "jpeg", "png", "gif"); // Define the allowed extensions
-                  if (in_array($imageFileType, $validExtensions)) {
-                      $maxFileSize = 64 * 1024 * 1024; // Maximum file size in bytes (64MB)
-                      if ($_FILES["my_image"]["size"] <= $maxFileSize) {
-                          if (move_uploaded_file($_FILES["my_image"]["tmp_name"], $targetFile)) {
-                              $image_url = $targetFile; // Store the file path or name in the $image_url variable
+                  // Handle audio upload
+                  $targetAudioDir = "audiouploads/"; // Specify the target directory for audio files
+                  $targetAudioFile = $targetAudioDir . basename($_FILES["my_audio"]["name"]); // Get the file name with the target directory
+                  $audioFileType = strtolower(pathinfo($targetAudioFile, PATHINFO_EXTENSION)); // Get the file extension
       
-                              // Perform database insertion or update with $image_url
-                              $comp = "INSERT INTO complaint (id_no, location, type_crime, d_o_c, description, image_url) VALUES ('$id_no', '$location', '$type_crime', '$d_o_c', '$description', '$image_url')";
-                              $res = mysqli_query($conn, $comp);
+                  // Handle video upload
+                  $targetVideoDir = "videouploads/"; // Specify the target directory for video files
+                  $targetVideoFile = $targetVideoDir . basename($_FILES["my_video"]["name"]); // Get the file name with the target directory
+                  $videoFileType = strtolower(pathinfo($targetVideoFile, PATHINFO_EXTENSION)); // Get the file extension
       
-                              if (!$res) {
-                                  $message1 = "Complaint already filed";
-                                  echo "<script type='text/javascript'>alert('$message1');</script>";
-                              } else {
-                                  $message = "Complaint Registered Successfully";
-                                  echo "<script type='text/javascript'>alert('$message');</script>";
-                              }
-                           } else {
-                              // Failed to move the uploaded file
+                  // Check if the uploaded image file is valid
+                  $validImageExtensions = array("jpg", "jpeg", "png"); // Define the allowed image extensions
+                  if (in_array($imageFileType, $validImageExtensions)) {
+                      $maxImageFileSize = 5 * 1024 * 1024; // Maximum image file size in bytes (5MB)
+                      if ($_FILES["my_image"]["size"] <= $maxImageFileSize) {
+                          if (move_uploaded_file($_FILES["my_image"]["tmp_name"], $targetImageFile)) {
+                              $image_url = $targetImageFile; // Store the image file path or name in the $image_url variable
+                          } else {
+                              // Failed to move the uploaded image file
                               $message = "Failed to upload the image.";
                               echo "<script type='text/javascript'>alert('$message');</script>";
                           }
-                      }
-                       else {
-                          // File size exceeds the limit
-                          $message = "The file size should not exceed 64MB.";
+                      } else {
+                          // Image file size exceeds the limit
+                          $message = "The image file size should not exceed 5MB.";
                           echo "<script type='text/javascript'>alert('$message');</script>";
                       }
                   } else {
-                      // Invalid file extension
-                      $message = "Only JPG, JPEG, PNG, and GIF files are allowed.";
+                      // Invalid image file extension
+                      $message = "Only JPG, JPEG, and PNG image files are allowed.";
                       echo "<script type='text/javascript'>alert('$message');</script>";
                   }
-                  
-
-                  // Handle audio upload
-
-                    $targetaudio = "audiouploads/"; // Specify the target directory
-                    $targetFile = $targetaudio . basename($_FILES["my_audio"]["name"]); // Get the file name with the target directory
-                    $audioFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION)); // Get the file extension
-        
-                    // Check if the uploaded file is an image
-                    $validExtensions = array("mp3", "mp4"); // Define the allowed extensions
-                    if (in_array($audioFileType, $validExtensions)) {
-                        $maxFileSize = 100 * 1024 * 1024; // Maximum file size in bytes (64MB)
-                        if ($_FILES["my_image"]["size"] <= $maxFileSize) {
-                            if (move_uploaded_file($_FILES["my_audio"]["tmp_name"], $targetFile)) {
-                                $audio_url = $targetFile; // Store the file path or name in the $image_url variable
-        
-                                // Perform database insertion or update with $image_url
-                                $comp = "INSERT INTO complaint (id_no, location, type_crime, d_o_c, description, image_url,audio_url) VALUES ('$id_no', '$location', '$type_crime', '$d_o_c', '$description', '$image_url','$audio_url')";
-                                $res = mysqli_query($conn, $comp);
-        
-                                if (!$res) {
-                                    $message1 = "Complaint already filed";
-                                    echo "<script type='text/javascript'>alert('$message1');</script>";
-                                } else {
-                                    $message = "Complaint Registered Successfully";
-                                    echo "<script type='text/javascript'>alert('$message');</script>";
-                                }
-                            } else {
-                                // Failed to move the uploaded file
-                                $message = "Failed to upload the audio.";
-                                echo "<script type='text/javascript'>alert('$message');</script>";
-                            }
-                        } else {
-                            // File size exceeds the limit
-                            $message = "The file size should not exceed 100MB.";
-                            echo "<script type='text/javascript'>alert('$message');</script>";
-                        }
-                    } else {
-                        // Invalid file extension
-                        $message = "Only mp3,mp4 files are allowed.";
-                        echo "<script type='text/javascript'>alert('$message');</script>";
-                    }
-                    
-
-
-
-
-              } else {
-                  $message = "Enter Valid Date";
-                  echo "<script type='text/javascript'>alert('$message');</script>";
-              }
+      
+                  // Check if the uploaded audio file is valid
+                  $validAudioExtensions = array("mp3", "mp4"); // Define the allowed audio extensions
+                  if (in_array($audioFileType, $validAudioExtensions)) {
+                      $maxAudioFileSize = 100 * 1024 * 1024; // Maximum audio file size in bytes (100MB)
+                      if ($_FILES["my_audio"]["size"] <= $maxAudioFileSize) {
+                          if (move_uploaded_file($_FILES["my_audio"]["tmp_name"], $targetAudioFile)) {
+                              $audio_url = $targetAudioFile; // Store the audio file path or name in the $audio_url variable
+                          } else {
+                              // Failed to move the uploaded audio file
+                              $message = "Failed to upload the audio.";
+                              echo "<script type='text/javascript'>alert('$message');</script>";
+                          }
+                      } else {
+                          // Audio file size exceeds the limit
+                          $message = "The audio file size should not exceed 100MB.";
+                          echo "<script type='text/javascript'>alert('$message');</script>";
+                      }
+                  } else {
+                      // Invalid audio file extension
+                      $message = "Only MP3 and MP4 audio files are allowed.";
+                      echo "<script type='text/javascript'>alert('$message');</script>";
+                  }
+      
+                  // Check if the uploaded video file is valid
+                  $validVideoExtensions = array("mp3","mp4", "mov", "avi"); // Define the allowed video extensions
+                  if (in_array($videoFileType, $validVideoExtensions)) {
+                      $maxVideoFileSize = 500 * 1024 * 1024; // Maximum video file size in bytes (500MB)
+                      if ($_FILES["my_video"]["size"] <= $maxVideoFileSize) {
+                          if (move_uploaded_file($_FILES["my_video"]["tmp_name"], $targetVideoFile)) {
+                              $video_url = $targetVideoFile; // Store the video file path or name in the $video_url variable
+                          } else {
+                              // Failed to move the uploaded video file
+                              $message = "Failed to upload the video.";
+                              echo "<script type='text/javascript'>alert('$message');</script>";
+                          }
+                      } else {
+                          // Video file size exceeds the limit
+                          $message = "The video file size should not exceed 500MB.";
+                          echo "<script type='text/javascript'>alert('$message');</script>";
+                      }
+                  } else {
+                      // Invalid video file extension
+                      $message = "Only MP4, MOV, and AVI video files are allowed.";
+                      echo "<script type='text/javascript'>alert('$message');</script>";
+                  }
+      
+          // Perform database insertion or update with the uploaded file paths
+          $comp = "INSERT INTO complaint (id_no, location, type_crime, d_o_c, description, image_url, audio_url, video_url) VALUES ('$id_no', '$location', '$type_crime', '$d_o_c', '$description', '$image_url', '$audio_url', '$video_url')";
+          $res = mysqli_query($conn, $comp);
+  
+          if (!$res) {
+              $message1 = "Complaint already filed";
+              echo "<script type='text/javascript'>alert('$message1');</script>";
+          } else {
+              $message = "Complaint Registered Successfully";
+              echo "<script type='text/javascript'>alert('$message');</script>";
           }
+      
+        }
       }
-      
-      
-
-?>
+    }
+  ?>
 
 
 

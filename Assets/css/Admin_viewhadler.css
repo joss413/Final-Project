@@ -223,13 +223,15 @@ nav a.active:before{
 
 
 .table tbody tr {
-
+    background: #dd3e54;  
+    background: -webkit-linear-gradient(to right, #6be585, #005AA7); 
+    background: linear-gradient(to right, #6be585, #005AA7);
     border-bottom: 1px solid #dddddd;
 }
 
-.table tbody tr:nth-of-type(even){
+/* .table tbody tr:nth-of-type(even){
    background-color: #f3f3f3;
-}
+} */
 
 .table tbody tr:last-of-type{
     border-bottom: 3px solid #000;

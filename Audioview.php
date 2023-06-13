@@ -1,7 +1,7 @@
 <?php
 
 include "connection.php";
-// Get the image URL based on the ID from the button click
+// Get the audio URL based on the ID from the button click
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     
@@ -13,14 +13,14 @@ if (isset($_GET['id'])) {
         $row = mysqli_fetch_assoc($result);
         $audioURL = $row['audio_url'];
         // echo $audioURL;
-        // Display the image
+        // Display the audio
         echo '<audio controls>
         <source src="./'. $audioURL . '" type="audio/wav">
         Your browser does not support the audio element.
         </audio>';
 
         
-        // '<img src="./'. $audioURL . '" alt="Audio">';
+     
     } 
     else {
         echo 'audio not found.';

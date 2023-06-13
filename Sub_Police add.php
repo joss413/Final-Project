@@ -177,7 +177,7 @@ if(isset($_POST['s'])){
 
           <div class="input-dropdown">
 
-                  <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Location of Police </p>  
+                  <p style="margin-bottom:8px; padding-left:3px; color:white"> Location of Police </p>  
                         <select class="form-control" name="location" placeholder="Police Location" required="" id="loc" onfocusout="f1()">
                           <option>Akaki-Kality</option>
                           <option>Addis Ketema</option>
@@ -196,11 +196,14 @@ if(isset($_POST['s'])){
 
              <div class="input-dropdown">
 
-                      <p style="margin-bottom:8px; padding-left:3px; opacity:0.7"> Specification </p>  
+                      <p style="margin-bottom:8px; padding-left:3px; color:white;"> Specification </p>  
                             <select class="form-control" name="specification" placeholder="specification" required="" id="spec" onfocusout="f1()">
-                                     
+                            
+                                      <option>Constable</option>
+                                      <option>Sergeant</option>
                                       <option>Inspector</option>
-                                      <option>Surf</option>
+                                      <option>Commander</option>
+                                      <option>Commissioner</option>
                             
                               
                             </select>

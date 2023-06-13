@@ -1,7 +1,7 @@
 <?php
 
 include "connection.php";
-// Get the image URL based on the ID from the button click
+// Get the video URL based on the ID from the button click
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     
@@ -13,10 +13,12 @@ if (isset($_GET['id'])) {
         $row = mysqli_fetch_assoc($result);
         $videoURL = $row['video_url'];
         
-        // Display the image
-        echo '<img src="./'. $videoURL . '" alt="Video">';
-    } else {
-        echo 'Video not found.';
+        // Display the video
+        echo '<video controls>
+        <source src="./'. $videoURL . '" type="video/mp4">
+        Your browser does not support the audio element.
+        </video>';
+
     }
 } else {
     echo 'Invalid request.';

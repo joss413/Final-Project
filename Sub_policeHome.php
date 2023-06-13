@@ -106,9 +106,9 @@
         <td><?php echo $rows['type_crime']; ?></td>     
         <td><?php echo $rows['d_o_c']; ?></td> 
         <td><?php echo $rows['location']; ?></td> 
-        <td><a style='color:black;' href='Imageview.php?id=<?php echo $rows["c_id"]; ?>'>View Image</a></td>
-        <td><a style='color:black;'href='Audioview.php?id=".$row["c_id"]."'>View Audio</a></td>
-        <td><a style='color:black;'href='Videoview.php?id=".$row["c_id"]."'>View Video</a></td>
+        <td><a style='color:black;' href='Imageview.php?id=<?php echo $rows["c_id"]; ?>'>View Image</a></td> 
+        <td><a style='color:black;' href='Audioview.php?id=<?php echo $rows["c_id"]; ?>'>View Audio</a></td> 
+        <td><a style='color:black;' href='Videoview.php?id=<?php echo $rows["c_id"]; ?>'>View Video</a></td> 
                   
       </tr>
     </tbody>
