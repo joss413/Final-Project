@@ -64,14 +64,14 @@ if(isset($_POST['s']))
 {
     session_start();
     // $_SESSION['x']=1;
-    $_SESSION['start']=time();
-    $_SESSION['expire']=$_SESSION['start'] + (10);
+    // $_SESSION['start']=time();
+    // $_SESSION['expire']=$_SESSION['start'] + (10);
     
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
         $name=$_POST['email'];
         $pass=md5($_POST['password']);
-        $result=mysqli_query($conn,"SELECT u_id,u_pass, FROM user where u_id='$name' and u_pass='$pass' ");
+        $result=mysqli_query($conn,"SELECT u_id,u_pass FROM user where u_id='$name' and u_pass='$pass' ");
        
           $u_id=$_POST['email'];
           $_SESSION['u_id']=$u_id;
