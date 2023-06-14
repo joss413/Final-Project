@@ -149,8 +149,9 @@ if(isset($_POST['reset'])){
     if($count == 1){
         // Update user password
         $q2 = mysqli_query($conn,"UPDATE user SET u_pass = '$hash' WHERE u_id = '$email'");
-        $message = "Password updated successfully!";
-        echo "<script type='text/javascript'>alert('$message');</script>";
+        // $message = "Password updated successfully!";
+        // echo "<script type='text/javascript'>alert('$message');</script>";
+        header("location:userlogin.php");
     } 
     
     else {

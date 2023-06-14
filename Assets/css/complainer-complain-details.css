@@ -241,9 +241,9 @@ nav a.active:before{
     border-bottom: 1px solid #dddddd;
 }
 
-.table tbody tr:nth-of-type(even){
+/* .table tbody tr:nth-of-type(even){
    /* background-color: #f3f3f3; */
-}
+/* }  */
 
   tbody tr:last-of-type{
     border-bottom: 1px solid #000;
