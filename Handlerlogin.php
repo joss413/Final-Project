@@ -83,7 +83,12 @@ if(isset($_POST['s']))
         }
         else 
         {
+         
+
+          $_SESSION['auth'] = 'handler';
+          $_SESSION['x'] = 1;
           header("location:HandlerHome.php");
+          exit();
         }
     }                
 }

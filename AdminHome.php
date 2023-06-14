@@ -1,3 +1,16 @@
+<?php
+session_start();
+if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'Admin') {
+    header("Location: home.php");
+    exit();
+}
+?>
+
+
+
+
+
+
 <meta http-equiv="refresh" content="60; url=Adminlogin.php">
 
 <!DOCTYPE html>
@@ -57,7 +70,7 @@
 
 <?php
   include("connection.php");
-session_start();
+// session_start();
     if(!isset($_SESSION['x']))
         header("location:headlogin.php");
     

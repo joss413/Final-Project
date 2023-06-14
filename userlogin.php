@@ -63,7 +63,7 @@ include("connection.php");
 if(isset($_POST['s']))
 {
     session_start();
-    $_SESSION['x']=1;
+    // $_SESSION['x']=1;
     $_SESSION['start']=time();
     $_SESSION['expire']=$_SESSION['start'] + (10);
     
@@ -71,7 +71,7 @@ if(isset($_POST['s']))
     {
         $name=$_POST['email'];
         $pass=md5($_POST['password']);
-        $result=mysqli_query($conn,"SELECT u_id,u_pass FROM user where u_id='$name' and u_pass='$pass' ");
+        $result=mysqli_query($conn,"SELECT u_id,u_pass, FROM user where u_id='$name' and u_pass='$pass' ");
        
           $u_id=$_POST['email'];
           $_SESSION['u_id']=$u_id;
@@ -84,8 +84,10 @@ if(isset($_POST['s']))
         }
         else 
         {
-         
+          $_SESSION['auth'] = 'user';
+          $_SESSION['x'] = 1;
           header("location:complainer_page.php");
+          exit();
         }
     }
     

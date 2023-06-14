@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
+    header("Location: home.php");
+    exit();
+}
+?>
+
+
+
 <meta http-equiv="refresh" content="60;url=userlogin.php"> 
 <!DOCTYPE html>
 <html lang="en">
@@ -121,7 +131,7 @@ var z = document.getElementById("eye2");
     
 <?php
 include("connection.php");
-session_start();
+// session_start();
 if(!isset($_SESSION['x']))
     header("location:userlogin.php");
 

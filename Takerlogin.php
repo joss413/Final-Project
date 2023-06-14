@@ -62,7 +62,7 @@ var z = document.getElementById("eye2");
 if(isset($_POST['s']))
 {
     session_start();
-    $_SESSION['x']=1;
+    // $_SESSION['x']=1;
   
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
@@ -79,10 +79,15 @@ if(isset($_POST['s']))
         }
         else 
         {
-          header("location:TakerHome.php");
+       
+          $_SESSION['auth'] = 'taker';
+          $_SESSION['x'] = 1;
+          header("Location: TakerHome.php");
+          exit();
+         }
         }
     }                
-}
+
 ?> 
 
 <header>

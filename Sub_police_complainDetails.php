@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'police') {
+    header("Location: home.php");
+    exit();
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +17,7 @@
 
     <?php
 include("connection.php");
-    session_start();
+    // session_start();
     if(!isset($_SESSION['x']))
         header("location:Sub_policelogin.php");
           

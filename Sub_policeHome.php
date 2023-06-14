@@ -1,3 +1,16 @@
+<?php
+session_start();
+if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'police') {
+    header("Location: home.php");
+    exit();
+}
+?>
+
+
+
+
+
+
 <meta http-equiv="refresh"  content="60 ; url=Sub_policelogin.php">
 <!DOCTYPE html>
 <html>
@@ -9,7 +22,7 @@
 	
      <?php
      include("connection.php");
-    session_start();
+    // session_start();
     if(!isset($_SESSION['x']))
         header("location:Sub_policelogin.php");
     

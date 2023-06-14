@@ -1,17 +1,22 @@
+<?php
+session_start();
+if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
+    header("Location: home.php");
+    exit();
+}
+?>
+
+
 <meta http-equiv="refresh" content="60;url=userlogin.php">  
 <!DOCTYPE html>
 <html>
  
 <?php
  include("connection.php");
-session_start();
+// session_start();
     if(!isset($_SESSION['x']))
         header("location:userlogin.php");
-    
-    
-   
-    
-    $u_id=$_SESSION['u_id'];
+        $u_id=$_SESSION['u_id'];
         
         $result=mysqli_query($conn,"SELECT id_no FROM user where u_id='$u_id' ");
         $q2=mysqli_fetch_assoc($result);

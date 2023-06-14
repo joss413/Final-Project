@@ -80,7 +80,12 @@ if(isset($_POST['s']))
         }
         else 
         {
+          
+
+          $_SESSION['auth'] = 'Admin';
+          $_SESSION['x'] = 1;
           header("location:AdminHome.php");
+          exit();
         }
     }                
 }

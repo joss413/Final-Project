@@ -68,7 +68,7 @@ if(isset($_POST['s']))
 {
 
     session_start();
-    $_SESSION['x']=1;
+    // $_SESSION['x']=1;
   
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {
@@ -83,7 +83,12 @@ if(isset($_POST['s']))
         }
         else 
         {
+         
+
+          $_SESSION['auth'] = 'police';
+          $_SESSION['x'] = 1;
           header("location:Sub_policeHome.php");
+          exit();
         }
     }                
 }
