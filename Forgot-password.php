@@ -1,10 +1,4 @@
-<?php
-session_start();
-if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
-    header("Location: home.php");
-    exit();
-}
-?>
+
 
 
 <meta http-equiv="refresh" content="60;url=userlogin.php"> 
@@ -76,7 +70,7 @@ var z = document.getElementById("eye2");
  include("connection.php");
 if(isset($_POST['s']))
 {
-    // session_start();
+    session_start();
     $_SESSION['x']=1;
   
     if($_SERVER["REQUEST_METHOD"]=="POST")
