@@ -6,7 +6,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'Admin') {
 }
 ?>
 
-
+<meta http-equiv="refresh"  content="60 ; url=Sub_policelogin.php">
 <!DOCTYPE html>
 <html>
 <head>
