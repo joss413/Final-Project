@@ -7,7 +7,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
 ?>
 
 
-<meta http-equiv="refresh" content="60;url=userlogin.php">  
+<meta http-equiv="refresh" content="180;url=userlogin.php">  
 <!DOCTYPE html>
 <html>
  
@@ -175,7 +175,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
  <body>
 
          <header>
-         <a href=""> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
+         <a href="home.php"> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
          
          <nav class="navigation">

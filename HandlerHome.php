@@ -49,8 +49,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'handler') {
       
       if(strcmp("$loc","$location")!=0)
       {
-        // $msg="Case Not of your Location";
-       // echo "<script type='text/javascript'>alert('$msg');</script>";
+     
        header("location:Handler_complain_details.php");
         
       }
@@ -81,7 +80,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'handler') {
   <header>
 
 <div class="leftside">
-    <a href=""> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
+    <a href="home.php"> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
            <nav class="navleft">
              <a href="home.php"> Home </a>

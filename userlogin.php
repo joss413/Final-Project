@@ -96,7 +96,7 @@ if(isset($_POST['s']))
 
 
 <header>
-         <a href=""> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
+         <a href="home.php"> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
          
          <nav class="navigation">

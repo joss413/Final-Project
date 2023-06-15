@@ -113,7 +113,7 @@ if(isset($_POST['s'])){
         $res=mysqli_query($conn,$reg);
         if(!$res)
             {
-        $message1 = "User Already Exist";
+        $message1 = "Subcity Police Already Exist";
         echo "<script type='text/javascript'>alert('$message1');</script>";
     }
             
@@ -136,7 +136,7 @@ if(isset($_POST['s'])){
 <header>
 
 <div class="leftside">
-    <a href=""> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
+    <a href="home.php"> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
            <nav class="navleft">
              <a href="home.php"> Home </a>

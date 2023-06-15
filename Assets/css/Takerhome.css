@@ -200,11 +200,11 @@ nav a.active:before{
     border-bottom: 1px solid #dddddd;
 }
 
-.table tbody tr:nth-of-type(even){
+/* .table tbody tr:nth-of-type(even){
    
-    /* background-color: #3D6181; */
+    background-color: #3D6181;
    
-}
+} */
 
 .table tbody tr:last-of-type{
     border-bottom: 3px solid #000;

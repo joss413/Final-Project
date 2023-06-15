@@ -30,7 +30,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'taker') {
  <header>
 
      <div class="leftside">
-         <a href=""> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
+         <a href="home.php"> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
               
                 <nav class="navleft">
                   <a href="home.php"> Home </a>
@@ -208,6 +208,7 @@ if(isset($_POST['pass_to_handler'])) {
       if ($conn->query($sql) === TRUE) {
           // remove the row from the table
           // add your code to remove the row here
+          // echo "Case passed successfully";
       } else {
           echo "Error: " . $sql . "<br>" . $conn->error;
       }
