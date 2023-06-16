@@ -171,7 +171,7 @@ nav a.active:before{
     border-collapse: collapse;
     margin-left:10px ;
     margin-right: 10px;
-    margin-top: 25px;
+    margin-top: 5px;
     margin-bottom: 0%;
     font-size: 0.9em;
     min-width: 400px;

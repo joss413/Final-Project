@@ -125,6 +125,9 @@ if(isset($_POST['s2']))
         $uid=$_POST['uid'];
         
         $q1=mysqli_query($conn,"delete from user where id_no='$uid'");
+      
+        $message = "User Deleted Successfully";
+        echo "<script type='text/javascript'>alert('$message');</script>";
         
     }
 }  
