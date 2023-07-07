@@ -241,7 +241,69 @@ main{
     text-decoration: underline;
 }
 
+/* resizing for different screen */
+/* Add your existing CSS code here */
 
+@media screen and (max-width: 375px) {
 
+    body {
+      
+      margin: 0;
+    }
+  
+    header {
+     
+      display:flex;
+      flex-direction: column;
+    }
+  
+    main {
+      
+      margin-left: 10px;
+      margin-right: 10px;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+
+    }
+  
+    .wrapper {
+     
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .pic {
+      padding-left: 10px;
+    }
+    img{
+        padding-left: 0px;
+    
+    }
+    nav{
+        font-size:15px;
+        gap: 10px;
+        display: flex;
+        text-align: center;
+        padding: 0 10px;
+        padding-bottom: 10px;
+    }
+    .navigation a {
+      margin-left: 2px;
+      margin-right: 20px;
+      
+    }
+    .form-control{
+        width: 100%;
+    }
+    input::placeholder {
+        font-size: 12px; 
+        font-weight: bold;
+      }
+    
+  }
+  
 
 

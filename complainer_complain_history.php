@@ -93,13 +93,13 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
     <a href="home.php"> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
            <nav class="navleft">
-             <a href="home.php"> Home </a>
+             
             
          </nav>
  </div>
 
     <nav class="navigation">
-       
+       <a href="home.php"> Home </a>
        <a href="complainer_page.php">Log New Complain</a>
        <a href="complainer_complain_history.php" class="active"> Complaint History</a>
        <a href="Taker_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>

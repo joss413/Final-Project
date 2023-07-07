@@ -22,7 +22,6 @@ header{
     width: 100%;
     padding: 0px 10px; 
     background: rgba(255,255,255, .5);
-    opacity: 1.2;
     border: 2px 0px solid rgba(255,255,255, .5);
     border-radius: 0px;
     display: flex;
@@ -150,18 +149,24 @@ nav a.active:before{
 @media (max-width: 576px) {
     header {
         flex-direction: column;
-        padding: 20px;
+        padding: 5px;
+    }
+    nav{
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
     }
     
     .pic {
-        height: 50px;
+        height: 40px;
         padding: 0;
+        margin-left: 0px;
     }
     
     .navigation a {
-        margin-left: 0;
+        margin-left: 5px;
         margin-right: 0;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     
     nav a.active:before {
@@ -197,3 +202,9 @@ nav a.active:before{
         }
     }
 }
+
+
+
+
+
+

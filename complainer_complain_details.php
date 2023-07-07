@@ -48,15 +48,12 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
 
 <div class="leftside">
     <a href="home.php"> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
-         
-           <nav class="navleft">
-             <a href="home.php"> Home </a>
-             <a href="complainer_complain_history.php" > Complaint History</a>
-            
-         </nav>
  </div>
 
     <nav class="navigation">
+    
+      <a href="home.php"> Home </a>
+      <a href="complainer_complain_history.php" > Complaint History</a>
        
        <a href="complainer_complain_details.php" class="active"> Complaint Details </a>
        
@@ -81,7 +78,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
             <?php
               while($rows=mysqli_fetch_assoc($result)){
             ?> 
-             <tbody >
+             <tbody class="xbody" >
               <tr>
                 <td><?php echo $rows['c_id']; ?></td>
                 <td><?php echo $rows['description']; ?></td>     
@@ -99,8 +96,8 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
             <table class="table" id="bottom-update">
                <thead >
                    <tr>
-                        <th class="head"scope="col">Date Of Update</th>
-                        <th class="head" scope="col">Case Update</th>
+                        <th scope="col">Date Of Update</th>
+                        <th  scope="col">Case Update</th>
                    </tr>
                </thead>
             <?php
@@ -108,8 +105,8 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
              ?> 
                 <tbody style="background-color: white; color: black;">
                 <tr>
-                    <td class="head"><?php echo $rows1['d_o_u']; ?></td>
-                    <td class="head"><?php echo $rows1['case_update']; ?></td>
+                    <td ><?php echo $rows1['d_o_u']; ?></td>
+                    <td ><?php echo $rows1['case_update']; ?></td>
                 </tr>
                 </tbody>
             <?php

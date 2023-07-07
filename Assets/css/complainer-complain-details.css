@@ -252,3 +252,82 @@ nav a.active:before{
 #bottom-update{
     margin-bottom: 34%;
 }
+
+
+
+@media screen and (max-width: 375px) {
+
+     
+    
+    header{
+        flex-direction: column;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+       
+    }
+    body{
+        height: auto;
+        width: 100vh;
+    }
+    .pic {
+      padding-left: 160px;
+      margin-right: 0;
+
+    }
+  
+    .leftside {
+      
+      flex-wrap: wrap;
+    }
+    nav{
+        display: flex;
+        gap: 15px;
+        flex-direction: row;
+        padding-bottom: 10px;      
+    }
+
+  
+    .navigation a {
+      font-size: 1em;
+       margin: 0px;
+    }
+  
+    .forms {
+      margin-top: 7%;
+      margin-left: 40%;
+     
+    }
+  
+    .btns {
+      width: 30%;
+      height: 30px;
+      margin-top: 10px;
+      margin-left: 7%;
+      
+    }
+  
+    .txts {
+      width: 150px;
+      height: 30px;
+      font-size: 1em;
+    }
+  
+    .table td {
+      padding: 8px 40px;
+    }
+  
+    .table {
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-bottom: 45%;
+    }
+
+   
+    .xbody{
+        margin-right: 20px;
+    }
+  }
+  

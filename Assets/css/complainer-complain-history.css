@@ -212,3 +212,82 @@ nav a.active:before{
     border-bottom: 1px solid #000;
 } 
 
+
+
+@media screen and (max-width: 375px) {
+
+     
+    
+    header{
+        flex-direction: column;
+        padding: 3px; 
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+      
+    }
+    body{
+        height: auto;
+        width: 100vh;
+    }
+    .pic {
+      padding-left: 30px;
+      margin-right: 0;
+    }
+  
+    .leftside {
+      margin-left: 10px;
+      margin-right: 10px;
+      flex-wrap: wrap;
+    }
+    nav{
+        display: flex;
+        gap: 3px;
+        flex-direction: row;
+        margin-bottom: 12px;
+        
+    }
+    .navleft a {
+      font-size: 1em;
+      margin-left: 20px;
+    }
+  
+    .navigation a {
+      font-size: 1em;
+      margin-left: 40px;
+    }
+  
+    .forms {
+      margin-top: 7%;
+      /* padding-top: 20%; */
+      margin-left: 40%;
+     
+    }
+  
+    .btns {
+      width: 30%;
+      height: 30px;
+      margin-top: 10px;
+      margin-left: 7%;
+      
+    }
+  
+    .txts {
+      width: 150px;
+      height: 30px;
+      font-size: 1em;
+    }
+  
+    .table td {
+      padding: 12px 50px;
+    }
+  
+    .table {
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-bottom: 42%;
+    }
+  }
+  

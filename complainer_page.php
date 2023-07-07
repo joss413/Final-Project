@@ -174,18 +174,13 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
 
  <body>
 
-         <header>
+<header>
          <a href="home.php"> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
-         
-         
-         <nav class="navigation">
-            
-            
+                  
+         <nav class="navigation">                 
             <a href="home.php" > Home </a>
             <a href="complainer_page.php" class="active">Log New Complain </a>
             <a href="complainer_complain_history.php">Complaint History</a>
-        
-       
          </nav>   
 </header>
 <main>
@@ -205,7 +200,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
                  <input type="text"  name="ID_number" placeholder="ID Number" required="" disabled value=<?php echo "$id_no"; ?>>
                  <label for="exampleInputEmail1">ID Number</label>
       
-                </div>
+            </div>
 
                 <div class="input-dropdown">
 
@@ -245,7 +240,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
            <div class="input-box">
               
                
-              	<input style="display:flex;" type="date" name="d_o_c" required>
+              	<input style="display:flex; color:white;" type="date" name="d_o_c" required>
                 <label for="exampleInputEmail1">	Date Of Crime  </label>
            
             </div>
@@ -253,7 +248,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
            <div class="input-box" >
        
                 <span class="icon"><ion-icon name="reader"></ion-icon></ion-icon></span>
-                <input type="text" name="description" rows="20" cols="50" placeholder="Describe the incident in details with time" onfocusout="f1()" id="desc" required>
+                <input type="text" name="description" rows="20" cols="50" placeholder="Describe the incident in details with time" onfocusout="f1()" class="text" id="desc" required>
                 <label for="exampleInputPassword1">	Description </label>
               </div>
 
