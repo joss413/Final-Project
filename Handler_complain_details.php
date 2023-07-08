@@ -121,7 +121,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'handler') {
 </table>
 
 <form method="post">
-<select  name="police_name" style="margin-left:40%; width:250px; height:30px;">
+<select  name="police_name" class="assign" style="margin-left:40%; width:250px; height:30px;">
             <?php
                         $p_name=mysqli_query($conn,"SELECT p_name,location from sub_police ");
                         while($row=mysqli_fetch_array($p_name))
@@ -136,7 +136,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'handler') {
                         ?>
           
             </select>
-            <input type="submit" name="assign" value="Assign Case" class="btns" style="margin-top:10px; margin-left:45%;">
+            <input type="submit" name="assign" value="Assign Case" class="btns" >
 </form>
  </div>
 

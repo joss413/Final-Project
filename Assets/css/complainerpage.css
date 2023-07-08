@@ -244,17 +244,23 @@ main{
 /* resizing for different screen */
 /* Add your existing CSS code here */
 
+
 @media screen and (max-width: 375px) {
 
+
+
     body {
-      
+        background: url(../pictures/darkblack.jpg) no-repeat;
       margin: 0;
+      height: auto;
     }
   
     header {
      
       display:flex;
       flex-direction: column;
+      width: 100%;
+     
     }
   
     main {
@@ -264,6 +270,10 @@ main{
       display:flex;
       align-items:center;
       justify-content: center;
+      width: 100%;
+      /* height: 1570px; */
+    
+      
 
     }
   
@@ -305,5 +315,8 @@ main{
     
   }
   
+
+
+
 
 

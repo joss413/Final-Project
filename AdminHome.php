@@ -35,11 +35,11 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'Admin') {
     <a href="indo"> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
            <nav class="navleft">
-             <a href="home.php"> Home </a>
+             
+           <!-- <a href="home.php"> Home </a> -->
              <a href="official_login.php">Official Login</a>
              <a href="Adminlogin.php">Admin Login</a> 
          </nav>
-
           <ul class="navleft">
          <li >
       <a href="#" class="drop" style="background: rgba(255,255,255, .5);"> View Officers <ion-icon name="caret-down-outline"></ion-icon> </a>
@@ -59,8 +59,8 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'Admin') {
 
     <nav class="navigation">
        
-       <a href="AdminHome.php" class="active"> View users</a>
-       <a href="Taker_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+       <!-- <a href="AdminHome.php" class="active"> View users</a> -->
+       <a href="Admin_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
    
   
     </nav>   

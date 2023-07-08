@@ -278,24 +278,45 @@ main{
   
 
 
-  /* resizing for different screen size */
+ /* resizing for different screen size */
 
-@media screen and (max-width: 576px) {
+ @media screen and (max-width: 375px) {
 
     header{
         padding: 0px 5px; 
+        display: flex;
+        flex-direction: column;
+    }
+    .leftside{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
     }
 
     .pic{
-        padding-left: 20px;
+        padding-left:0px;
         padding-top: 10px;
     }
 
-    .navigation a {
-        font-size: 1.1em;
-        margin-left: 2px;
-        margin-right: 20px;
+    nav{
+        font-size:15px;
+        gap: 5px;
+        display: flex;
+        text-align: center;
+        padding: 0 0px 10px 0px;
     }
+    .navigation a {
+      margin-left: 2px;
+      font-size:15px;
+      margin-right: 0px;
+      
+    }
+  .form-control{
+    width:268px;
+  }
+
+  
 
     main{
         margin-top: 8em;
@@ -304,7 +325,7 @@ main{
 
     .wrapper{
         width: 90%;
-        height: 400px;
+        height: 100vh;
         margin-left: 5%;
         margin-bottom: 15%;
     }

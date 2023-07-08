@@ -6,7 +6,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'Admin') {
 }
 ?>
 
-<meta http-equiv="refresh"  content="60;url=Takerlogin.php";
+<!-- <meta http-equiv="refresh"  content="60;url=Adminlogin.php"; -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -117,19 +117,15 @@ if(isset($_POST['s'])){
  <header>
 
 <div class="leftside">
-    <a href="home.php"> <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
-         
-           <nav class="navleft">
-             <a href="home.php"> Home </a>
-             <a href="Adminlogin.php">Admin Login</a>
-             <a href="AdminHome.php">Admin Home</a>
-            
+    <a href="home.php"> 
+      <img class="pic" src="../on_the_go incident reporter/Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
 
-         </nav>
  </div>
 
     <nav class="navigation">
-       
+           <a href="home.php"> Home </a>
+             <a href="Adminlogin.php">Admin Login</a>
+             <a href="AdminHome.php">Admin Home</a>
        <a href="Taker add.php" class="active"> Add Taker </a>
        
        <a href="Admin_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>

@@ -281,3 +281,106 @@ nav a.active:before{
 }
 
 
+
+
+
+/* Add your existing CSS code here */
+
+@media screen and (max-width: 375px) {
+
+    header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-left: 0px;
+    }
+    .pic {
+      padding-left: 30px;
+      margin-right: 0;
+    }
+    body{
+        /* height: 900%; */
+        width: 250%;
+    }
+    
+  .title{
+    width: 20%;
+  }
+
+    .leftside {
+      margin-left: 10px;
+      margin-right: 10px;
+      display: flex;
+      flex-direction: row;
+
+    }
+  
+    .leftside nav{
+        display: flex;
+    }
+
+ 
+    .leftside nav a{
+        width: 100%;
+        word-break: keep-all;
+    }
+    .navleft a {
+      font-size: 1em;
+      margin-left: 20px;
+    }
+  
+    .navigation a {
+      font-size: 1em;
+      margin-left: 0px;
+      font-size: 18px;
+
+    }
+
+    .navigation{
+        display: flex;
+        gap: 10px;
+        width: 25px;
+        padding-bottom: 15px;
+        
+    }
+  
+    .forms {
+      margin-top: 7%;
+      margin-left: 40%;
+    }
+  
+    .btns {
+      width: 25%;
+      height: 35px;
+      margin-top: 10px;
+      margin-left: 0.5%;
+      margin-bottom: 0;
+    }
+  
+    .txts {
+      width: 150px;
+      height: 30px;
+      font-size: 1em;
+     
+    }
+  
+ .table td {
+        padding: 12px 50px;
+      }
+    
+      .table {
+        margin-left: 5px;
+        margin-right: 5px;
+        /* margin-bottom: 42%; */
+        width: 30px;
+      }
+    .title {
+      font-size: 1.3em;
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 8%;
+      padding-top: 0.5%;
+      padding-bottom: 0.5%;
+    }
+  }
+  

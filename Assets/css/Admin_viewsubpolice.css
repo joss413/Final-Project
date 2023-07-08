@@ -239,3 +239,92 @@ nav a.active:before{
 }
 
 
+
+
+@media screen and (max-width: 375px) {
+
+    
+    
+    header{
+        /* flex-direction: column; */
+        padding: 3px; 
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto;
+        z-index: 999;
+      
+    }
+    body{
+        height: 900%;
+        width: 575%;
+    }
+    .pic {
+      padding-left: 30px;
+      margin-right: 0;
+    }
+  
+    .leftside {
+      margin-left: 10px;
+      margin-right: 10px;
+      flex-wrap: wrap;
+    }
+    nav{
+        display: flex;
+        gap: 3px;
+        flex-direction: row;
+        margin-bottom: 12px;
+        
+    }
+    .navleft a {
+      font-size: 1em;
+      margin-left: 20px;
+    }
+  
+    .navigation a {
+      font-size: 1em;
+      margin-left: 40px;
+    }
+  
+    .forms {
+      margin-top: 7%;
+      /* padding-top: 20%; */
+      margin-left: 40%;
+     
+    }
+  
+    .btn-danger {
+      width: 10%;
+      height: 30px;
+      margin-top: 10px;
+      margin-left: 1%;
+      /* padding-left: 0%; */
+      
+    }
+
+    .assign{
+
+        margin-left: 10%;
+    }
+  
+    .txts {
+      width: 150px;
+      height: 30px;
+      font-size: 1em;
+    }
+  
+    .table th{
+        padding: 10px  0px;
+    }
+    .table td {
+      padding: 10px 240px;
+      
+    }
+  
+    .table {
+      margin-left: 5px;
+      margin-right: 5px;
+      /* margin-bottom: 42%; */
+    }
+  }
+  

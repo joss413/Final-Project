@@ -9,7 +9,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'taker') {
 
 
 
-<meta http-equiv="refresh"  content="60;url=Takerlogin.php";
+<!-- <meta http-equiv="refresh"  content="60;url=Takerlogin.php"; -->
 
 
 <!DOCTYPE html>

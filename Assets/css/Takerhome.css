@@ -211,49 +211,81 @@ nav a.active:before{
 }
 
 
-/* resizing for different screen size */
 
-@media (max-width: 576px) {
-    .pic {
-      height: 50px;
-      padding-left: 30px;
-      padding-right: 0px;
-      padding-top: 5px;
+@media screen and (max-width: 375px) {
+
+    
+    
+    header{
+        /* flex-direction: column; */
+        padding: 3px; 
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto;
+        z-index: 999;
+      
     }
+    body{
+        height: 900%;
+        width: 570%;
+    }
+    .pic {
+      padding-left: 30px;
+      margin-right: 0;
+    }
+  
     .leftside {
       margin-left: 10px;
       margin-right: 10px;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav{
+        display: flex;
+        gap: 3px;
+        flex-direction: row;
+        margin-bottom: 12px;
+        
     }
     .navleft a {
-      margin: 10px 0;
+      font-size: 1em;
+      margin-left: 20px;
     }
+  
     .navigation a {
-      margin: 10px 0;
+      font-size: 1em;
+      margin-left: 40px;
     }
+  
     .forms {
-      margin-top: 20%;
-      margin-left: 20%;
+      margin-top: 7%;
+      /* padding-top: 20%; */
+      margin-left: 40%;
+     
     }
-    .txts {
-      width: 200px;
-      height: 25px;
-      font-size: 1.1em;
-    }
+  
     .btns {
-      width: 25%;
+      width: 10%;
       height: 30px;
       margin-top: 10px;
-      margin-left: 5%;
-      font-size: 0.9em;
+      margin-left: 1%;
+      
     }
-    .btn-primary, .btn-danger {
-      width: 100%;
+  
+    .txts {
+      width: 150px;
+      height: 30px;
+      font-size: 1em;
     }
+  
+    .table td {
+      padding: 2px 50px;
+    }
+  
     .table {
-      font-size: 0.8em;
-      min-width: 300px;
+      margin-left: 5px;
+      margin-right: 5px;
+      /* margin-bottom: 42%; */
     }
   }
   
