@@ -80,6 +80,8 @@ header{
 
 
 
+
+
                                             /*selection part*/
 
 ul{
@@ -298,25 +300,36 @@ nav a.active:before{
       padding-left: 30px;
       margin-right: 0;
     }
+
+    html{
+        height: 100%;
+    }
     body{
-        /* height: 900%; */
-        width: 250%;
+        height: 400%;
+        width: 895px; 
+        justify-content: flex-start;
+        align-items: flex-start;
     }
     
+    h4{
+        height: min-content;
+    }
   .title{
     width: 20%;
+    height: 35px;
   }
 
     .leftside {
-      margin-left: 10px;
+      margin-left: 0px;
       margin-right: 10px;
       display: flex;
       flex-direction: row;
 
     }
   
-    .leftside nav{
+    .leftside{
         display: flex;
+
     }
 
  
@@ -324,14 +337,19 @@ nav a.active:before{
         width: 100%;
         word-break: keep-all;
     }
+    .navleft{
+        display: flex;
+        gap: 0px;
+    }
     .navleft a {
       font-size: 1em;
       margin-left: 20px;
+     
     }
   
     .navigation a {
       font-size: 1em;
-      margin-left: 0px;
+      margin-left: 20px;
       font-size: 18px;
 
     }
@@ -355,11 +373,11 @@ nav a.active:before{
       margin-top: 10px;
       margin-left: 0.5%;
       margin-bottom: 0;
+      margin-bottom: 298.5%;
     }
   
     .txts {
       width: 150px;
-      height: 30px;
       font-size: 1em;
      
     }

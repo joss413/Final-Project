@@ -225,8 +225,9 @@ nav a.active:before{
       
     }
     body{
-        height: 900%;
+        height: 400%;
         width: 570%;
+        
     }
     .pic {
       padding-left: 30px;

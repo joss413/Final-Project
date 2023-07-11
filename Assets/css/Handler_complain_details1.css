@@ -259,9 +259,14 @@ nav a.active:before{
         z-index: 999;
       
     }
+ 
+
+     html{
+        height: 580px;
+     }
     body{
-        height: 900%;
-        width: 570%;
+        height: 400%;
+        width: 527%;
     }
     .pic {
       padding-left: 30px;
@@ -272,6 +277,11 @@ nav a.active:before{
       margin-left: 10px;
       margin-right: 10px;
       flex-wrap: wrap;
+    }
+
+    .title{
+        height: 50px;
+        padding-bottom: 50px;
     }
     nav{
         display: flex;
@@ -320,6 +330,9 @@ nav a.active:before{
     .table td {
       padding: 9px 120px;
     }
+      .table .head{
+        padding: 9px  220px;
+      }
   
     .table {
       margin-left: 5px;

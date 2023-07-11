@@ -63,9 +63,6 @@ include("connection.php");
 if(isset($_POST['s']))
 {
     session_start();
-    // $_SESSION['x']=1;
-    // $_SESSION['start']=time();
-    // $_SESSION['expire']=$_SESSION['start'] + (10);
     
     if($_SERVER["REQUEST_METHOD"]=="POST")
     {

@@ -229,8 +229,10 @@ nav a.active:before{
       
     }
     body{
-        height: auto;
-        width: 100vh;
+        justify-content: flex-start;
+        align-items: flex-start;
+        /* height: auto;*/
+        width: 550px; 
     }
     .pic {
       padding-left: 30px;
@@ -281,7 +283,7 @@ nav a.active:before{
     }
   
     .table td {
-      padding: 12px 50px;
+      padding: 12px 49px;
     }
   
     .table {

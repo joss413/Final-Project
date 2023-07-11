@@ -264,80 +264,84 @@ main{
   
 
 
-  @media screen and (max-width: 375px) {
 
-     
-    
+/* resizing for different screen size */
+@media screen and (max-width: 375px) {
+
     header{
-        flex-direction: column;
-        padding: 3px; 
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-      
-    }
-    body{
-        height: auto;
-        width: 100vh;
-    }
-    .pic {
-      padding-left: 30px;
-      margin-right: 0;
-    }
-  
-    .leftside {
-      margin-left: 10px;
-      margin-right: 10px;
-      flex-wrap: wrap;
-    }
-    nav{
+        padding: 0px 5px; 
         display: flex;
-        gap: 3px;
-        flex-direction: row;
-        margin-bottom: 12px;
-        
+        flex-direction: column;
     }
-    .navleft a {
-      font-size: 1em;
-      margin-left: 20px;
+    .leftside{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
     }
-  
+
+    .pic{
+        padding-left:0px;
+        padding-top: 10px;
+    }
+
+    nav{
+        font-size:15px;
+        gap: 5px;
+        display: flex;
+        text-align: center;
+        padding: 0 0px 10px 0px;
+    }
     .navigation a {
-      font-size: 1em;
-      margin-left: 40px;
-    }
-  
-    .forms {
-      margin-top: 7%;
-      /* padding-top: 20%; */
-      margin-left: 40%;
-     
-    }
-  
-    .btns {
-      width: 30%;
-      height: 30px;
-      margin-top: 10px;
-      margin-left: 7%;
+      margin-left: 2px;
+      font-size:15px;
+      margin-right: 0px;
       
     }
-  
-    .txts {
-      width: 150px;
-      height: 30px;
-      font-size: 1em;
-    }
-  
-    .table td {
-      padding: 12px 50px;
-    }
-  
-    .table {
-      margin-left: 5px;
-      margin-right: 5px;
-      margin-bottom: 42%;
-    }
+  .form-control{
+    width:268px;
   }
+
   
+
+    main{
+        margin-top: 8em;
+        margin-left: 0;
+    }
+
+    .wrapper{
+        width: 90%;
+        height: 100vh;
+        margin-left: 5%;
+        margin-bottom: 15%;
+    }
+
+    .wrapper .form-box {
+        padding: 30px;
+    }
+
+    .input-box label{
+        font-size: .8em;
+    }
+
+    .input-box input{
+        height: 120%;
+        font-size: .9em;
+    }
+
+    .remeber-forgot{
+        font-size: .7em;
+        margin: -10px 0 10px;
+    }
+
+    .btn{
+        height: 40px;
+        font-size: .8em;
+    }
+
+    .login-register{
+        font-size: .7em;
+        margin: 20px 0 5px;
+    }
+
+}

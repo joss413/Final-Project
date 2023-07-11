@@ -102,7 +102,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'user') {
        <a href="home.php"> Home </a>
        <a href="complainer_page.php">Log New Complain</a>
        <a href="complainer_complain_history.php" class="active"> Complaint History</a>
-       <a href="Taker_logout.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+       <a href="userlogin.php">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a>
    
   
     </nav>   

@@ -245,9 +245,10 @@ nav a.active:before{
         z-index: 999;
       
     }
+  
     body{
         height: 900%;
-        width: 570%;
+        width: 565%;
     }
     .pic {
       padding-left: 30px;

@@ -233,8 +233,9 @@ nav a.active:before{
         z-index: 999;
       
     }
+
     body{
-        height: 900%;
+        height: 400%;
         width: 570%;
     }
     .pic {

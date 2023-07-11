@@ -11,7 +11,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'Admin') {
 
 
 
-<meta http-equiv="refresh" content="60; url=Adminlogin.php">
+<!-- <meta http-equiv="refresh" content="60; url=Adminlogin.php"> -->
 
 <!DOCTYPE html>
 <html>
@@ -32,7 +32,7 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'Admin') {
 <header>
 
 <div class="leftside">
-    <a href="indo"> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
+    <a href="home.php"> <img class="pic" src="./Assets/pictures/logos.png" alt="Addis Ababa police commission logo"  ></a>
          
            <nav class="navleft">
              

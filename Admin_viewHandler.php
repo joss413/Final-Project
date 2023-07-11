@@ -86,8 +86,8 @@ if(!isset($_SESSION['auth']) || $_SESSION['auth'] !== 'Admin') {
    <table class="table">
     <thead>
       <tr>
-        <th scope="col">Handler Id</th>
-        <th scope="col">Handler Name</th>
+        <th class"thead" scope="col">Handler Id</th>
+        <th class"thead" scope="col">Handler Name</th>
       </tr>
     </thead>
 
